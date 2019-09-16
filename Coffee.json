@@ -1,0 +1,47 @@
+{ "frames": [
+   {
+    "filename": "Coffee 0.png",
+    "frame": { "x": 0, "y": 0, "w": 12, "h": 11 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 11 },
+    "sourceSize": { "w": 12, "h": 11 },
+    "duration": 100
+   },
+   {
+    "filename": "Coffee 1.png",
+    "frame": { "x": 12, "y": 0, "w": 12, "h": 11 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 11 },
+    "sourceSize": { "w": 12, "h": 11 },
+    "duration": 100
+   },
+   {
+    "filename": "Coffee 2.png",
+    "frame": { "x": 24, "y": 0, "w": 12, "h": 11 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 11 },
+    "sourceSize": { "w": 12, "h": 11 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.9",
+  "image": "Coffee.png",
+  "format": "RGBA8888",
+  "size": { "w": 36, "h": 11 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 0, "direction": "forward" },
+   { "name": "run", "from": 1, "to": 2, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

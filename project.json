@@ -1,0 +1,816 @@
+{
+	"metadata": {},
+	"lastBuffer": "Main.java",
+	"files": {
+		"Dog.json": {},
+		"Hello Java.bin": {},
+		"Hello Java.elf": {},
+		"Main.java": {},
+		"Pattern.png": {},
+		"dog.png": {},
+		"dump.bin": {},
+		"firmware.bin": {},
+		"project.json": {}
+	},
+	"javaFlags": {
+		"mainClass": "Main"
+	},
+	"libs": {
+		"Pokitto": [
+			"${appPath}/javacompiler/pokitto/libs/startup.cpp",
+			"${appPath}/javacompiler/pokitto/libs/SystemInit.s"
+		]
+	},
+	"SFlags": {
+		"Pokitto": [
+			"-I${appPath}/javacompiler/pokitto/includes",
+			"-I${projectPath}",
+			"-mcpu=cortex-m0plus",
+			"-mthumb"
+		]
+	},
+	"CPPFlags": {
+		"DEBUG": [
+			"-Og",
+			"-g3",
+			"-ggdb"
+		],
+		"RELEASE": [
+			"-flto",
+			"-O3"
+		],
+		"Pokitto": [
+			"-I${appPath}/javacompiler/pokitto/includes",
+			"-I${projectPath}",
+			"-DPOKITTO",
+			"-fexceptions",
+			"-fno-rtti",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks",
+			"-mcpu=cortex-m0plus",
+			"-mthumb",
+			"-Wno-psabi"
+		],
+		"Desktop": [
+			"-I${appPath}/javacompiler/desktop/includes",
+			"-I${projectPath}",
+			"-DDESKTOP",
+			"-fno-rtti",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-exceptions",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks"
+		],
+		"ALL": [
+			"-std=c++14"
+		]
+	},
+	"GDBFlags": {
+		"Pokitto": [
+			"${projectPath}/${projectName}.elf"
+		]
+	},
+	"emuFlags": {
+		"Pokitto": [
+			"${projectPath}/${projectName}.bin"
+		]
+	},
+	"ELF2BINFlags": {
+		"Pokitto": [
+			"-O",
+			"binary",
+			"${projectPath}/${projectName}.elf",
+			"${projectPath}/${projectName}.bin"
+		]
+	},
+	"LDFlags": {
+		"RELEASE": [
+			"-O3"
+		],
+		"DEBUG": [
+			"-Og",
+			"-g3",
+			"-ggdb"
+		],
+		"Pokitto": [
+			"-Wl,--gc-sections",
+			"-Wl,-n",
+			"--specs=nano.specs",
+			"-Wl,--wrap,_sbrk",
+			"-Wl,--wrap,exit",
+			"-Wl,--wrap,malloc",
+			"-mcpu=cortex-m0plus",
+			"-mthumb",
+			"-Wl,--undefined=g_pfnVectors",
+			"-Wl,--undefined=boot",
+			"-T",
+			"${appPath}/javacompiler/pokitto/link.ld",
+			"--output",
+			"${projectPath}/${projectName}.elf",
+			"$objectFiles",
+			"-Wl,--start-group",
+			"-lstdc++",
+			"-lsupc++",
+			"-lm",
+			"-lc",
+			"-lgcc",
+			"-lnosys",
+			"-Wl,--end-group"
+		]
+	},
+	"target": "Pokitto",
+	"pipelines": {
+		"Pokitto": [
+			"pre-build",
+			"compile-java",
+			"compile-cpp",
+			"compile-ld",
+			"compile-bin",
+			"make-img"
+		],
+		"Desktop": [
+			"compile-java",
+			"compile-cpp",
+			"compile-ld",
+			"compile-bin"
+		]
+	},
+	"meta": {
+		"": {},
+		"\\Coffee.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Coffee.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Dog.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Main.java": {
+			"sdcard": false
+		},
+		"\\Pattern.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\project.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\dog.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.elf": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin": {
+			"sdcard": false
+		},
+		"\\.git": {
+			"sdcard": false
+		},
+		"\\ZombieEntity.java": {
+			"sdcard": false
+		},
+		"\\Main - Copy.java": {
+			"sdcard": false
+		},
+		"\\Common.java": {
+			"sdcard": false
+		},
+		"\\ZombieEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\Event.java": {
+			"sdcard": false
+		},
+		"\\Pattern - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bubble.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.1.gif": {
+			"sdcard": false
+		},
+		"\\Bubble - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bar.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BarH.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BarH - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BarV.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.1.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.2.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Castle.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Castle - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Zxarne52 - Copy.pal": {
+			"sdcard": false
+		},
+		"\\ZxSpectrum.pal": {
+			"sdcard": false
+		},
+		"\\Zombie.json": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Zombie.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BarEntity.java": {
+			"sdcard": false
+		},
+		"\\BarEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\HorizBarEntity.java": {
+			"sdcard": false
+		},
+		"\\VertBarEntity.java": {
+			"sdcard": false
+		},
+		"\\test.wav": {
+			"sdcard": false
+		},
+		"\\test.wav_old": {
+			"sdcard": false
+		},
+		"\\test2.wav": {
+			"sdcard": false
+		},
+		"\\arrigd_zombie-roar-3.wav": {
+			"sdcard": false
+		},
+		"\\breviceps_zombie-gargles.wav": {
+			"sdcard": false
+		},
+		"\\crocytc_zombie3.wav": {
+			"sdcard": false
+		},
+		"\\thanra_zombie-roar.wav": {
+			"sdcard": false
+		},
+		"\\missozzy_zombie-04.wav": {
+			"sdcard": false
+		},
+		"\\missozzy_zombie-02.wav": {
+			"sdcard": false
+		},
+		"\\arrigd_zombie_roar_3.wav": {
+			"sdcard": false
+		},
+		"\\breviceps_zombie_gargles.wav": {
+			"sdcard": false
+		},
+		"\\missozzy_zombie_02.wav": {
+			"sdcard": false
+		},
+		"\\missozzy_zombie_04.wav": {
+			"sdcard": false
+		},
+		"\\thanra_zombie_roar.wav": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.3.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.bin.4.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.bin.5.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.bin.6.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.7.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.8.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.9.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.10.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.11.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.12.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.13.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.14.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.15.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.16.gif": {
+			"sdcard": false
+		},
+		"\\GameOver.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.bin.2.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.3.gif": {
+			"sdcard": false
+		},
+		"\\Hole.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\TimeMeter.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\VertBarEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\TimeMeterEntity.java": {
+			"sdcard": false
+		},
+		"\\Hole - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Winner.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Coffee - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bat.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BeanSack.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Enemy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Hero.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Tree.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Main_day.java": {
+			"sdcard": false
+		},
+		"\\Zombie - Copy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Hero.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\TimeMeterEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\HeroEntity.java": {
+			"sdcard": false
+		},
+		"\\HeroEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\TreeEntity.java": {
+			"sdcard": false
+		},
+		"\\map.tmx": {
+			"sdcard": false
+		},
+		"\\MainDay.java": {
+			"sdcard": false
+		},
+		"\\map.tmx.gq4544": {
+			"sdcard": false
+		},
+		"\\map.tmx.Uh4544": {
+			"sdcard": false
+		},
+		"\\TilesetImage.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/BarH.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/BarV.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Bat.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/BeanSack.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Castle.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Bubble.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Coffee.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Coffee.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Common.java": {
+			"sdcard": false
+		},
+		"/Event.java": {
+			"sdcard": false
+		},
+		"/Hero.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Hero.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/HeroEntity.java": {
+			"sdcard": false
+		},
+		"/HorizBarEntity.java": {
+			"sdcard": false
+		},
+		"/Main.java": {
+			"sdcard": false
+		},
+		"/MainDay.java": {
+			"sdcard": false
+		},
+		"/Pattern.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/TimeMeter.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/TimeMeterEntity.java": {
+			"sdcard": false
+		},
+		"/VertBarEntity.java": {
+			"sdcard": false
+		},
+		"/Winner.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Zombie.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/Zombie.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/ZombieEntity.java": {
+			"sdcard": false
+		},
+		"/ZombieFlock.bin": {
+			"sdcard": false
+		},
+		"/ZombieFlock.bin.1.gif": {
+			"sdcard": false
+		},
+		"/ZombieFlock.bin.1.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/ZombieFlock.bin.2.gif": {
+			"sdcard": false
+		},
+		"/ZombieFlock.bin.2.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/ZombieFlock.bin.3.gif": {
+			"sdcard": false
+		},
+		"/ZombieFlock.bin.3.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/ZombieFlock.elf": {
+			"sdcard": false
+		},
+		"/ZxSpectrum.pal": {
+			"sdcard": false
+		},
+		"/arrigd_zombie_roar_3.wav": {
+			"sdcard": false
+		},
+		"/breviceps_zombie_gargles.wav": {
+			"sdcard": false
+		},
+		"/crocytc_zombie3.wav": {
+			"sdcard": false
+		},
+		"/maps": {},
+		"/missozzy_zombie_02.wav": {
+			"sdcard": false
+		},
+		"/missozzy_zombie_04.wav": {
+			"sdcard": false
+		},
+		"/project.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/thanra_zombie_roar.wav": {
+			"sdcard": false
+		},
+		"/Enemy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/maps/TilesetImage.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/maps/map.tmx": {
+			"sdcard": false
+		},
+		"/scripts": {
+			"sdcard": false
+		},
+		"/scripts/tilemap.js": {
+			"sdcard": false
+		},
+		"/maps/Tileset.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/maps/mapData.map": {
+			"sdcard": false
+		},
+		"/maps/map.java": {
+			"sdcard": false
+		},
+		"/maps/Tileset.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"/maps/BaseMap.java": {
+			"sdcard": false
+		},
+		"\\maps": {},
+		"\\scripts": {},
+		"\\maps\\BaseMap.java": {
+			"sdcard": false
+		},
+		"\\maps\\map.java": {
+			"sdcard": false
+		},
+		"\\maps\\mapData.map": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx": {
+			"sdcard": false
+		},
+		"\\maps\\Tileset.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\maps\\TilesetImage.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\maps\\Tileset.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\scripts\\tilemap.js": {
+			"sdcard": false
+		},
+		"\\EnemyEntity.java": {
+			"sdcard": false
+		},
+		"\\Hero - Copy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Enemy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Beans.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\CastleDay.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Hero - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Crash.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Crash.json": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.4.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.5.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.17.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.18.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.19.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.20.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.21.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.22.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.23.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.24.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.25.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.26.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.27.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.28.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.29.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.30.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.31.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.32.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.33.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.34.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.35.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.36.gif": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.37.gif": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.Hp7056": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.p11744": {
+			"sdcard": false
+		},
+		"\\Bean.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\MainDay - Copy.java": {
+			"sdcard": false
+		},
+		"\\MainMap.java": {
+			"sdcard": false
+		},
+		"\\MainLevelMap.java": {
+			"sdcard": false
+		},
+		"\\CastleDay - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\LevelMapItem.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\LevelMapItem - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\LevelMapPoints.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\PointsRectEnds.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\PointsRectEnds - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\PointsRectBody.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\lock.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Lock.png": {
+			"sdcard": false,
+			"implements": ""
+		}
+	}
+}
