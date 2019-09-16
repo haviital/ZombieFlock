@@ -811,6 +811,76 @@
 		"\\Lock.png": {
 			"sdcard": false,
 			"implements": ""
+		},
+		"\\LICENSE": {
+			"sdcard": false
+		},
+		"\\README.md": {
+			"sdcard": false
+		},
+		"\\Panel1.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (2).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (3).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (4).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (5).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (6).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel1 - Copy (7).png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel2.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel3.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel4.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel5.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel6.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel7.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Panel8.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\PanelHighlight.png": {
+			"sdcard": false,
+			"implements": ""
 		}
 	}
 }

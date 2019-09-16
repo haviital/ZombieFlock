@@ -31,6 +31,16 @@ class Common
     static long currentDay;
     static int[] levelPointsArray;
     
+    static Panel1 panelImage1;
+    static Panel2 panelImage2;
+    static Panel3 panelImage3;
+    static Panel4 panelImage4;
+    static Panel5 panelImage5;
+    static Panel6 panelImage6;
+    static Panel7 panelImage7;
+    static Panel8 panelImage8;
+    static PanelHighLight panelHighLightImage;
+    
     public static void freeResources()
     {
         tilemap = null;

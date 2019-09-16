@@ -99,6 +99,16 @@ public class Main extends State {
         Common.levelPointsArray[3] = levelPoints.levelPoints3;
         Common.levelPointsArray[4] = levelPoints.levelPoints4;
         Common.levelPointsArray[5] = levelPoints.levelPoints5;
+        
+        Common.panelImage1 = new Panel1();
+        Common.panelImage2 = new Panel2();
+        Common.panelImage3 = new Panel3();
+        Common.panelImage4 = new Panel4();
+        Common.panelImage5 = new Panel5();
+        Common.panelImage6 = new Panel6();
+        Common.panelImage7 = new Panel7();
+        Common.panelImage8 = new Panel8();
+        Common.panelHighLightImage = new PanelHighLight();
 
         Common.currentDay = 1;
         Game.run( TIC80.font(), new MainLevelMap() );
@@ -519,6 +529,43 @@ public class Main extends State {
         return foundIndex;
     }
     
+
+    public static void DrawPanel(int x, int y, int w, int h)
+    {
+        // Fill the center area.
+        Main.screen.fillRect( x+16, y+16, w-32, h-32, 15 );
+
+        // Draw edges
+        int count = (w - 32) / 16;
+        for( int i=0; i<count; i+=1 )
+        {
+            // Top and bottom edge
+            Common.panelImage2.draw(Main.screen, x + 16 + (i*16),  y);
+            Common.panelImage7.draw(Main.screen, x + 16 + (i*16),  y + h - 16 );
+        }
+        Common.panelImage2.draw(Main.screen, x + w - 32,  y);  // last piece
+        Common.panelImage7.draw(Main.screen, x + w - 32,  y + h - 16 ); // last piece
+        
+        count = (h - 16 - 16) / 16;
+        for( int j=0; j<count; j+=1 )
+        {
+            // Left and right edge
+            Common.panelImage4.draw(Main.screen, x,           y + 16 + (j*16));
+            Common.panelImage5.draw(Main.screen, x + w - 16,  y + 16 + (j*16));
+        }
+        Common.panelImage4.draw(Main.screen, x,           y + h - 32);  // last piece
+        Common.panelImage5.draw(Main.screen, x + w - 16,  y + h - 32);  // last piece
+        
+        // Draw corners
+        Common.panelImage1.draw(Main.screen, x,  y);
+        Common.panelImage3.draw(Main.screen, x + w - 16,  y);
+        Common.panelImage6.draw(Main.screen, x,  y + h - 16);
+        Common.panelImage8.draw(Main.screen, x + w - 16,  y + h - 16);
+        
+        // Draw the hightlight
+        Common.panelHighLightImage.draw( Main.screen, x+8, y+6 );
+    }
+
 }
 
 

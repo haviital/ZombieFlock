@@ -176,6 +176,11 @@ public class MainLevelMap extends State
             }
         }
 
+
+        // !!HV TEST
+        Main.screen.clear(0);
+        Main.DrawPanel(10, 10, 100, 100);
+
         // Update the screen with everything that was drawn
         Main.screen.flush();
     }
