@@ -60,18 +60,18 @@ public class Main extends State {
     Winner winnerImage;
 
     // Sounds
-    arrigd_zombie_roar_3 sfx1;
+    //arrigd_zombie_roar_3 sfx1;
     breviceps_zombie_gargles sfx2;
-    crocytc_zombie3 sfx3;
-    missozzy_zombie_02 sfx4;
-    missozzy_zombie_04 sfx5;
-    thanra_zombie_roar sfx6;
+    //crocytc_zombie3 sfx3;
+    //missozzy_zombie_02 sfx4;
+    //missozzy_zombie_04 sfx5;
+    //thanra_zombie_roar sfx6;
     
     //HiRes16Color screen; // the screenmode we want to draw with
     HorizBarEntity barH;
     VertBarEntity barV;
     TimeMeterEntity timeMeterEntity;
-    int currSfxNum;
+    //int currSfxNum;
     float angle; // floats are actually FixedPoint (23.8)
     int counter; // variables are automatically initialized to 0 or null
     boolean[] isCoffeeTaken; 
@@ -91,7 +91,10 @@ public class Main extends State {
     // and TIC80 as the menu's font
     public static void main(String[] args){
         
-        // Create the level map.
+         // Initialize the Mixer at 8khz
+        Mixer.init(8000);
+        
+       // Create the level map.
         Common.levelPointsArray = new int[Common.LEVEL_MAP_COUNT];
         Common.levelPointsArray[0] = levelPoints.levelPoints0;
         Common.levelPointsArray[1] = levelPoints.levelPoints1;
@@ -102,16 +105,13 @@ public class Main extends State {
         
         Common.panelImage1 = new Panel1();
         Common.panelImage2 = new Panel2();
-        Common.panelImage3 = new Panel3();
         Common.panelImage4 = new Panel4();
-        Common.panelImage5 = new Panel5();
         Common.panelImage6 = new Panel6();
         Common.panelImage7 = new Panel7();
-        Common.panelImage8 = new Panel8();
         Common.panelHighLightImage = new PanelHighLight();
 
         Common.currentDay = 1;
-        Game.run( TIC80.font(), new MainLevelMap() );
+        Game.run( TIC80.font(), new MainStartupScreen() );
         //Game.run( TIC80.font(), new MainDay() );
         //Game.run( TIC80.font(), new Main() );
     }
@@ -124,9 +124,11 @@ public class Main extends State {
         programStartTimeMs = System.currentTimeMillis() - 1; // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         
         //!!HV make the level shorter
-        programStartTimeMs -= 25*1000;
+        //programStartTimeMs -= 20*1000;
         
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
+        
+        Main.screen.loadPalette(Pico8.palette());
         
         screen.cameraX = 0;
         screen.cameraY = 0;
@@ -140,17 +142,14 @@ public class Main extends State {
         timeMeterEntity =  new TimeMeterEntity();
         winnerImage = new Winner();
         
-        sfx1 = new arrigd_zombie_roar_3(0);
+        // sfx1 = new arrigd_zombie_roar_3(0);
         sfx2 = new breviceps_zombie_gargles(0);
-        sfx3 = new crocytc_zombie3(0);
-        sfx4 = new missozzy_zombie_02(0);
-        sfx5 = new missozzy_zombie_04(0);
-        sfx6 = new thanra_zombie_roar(0);
-        currSfxNum = 1;
+        // sfx3 = new crocytc_zombie3(0);
+        // sfx4 = new missozzy_zombie_02(0);
+        // sfx5 = new missozzy_zombie_04(0);
+        // sfx6 = new thanra_zombie_roar(0);
+        // currSfxNum = 1;
 
-        // Initialize the Mixer at 8khz
-        Mixer.init(8000);
-        
         // Create events.
         Common.events = new Event[Common.MAX_EVENTS]; //
         for(int i=0; i < Common.MAX_EVENTS; i++) Common.events[i] = new Event();
@@ -245,15 +244,15 @@ public class Main extends State {
             
         if( Button.B.justPressed() )
         {
-             if(currSfxNum==1) sfx1.play();
-             else if(currSfxNum==2) sfx2.play();
-             else if(currSfxNum==3) sfx3.play();
-             else if(currSfxNum==4) sfx4.play();
-             else if(currSfxNum==5) sfx5.play();
-             else if(currSfxNum==6) sfx6.play();
+            //  if(currSfxNum==1) sfx1.play();
+            //  else if(currSfxNum==2) sfx2.play();
+            //  else if(currSfxNum==3) sfx3.play();
+            //  else if(currSfxNum==4) sfx4.play();
+            //  else if(currSfxNum==5) sfx5.play();
+            //  else if(currSfxNum==6) sfx6.play();
             
-             currSfxNum += 1;
-             if( currSfxNum>6 ) currSfxNum = 1;
+            //  currSfxNum += 1;
+            //  if( currSfxNum>6 ) currSfxNum = 1;
         }
 
         // *** Update 
@@ -473,8 +472,8 @@ public class Main extends State {
         int winW = 220;
         int winH = 2*30;
         int marginV = 2;
-        Main.screen.fillRect( winX, winY, winW, winH, 15 );
-        Main.screen.fillRect( winX, winY+marginV, winW, winH-(2*marginV), 13 );
+        
+        DrawPanel(winX, winY, winW, winH);
         
         winnerImage.draw(Main.screen, 110 - 49,  winY + marginV + 2);
         winnerImage.draw(Main.screen, 110 - 13,  winY + marginV + 2);
@@ -500,16 +499,15 @@ public class Main extends State {
         int winW = 220;
         int winH = 2*30;
         int marginV = 2;
-        screen.fillRect( winX, winY, winW, winH, 15 );
-        screen.fillRect( winX,  winY+marginV, winW, winH-(marginV*2), 13 );
+        DrawPanel(winX, winY, winW, winH);
         
         screen.setTextPosition( winX,   winY + 10);
         screen.textColor = 3;
-        screen.print(" You lost! Undeads will rule the world");
+        screen.print("      You lost! Undeads will rule");
         screen.setTextPosition( winX,   winY + 20);
-        screen.print("     with the power of coffee!");
+        screen.print("  the world with the power of coffee!");
         screen.setTextPosition( winX, winY + 40);
-        screen.print("           Restart (A)?");
+        screen.print("             Restart (A)?");
     }
 
     public static int getNextFreeEvent()
@@ -540,30 +538,36 @@ public class Main extends State {
         for( int i=0; i<count; i+=1 )
         {
             // Top and bottom edge
-            Common.panelImage2.draw(Main.screen, x + 16 + (i*16),  y);
-            Common.panelImage7.draw(Main.screen, x + 16 + (i*16),  y + h - 16 );
+            Common.panelImage2.draw(Main.screen, x + 16 + (i*16),  y, false, false, true);
+            Common.panelImage7.draw(Main.screen, x + 16 + (i*16),  y + h - 16, false, false, true );
         }
-        Common.panelImage2.draw(Main.screen, x + w - 32,  y);  // last piece
-        Common.panelImage7.draw(Main.screen, x + w - 32,  y + h - 16 ); // last piece
+        if(count>0)
+        {
+            Common.panelImage2.draw(Main.screen, x + w - 32,  y, false, false, true);  // last piece
+            Common.panelImage7.draw(Main.screen, x + w - 32,  y + h - 16, false, false, true ); // last piece
+        }
         
         count = (h - 16 - 16) / 16;
         for( int j=0; j<count; j+=1 )
         {
             // Left and right edge
-            Common.panelImage4.draw(Main.screen, x,           y + 16 + (j*16));
-            Common.panelImage5.draw(Main.screen, x + w - 16,  y + 16 + (j*16));
+            Common.panelImage4.draw(Main.screen, x,           y + 16 + (j*16), false, false, true);
+            Common.panelImage4.draw(Main.screen, x + w - 16,  y + 16 + (j*16), true, false, true);
         }
-        Common.panelImage4.draw(Main.screen, x,           y + h - 32);  // last piece
-        Common.panelImage5.draw(Main.screen, x + w - 16,  y + h - 32);  // last piece
+        if(count>0)
+        {
+            Common.panelImage4.draw(Main.screen, x,           y + h - 32, false, false, true);  // last piece
+            Common.panelImage4.draw(Main.screen, x + w - 16,  y + h - 32, true, false, true);  // last piece
+        }
         
         // Draw corners
-        Common.panelImage1.draw(Main.screen, x,  y);
-        Common.panelImage3.draw(Main.screen, x + w - 16,  y);
-        Common.panelImage6.draw(Main.screen, x,  y + h - 16);
-        Common.panelImage8.draw(Main.screen, x + w - 16,  y + h - 16);
+        Common.panelImage1.draw(Main.screen, x,  y, false, false, true);
+        Common.panelImage1.draw(Main.screen, x + w - 16,  y, true, false, true);
+        Common.panelImage6.draw(Main.screen, x,  y + h - 16, false, false, true);
+        Common.panelImage6.draw(Main.screen, x + w - 16,  y + h - 16, true, false, true);
         
         // Draw the hightlight
-        Common.panelHighLightImage.draw( Main.screen, x+8, y+6 );
+        Common.panelHighLightImage.draw( Main.screen, x+8, y+6, false, false, true );
     }
 
 }

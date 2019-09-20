@@ -10,7 +10,7 @@ class HeroEntity extends Hero
     HeroEntity(MainDay mainDayPar) 
     { 
         velX = 2;
-        velY = 2;
+        velY = 2 + (Common.currentDay * 0.3 );
         halfWidth = width() / 2;
         halfHeight = height() / 2;
         x = 110;
@@ -77,7 +77,7 @@ class HeroEntity extends Hero
         {
             // Collect beans.
             //Common.events[0].setMoveAnimEvent(0, (long)1*1000, heroX, heroY, 110.90, -10.0, beansImage );
-            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, heroX, heroY, 110, heroY-88-20, beansImage, null, false );
+            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, heroX, heroY, 110, heroY-88-20, beansImage, null, false, 0, 0 );
             //System.out.println("CRASH!");
             mainDay.currentBeanCount += 10;
         }
@@ -86,7 +86,7 @@ class HeroEntity extends Hero
         if(isTilechanged && tileId == Common.TREE_MAP_TILE_ID)
         {
             // Slow down.
-            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, 0, -10, 0, -10, null, crashSprite, true );
+            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, 0, -10, 0, -10, null, crashSprite, true, 0, 0 );
             System.out.println("CRASH TREE!");
             stopUntilTime = Common.currentFrameStartTimeMs + 100;
             

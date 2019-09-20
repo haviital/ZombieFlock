@@ -881,6 +881,69 @@
 		"\\PanelHighlight.png": {
 			"sdcard": false,
 			"implements": ""
+		},
+		"\\PanelHighLight.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\maps\\map.tmx.Hp7524": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.p12000": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.H12000": {
+			"sdcard": false
+		},
+		"\\Enemy - Copy.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Enemy - Copy.json": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Dust.json": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Dust.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\MainLevelMap - Copy.java": {
+			"sdcard": false
+		},
+		"\\MainStartupScreen.java": {
+			"sdcard": false
+		},
+		"\\TitleBrew.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\TitleCup.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\TitleHands.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\TitleOfTheUndead.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Pico8.pal": {
+			"sdcard": false
+		},
+		"\\Pico8Ext.pal": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.zip": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.all_sounds": {
+			"sdcard": false
 		}
 	}
 }

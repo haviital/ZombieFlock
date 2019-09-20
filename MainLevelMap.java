@@ -25,6 +25,8 @@ public class MainLevelMap extends State
     // Allocate on init instead.
     void init()
     {
+        Main.screen.loadPalette(Pico8.palette());
+        
         Main.screen.cameraX = 0;
         Main.screen.cameraY = 0;
         
@@ -34,6 +36,13 @@ public class MainLevelMap extends State
         bodyImage = new PointsRectBody();
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
+        
+        // Calc total points
+        totalPoints = 0;
+        for(int i=0; i<Common.LEVEL_MAP_COUNT; i+=1)
+        {
+            totalPoints += 10 * Common.levelPointsArray[i];
+        }
     }
     
     // 
@@ -74,10 +83,13 @@ public class MainLevelMap extends State
         
         if( Button.A.justPressed() )
         {
-            // Go on to the night level.
             int dayNum = gridPosX + (gridPosY*3);
-            Common.currentDay = dayNum;
-            Game.changeState( new MainDay() );
+            if( dayNum <= maxLevelIndexAllowed )
+            {
+                // Go on to the night level.
+                Common.currentDay = dayNum;
+                Game.changeState( new MainDay() );
+            }
         }
 
         if( Button.B.justPressed() ) 
@@ -93,32 +105,14 @@ public class MainLevelMap extends State
         
         // Draw points
         
-        // Draw left end
-        long currX = 4;
-        long currY = 3;
-        endsImage.draw( Main.screen, currX, currY );
-        currX += 22;
-        
-        // Draw body
-        for(int i=0; i<11; i+=1)
-        {
-            bodyImage.draw( Main.screen, currX, currY );
-            currX += 16;
-        }
-            
-        // Draw right end
-        currX = 220-4-32;
-        endsImage.draw( Main.screen, currX, currY );
-        currX += 32 - 10 - 16;
-        bodyImage.draw( Main.screen, currX, currY );
-        currX += - 16;
-        bodyImage.draw( Main.screen, currX, currY );
+        // Draw panel
+        Main.DrawPanel(4, 3, 220-8, 26);
 
         // Draw total points.
-        currY = 12;
-        String text = "TOTAL POINTS: " + 440;
+        int currY = 12;
+        String text = "TOTAL POINTS: " + totalPoints;
         int pixelwidth = Main.screen.textWidth(text);
-        currX = 110-(pixelwidth/2);
+        int currX = 110-(pixelwidth/2);
         Main.screen.setTextPosition( currX+1, currY+1 );
         Main.screen.textColor = 1;
         Main.screen.print( text );
@@ -127,6 +121,7 @@ public class MainLevelMap extends State
         Main.screen.print(  text);
             
         // Draw the level map
+        boolean isNewLevelDrawn = false;
         for(int i=0; i<Common.LEVEL_MAP_COUNT; i+=1)
         {
             int margin = 3;
@@ -137,6 +132,14 @@ public class MainLevelMap extends State
             int topLeftX = col *  width + 1;
             int topLeftY = row * height + 14 + 17;
 
+            // If this is the first update call and the first zero item, set the grid pos.
+            if(isFirstUpdate && Common.levelPointsArray[i]==0 && !isNewLevelDrawn)
+            {
+                gridPosX = col;
+                gridPosY = row;
+                maxLevelIndexAllowed = i;   
+            }
+            
             // Draw level item bg.
             long color = 10;
             if(col == gridPosX && row == gridPosY )
@@ -146,7 +149,6 @@ public class MainLevelMap extends State
             
             // Draw level item
             levelMapItemImage.draw( Main.screen,  topLeftX + margin, topLeftY + margin );
-            
             
             if( Common.levelPointsArray[i]>0)
             {
@@ -169,7 +171,26 @@ public class MainLevelMap extends State
                 Main.screen.textColor = 3;
                 Main.screen.print("x" +  Common.levelPointsArray[i] );
             }
-            else
+            else if(!isNewLevelDrawn)
+            {
+                // Draw new level.
+                
+                // Draw day n.
+                Main.screen.setTextPosition( topLeftX + margin + 18 + 1, topLeftY + margin + 23 + 1 );
+                Main.screen.textColor = 1;
+                Main.screen.print("DAY " + (i+1) );
+                Main.screen.setTextPosition( topLeftX + margin + 18, topLeftY + margin + 23 );
+                Main.screen.textColor = 3;
+                Main.screen.print("DAY " + (i+1) );
+                
+                // Draw text.
+                Main.screen.setTextPosition( topLeftX + margin + 22, topLeftY + margin + 36 );
+                Main.screen.textColor = 3;
+                Main.screen.print("NEW!" );
+                
+                isNewLevelDrawn = true;
+            }
+            else // locked
             {
                 // Draw lock.
                 lockImage.draw(Main.screen, topLeftX + margin + 23, topLeftY + margin + 20);
@@ -177,12 +198,15 @@ public class MainLevelMap extends State
         }
 
 
+
         // !!HV TEST
-        Main.screen.clear(0);
-        Main.DrawPanel(10, 10, 100, 100);
+        //Main.screen.clear(0);
+        //Main.DrawPanel(10, 10, 100, 100);
 
         // Update the screen with everything that was drawn
         Main.screen.flush();
+        
+        isFirstUpdate = false;
     }
     
     
@@ -193,6 +217,9 @@ public class MainLevelMap extends State
     Coffee coffee;
     long gridPosX;
     long gridPosY;
+    boolean isFirstUpdate = true;
+    int maxLevelIndexAllowed;
+    int totalPoints;
 }
 
 

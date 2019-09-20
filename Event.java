@@ -7,11 +7,7 @@ import Common;
 
 class Event
 {
-    // enum EventType
-    // {
-    //     NONE, START_BUBBLE, END_BUBBLE
-    // }
-    
+    // Event types
     static final int EVENT_NONE = 0;
     static final int EVENT_START_BUBBLE = 1;
     static final int EVENT_END_BUBBLE = 2;
@@ -23,6 +19,10 @@ class Event
     static final int EVENT_END_TUTORIAL_BUBBLE = 8;
     static final int EVENT_START_MOVE_ANIM = 9;
     static final int EVENT_END_MOVE_ANIM = 10;
+    
+    // Gfx primitives 
+    static final int GFX_PRIMITIVE_NONE = 0;
+    static final int GFX_PRIMITIVE_RECT = 1;
     
     // enum EventState
     // {
@@ -104,7 +104,7 @@ class Event
     }
     
     public void setMoveAnimEvent(long startTime, long endTime, float startX, float startY, float endX, float endY,
-            Image imagePar, Sprite spritePar, boolean drawRelativeToHeroPar)
+            Image imagePar, Sprite spritePar, boolean drawRelativeToHeroPar, float shakeXPar, float shakeYPar)
     {
         System.out.println("wait: EVENT_START_MOVE_ANIM");
         clear();
@@ -119,6 +119,30 @@ class Event
         targetPosX = endX;
         targetPosY = endY;
         drawRelativeToHero = drawRelativeToHeroPar;
+        shakeX = shakeXPar;
+        shakeY = shakeYPar;
+    }
+
+    public void setGfxPrimitiveMoveAnimEvent(long startTime, long endTime, float startX, float startY, float endX, float endY,
+            long gfxPrimitivePar, long widthPar, long heightPar, long colorIndexPar, boolean drawRelativeToHeroPar)
+    {
+        System.out.println("wait: EVENT_START_MOVE_ANIM");
+        clear();
+        eventTime = Common.currentFrameStartTimeMs + startTime;
+        startEventTime = eventTime;
+        endEventTime = Common.currentFrameStartTimeMs + endTime;
+        waitingForEvent = EVENT_START_MOVE_ANIM;
+        image = null;
+        sprite = null;
+        gfxPrimitive = gfxPrimitivePar;
+        posX = startX;
+        posY = startY;
+        targetPosX = endX;
+        targetPosY = endY;
+        drawRelativeToHero = drawRelativeToHeroPar;
+        width = widthPar;
+        height = heightPar;
+        colorIndex = colorIndexPar;
     }
 
     public void execute()
@@ -270,6 +294,10 @@ class Event
             float factor = passedTime / fulltime;
             float currX = (targetPosX-posX)*factor + posX;
             float currY = (targetPosY-posY)*factor + posY;
+            if(shakeX != 0)
+                currX += (Math.random() * shakeX*2) - shakeX;
+            if(shakeY != 0)
+                currY += (Math.random() * shakeY*2) - shakeY;
             
             // Draw relative to Hero? 
             if(drawRelativeToHero)
@@ -280,8 +308,10 @@ class Event
             
             if(image!=null)
                 image.draw(screen, currX, currY);
-            if(sprite!=null)
+            else if(sprite!=null)
                 sprite.draw(screen, currX, currY);
+            else if( gfxPrimitive == GFX_PRIMITIVE_RECT )
+                screen.fillRect( currX, currY, currX+width, currY+height, colorIndex, true );
         }
         else if( waitingForEvent == EVENT_END_TUTORIAL_BUBBLE )
         {
@@ -307,12 +337,14 @@ class Event
          }
      }
     
+    // Member data
     public long eventTime;
     public int waitingForEvent;
     public boolean isDrawingState;
     //public EventState state;
     Image image;
     Sprite sprite;
+    long gfxPrimitive;
     float posX;
     float posY;
     float targetPosX;
@@ -326,6 +358,11 @@ class Event
     long startEventTime;
     long endEventTime;
     boolean drawRelativeToHero;
+    long width;
+    long height;
+    long colorIndex;
+    float shakeX;
+    float shakeY;
 
     // Bubble text event specific parameters
     public String[] textLineArray1;

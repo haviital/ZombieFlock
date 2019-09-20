@@ -62,6 +62,8 @@ public class MainDay extends State {
         //System.gc();
         System.out.println("init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
 
+        Main.screen.loadPalette(Pico8.palette());
+        
         Main.screen.cameraX = 0;
         Main.screen.cameraY = 0;
         
@@ -94,17 +96,20 @@ public class MainDay extends State {
         for(int i=0; i < Common.MAX_ENEMIES; i++, j++)
         {
             Common.enemies[j] = new EnemyEntity();
-            Common.enemies[j].run();
         }
         Common.enemies[0].x = 110;
         Common.enemies[0].followHeroOffsetX = 0;
         Common.enemies[0].followHeroOffsetY = Common.SKELETON_OFFSET_Y;
+        Common.enemies[0].run();
         Common.enemies[1].x = 110;
         Common.enemies[1].followHeroOffsetX = -12;
         Common.enemies[1].followHeroOffsetY = Common.SKELETON_OFFSET_Y-20;
+        Common.enemies[1].run2();
         Common.enemies[2].x = 110;
         Common.enemies[2].followHeroOffsetX = 12;
         Common.enemies[2].followHeroOffsetY = Common.SKELETON_OFFSET_Y-25;
+        Common.enemies[2].run();
+        Common.enemies[2].setMirrored(true);
 
         Common.tilemap = new map();
         
@@ -133,8 +138,8 @@ public class MainDay extends State {
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
         //!!HV
-        Common.totalBeanCount = 500;
-        Common.heroEntity.y = 95*16;
+        //Common.totalBeanCount = 500;
+        //Common.heroEntity.y = 95*16;
     }
     
     // 
@@ -332,8 +337,8 @@ public class MainDay extends State {
         int winW = 220;
         int winH = 2*30;
         int marginV = 2;
-        Main.screen.fillRect( winX, winY, winW, winH, 15 );
-        Main.screen.fillRect( winX,  winY+marginV, winW, winH-(marginV*2), 13 );
+        
+        Main.DrawPanel(winX, winY, winW, winH);
         
         int startCoffeeX = (int)Main.screen.cameraX + 80;
         int startCoffeeY = (int)Main.screen.cameraY + winY + 10;
