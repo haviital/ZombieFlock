@@ -100,6 +100,35 @@ class HeroEntity extends Hero
 
     void checkCollision()
     {
+        // Check out of tilemap end
+        if( y > Common.tilemap.height()*16)
+        {
+            // End the day level
+            
+            // Collected beans are lost! Only stored beans are counted.
+            mainDay.currentBeanCount = mainDay.storedBeanCount;
+            
+            // How much bean stored in the tower?
+            if(mainDay.currentBeanCount<40)
+            {
+                // Not enough beans!
+                mainDay.isGameOver = true;
+            }
+            else
+            {
+                // Won the day field!
+                mainDay.isWon = true;
+                Common.totalBeanCount = mainDay.currentBeanCount;
+            }
+        
+        }
+
+        // Check out of screen edges.
+        if( x < 0 )
+            x = 0;
+        if( x > 220 - width() )
+            x = 220 - width();
+
         float heroX = x + halfWidth;
         int tileXIndex = ((int)heroX) >> 4;
         float heroY = y + halfHeight;
@@ -152,7 +181,6 @@ class HeroEntity extends Hero
                 
         if(isIntersection)
         {
-            float halfTilemapHeight = (Common.tilemap.height() / 2) *16;
             mainDay.isGameOver = true;
         }
 
@@ -175,21 +203,33 @@ class HeroEntity extends Hero
 
             if(heroY < halfTilemapHeight)
             {
+                // First tower
+                
                 // Collision to castle. Going to checkpoint mode.
                 mainDay.continueAt = 0; // no time yet
-                mainDay.dialogBeanCount = 0;
+                mainDay.storedBeanCount = 0;
                 mainDay.state = mainDay.STATE_IN_CHECKPOINT;
                 //System.out.println("isIntersection = true");
             }
             else
             {
-                // Won the day field!
-                mainDay.isWon = true;
-                Common.totalBeanCount += mainDay.currentBeanCount;
+                // Last tower
+                if(mainDay.currentBeanCount<40)
+                {
+                    // Not enough beans!
+                    mainDay.isGameOver = true;
+                }
+                else
+                {
+                    // Won the day field!
+                    mainDay.isWon = true;
+                    Common.totalBeanCount = mainDay.currentBeanCount;
+                }
+                
             }
         }
-
-        // Store prev values 
+        
+       // Store prev values 
         prevTileID = tileId;
    }
     

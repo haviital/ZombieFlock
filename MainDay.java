@@ -1,4 +1,3 @@
-
 import femto.mode.HiRes16Color;
 import femto.Game;
 import femto.State;
@@ -52,7 +51,7 @@ public class MainDay extends State {
     int state = STATE_PLAYING;
     long continueAt; // infinite
     long currentBeanCount;
-    long dialogBeanCount;  //!!HV
+    long storedBeanCount;  //!!HV
     float castleX;
     float castleY;
    
@@ -138,8 +137,8 @@ public class MainDay extends State {
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
         //!!HV
-        //Common.totalBeanCount = 500;
-        //Common.heroEntity.y = 95*16;
+        currentBeanCount = 500;
+        Common.heroEntity.y = 95*16;
     }
     
     // 
@@ -243,17 +242,11 @@ public class MainDay extends State {
         }
         
         // Print time meter
-        float normalizedTimeLeft = ((float)Common.LEVEL_TIMEOUT - Common.currentFrameStartTimeMs) / (float)Common.LEVEL_TIMEOUT;
-        if(normalizedTimeLeft <= 0) 
-        {
-            if(!isGameOver)
-            {
-                //isWon = true;
-                //isGameOver = true;
-            }
-            normalizedTimeLeft = 0;
-        }
-        timeMeterEntity.drawMeter( Main.screen, normalizedTimeLeft );
+        float normalizedDistanceToEnd = 
+            (((float)Common.tilemap.height()*16) - (float)(Common.heroEntity.y+Common.heroEntity.height())) / ((float)Common.tilemap.height()*16);
+        if(normalizedDistanceToEnd < 0) 
+            normalizedDistanceToEnd = 0;
+        timeMeterEntity.drawMeter( Main.screen, normalizedDistanceToEnd );
             
         // Draw the winner or loser dialog
         if(isWon)
@@ -292,10 +285,10 @@ public class MainDay extends State {
     {
         
         // Update
-        dialogBeanCount += 1;
-        if(dialogBeanCount > currentBeanCount)
+        storedBeanCount += 1;
+        if(storedBeanCount > currentBeanCount)
         {
-            dialogBeanCount = currentBeanCount;
+            storedBeanCount = currentBeanCount;
             
             //  Beans have been counted
             if(continueAt == 0)
@@ -329,17 +322,17 @@ public class MainDay extends State {
 
         Main.screen.textColor = 14;
         Main.screen.setTextPosition( px+1, py );
-        Main.screen.print((int)dialogBeanCount);
+        Main.screen.print((int)storedBeanCount);
         Main.screen.setTextPosition( px-1, py );
-        Main.screen.print((int)dialogBeanCount);
+        Main.screen.print((int)storedBeanCount);
         Main.screen.setTextPosition( px, py+1 );
-        Main.screen.print((int)dialogBeanCount);
+        Main.screen.print((int)storedBeanCount);
         Main.screen.setTextPosition( px, py-1 );
-        Main.screen.print((int)dialogBeanCount);
+        Main.screen.print((int)storedBeanCount);
 
         Main.screen.setTextPosition( px, py );
         Main.screen.textColor = 3;
-        Main.screen.print((int)dialogBeanCount);
+        Main.screen.print((int)storedBeanCount);
     }
 
     //
@@ -369,11 +362,23 @@ public class MainDay extends State {
         if(Common.totalCoffeeCount > 4)
             coffee.draw(Main.screen, startCoffeeX + 80, startCoffeeY);
             
-        Main.screen.setTextPosition( winX+15, winY + 30);
+        Main.drawTextCellCentered( winX, winY + 30, winW, "That is your supply for the night!" );
+        Main.drawTextCellCentered( winX, winY + 45, winW, "   Continue" );
+        
+        // Button
+        float fullTextWidth = Main.screen.textWidth("A  Continue");
+        float currX = winX + (winW/2) - (fullTextWidth/2);
+        float currY = winY + 45;
+        Common.uiButtonImage.draw( Main.screen, (int)(currX-6), currY - 5, false, false, true );
+
+        // "A"
+        String text = "A";
+        Main.screen.setTextPosition( currX+1, currY+1 );
+        Main.screen.textColor = 1;
+        Main.screen.print( text );
+        Main.screen.setTextPosition( currX, currY );
         Main.screen.textColor = 3;
-        Main.screen.print("That is your supply for the night!");
-        Main.screen.setTextPosition( winX+5+60, winY  + 45);
-        Main.screen.print("Continue (A)?");
+        Main.screen.print(  text);
     }
 
 }

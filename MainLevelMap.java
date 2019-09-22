@@ -88,6 +88,8 @@ public class MainLevelMap extends State
             {
                 // Go on to the night level.
                 Common.currentDay = dayNum;
+                Common.totalBeanCount = 0;
+                Common.totalCoffeeCount = 0;
                 Game.changeState( new MainDay() );
             }
         }

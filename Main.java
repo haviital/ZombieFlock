@@ -110,6 +110,8 @@ public class Main extends State {
         Common.panelImage7 = new Panel7();
         Common.panelHighLightImage = new PanelHighLight();
 
+        Common.uiButtonImage = new UiButton();
+        
         Common.currentDay = 1;
         Game.run( TIC80.font(), new MainStartupScreen() );
         //Game.run( TIC80.font(), new MainDay() );
@@ -358,7 +360,7 @@ public class Main extends State {
         // Print day number
         Main.screen.setTextPosition( 220-(7*6), 0 );
         Main.screen.textColor = 3;
-        Main.screen.print("Day: " + (int)Common.currentDay + 1 );
+        Main.screen.print("Day: " + (int)(Common.currentDay + 1) );
         
         // print fps
         screen.setTextPosition( 0, 0 );
@@ -569,7 +571,7 @@ public class Main extends State {
         float fullTextWidth = Main.screen.textWidth(text);
         float currX = cellX + (cellWidth/2) - (fullTextWidth/2);
         float currY = cellY;
-        Main.screen.setTextPosition( currX-1, currY-1 );
+        Main.screen.setTextPosition( currX+1, currY+1 );
         Main.screen.textColor = 1;
         Main.screen.print( text );
         Main.screen.setTextPosition( currX, currY );

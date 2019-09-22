@@ -26,7 +26,8 @@
 			"-I${appPath}/javacompiler/pokitto/includes",
 			"-I${projectPath}",
 			"-mcpu=cortex-m0plus",
-			"-mthumb"
+			"-mthumb",
+			"--defsym=_OSCT=2"
 		]
 	},
 	"CPPFlags": {
@@ -55,7 +56,8 @@
 			"-fno-delete-null-pointer-checks",
 			"-mcpu=cortex-m0plus",
 			"-mthumb",
-			"-Wno-psabi"
+			"-Wno-psabi",
+			"-D_OSCT=2"
 		],
 		"Desktop": [
 			"-I${appPath}/javacompiler/desktop/includes",
@@ -944,6 +946,18 @@
 		},
 		"\\ZombieFlock.bin.all_sounds": {
 			"sdcard": false
+		},
+		"\\Lock - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Button.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\UiButton.png": {
+			"sdcard": false,
+			"implements": ""
 		}
 	}
 }

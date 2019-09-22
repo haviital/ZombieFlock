@@ -37,6 +37,7 @@ class Common
     static Panel6 panelImage6;
     static Panel7 panelImage7;
     static PanelHighLight panelHighLightImage;
+    static UiButton uiButtonImage;
     
     public static void freeResources()
     {
