@@ -324,7 +324,20 @@ public class MainDay extends State {
         }
         
         // 
-        Main.screen.setTextPosition( castleX + 10 - Main.screen.cameraX, castleY + 30 - Main.screen.cameraY );
+        float px = castleX + 23 - Main.screen.cameraX;
+        float py = castleY + 20 - Main.screen.cameraY;
+
+        Main.screen.textColor = 14;
+        Main.screen.setTextPosition( px+1, py );
+        Main.screen.print((int)dialogBeanCount);
+        Main.screen.setTextPosition( px-1, py );
+        Main.screen.print((int)dialogBeanCount);
+        Main.screen.setTextPosition( px, py+1 );
+        Main.screen.print((int)dialogBeanCount);
+        Main.screen.setTextPosition( px, py-1 );
+        Main.screen.print((int)dialogBeanCount);
+
+        Main.screen.setTextPosition( px, py );
         Main.screen.textColor = 3;
         Main.screen.print((int)dialogBeanCount);
     }

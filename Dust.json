@@ -1,42 +1,50 @@
 { "frames": [
    {
-    "filename": "Enemy 0.png",
+    "filename": "Dust 0.png",
     "frame": { "x": 0, "y": 0, "w": 12, "h": 10 },
     "rotated": false,
     "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 16 },
-    "sourceSize": { "w": 14, "h": 16},
-    "duration": 100
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 10 },
+    "sourceSize": { "w": 12, "h": 10},
+    "duration": 150
    },
    {
-    "filename": "Enemy 1.png",
-    "frame": { "x": 0, "y": 16, "w": 14, "h": 16 },
+    "filename": "Dust 1.png",
+    "frame": { "x": 0, "y": 10, "w": 12, "h": 9 },
     "rotated": false,
     "trimmed": false,
-    "spriteSourceSize": { "x":0, "y": 0, "w": 14, "h": 16 },
-    "sourceSize": { "w": 14, "h": 16},
-    "duration": 100
+    "spriteSourceSize": { "x":0, "y": 0, "w": 12, "h": 9 },
+    "sourceSize": { "w": 12, "h": 9},
+    "duration": 150
    },
    {
-    "filename": "Enemy 1.png",
-    "frame": { "x": 0, "y": 16, "w": 14, "h": 16 },
+    "filename": "Dust 2.png",
+    "frame": { "x": 0, "y": 19, "w": 12, "h": 6 },
     "rotated": false,
     "trimmed": false,
-    "spriteSourceSize": { "x":0, "y": 0, "w": 14, "h": 16 },
-    "sourceSize": { "w": 14, "h": 16},
-    "duration": 100
+    "spriteSourceSize": { "x":0, "y": 0, "w": 12, "h": 6 },
+    "sourceSize": { "w": 12, "h": 6},
+    "duration": 150
+   },
+   {
+    "filename": "Dust 3.png",
+    "frame": { "x": 0, "y": 19, "w": 2, "h": 2 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x":0, "y": 0, "w": 2, "h": 2 },
+    "sourceSize": { "w": 2, "h": 2},
+    "duration": 60000
    }
  ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.9",
-  "image": "Enemy.png",
+  "image": "Dust.png",
   "format": "RGBA8888",
   "size": { "w": 14, "h": 16 },
   "scale": "1",
   "frameTags": [
-   { "name": "run", "from": 0, "to": 1, "direction": "forward" },
-   { "name": "run2", "from": 0, "to": 1, "direction": "backward" }
+   { "name": "run", "from": 0, "to": 3, "direction": "forward" }
   ],
   "layers": [
    { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }

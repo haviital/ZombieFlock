@@ -7,6 +7,24 @@ import Common;
 class HeroEntity extends Hero 
 {
    
+    static final long DUST_COUNT = 8;
+    static final long DUST_PERIOD_MS = 75;
+   
+    public float velX;
+    public float velY;
+    public float halfWidth;
+    public float halfHeight;
+    Beans beansImage;
+    Crash crashSprite;
+    Dust[] dustArray;
+    long currenDustIndex;
+    long dustTime;
+    long stopUntilTime;
+    MainDay mainDay;
+    int prevTileID;
+    float prevY;
+    float dustHalfWidth;
+
     HeroEntity(MainDay mainDayPar) 
     { 
         velX = 2;
@@ -20,6 +38,11 @@ class HeroEntity extends Hero
         crashSprite = new Crash();
         crashSprite.run();
         mainDay = mainDayPar;
+        dustArray = new Dust[DUST_COUNT]; //
+        for( int i=0; i < DUST_COUNT; i++ )
+            dustArray[i] = new Dust();
+        currenDustIndex = 0;
+        dustHalfWidth = dustArray[0].width() / 2;
     }
     
     void update(HiRes16Color screen)
@@ -56,6 +79,19 @@ class HeroEntity extends Hero
         //    for(int i=0; i < Common.MAX_ENEMIES; i++)
         //        Common.enemies[i].y += velY;
         //}
+        
+        // Dust
+        if( dustTime < Common.currentFrameStartTimeMs )
+        {
+            currenDustIndex += 1;
+            if( currenDustIndex >= DUST_COUNT)
+                currenDustIndex = 0;
+            dustArray[currenDustIndex].x = x +  halfWidth - dustHalfWidth;
+            dustArray[currenDustIndex].y = y + height() - dustArray[currenDustIndex].height();
+            dustArray[currenDustIndex].endFrame = 0;  // Causes reset in run()
+            dustArray[currenDustIndex].run();
+            dustTime = Common.currentFrameStartTimeMs + DUST_PERIOD_MS;
+        }
         
        // check checkCollision
         checkCollision();
@@ -159,21 +195,14 @@ class HeroEntity extends Hero
     
     void drawMe(HiRes16Color screen)
     {
-        float previousY = y;
+        // Draw dust
+        for( int i=0; i < DUST_COUNT; i++ )
+            dustArray[i].draw(screen);
+        
+        
+        // draw hero
         draw(screen, x, y );
-        y = previousY;
     }
     
-    public float velX;
-    public float velY;
-    public float halfWidth;
-    public float halfHeight;
-    Beans beansImage;
-    Crash crashSprite;
-    long stopUntilTime;
-    MainDay mainDay;
-    int prevTileID;
-    float prevY;
-
 }
 

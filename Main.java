@@ -358,7 +358,7 @@ public class Main extends State {
         // Print day number
         Main.screen.setTextPosition( 220-(7*6), 0 );
         Main.screen.textColor = 3;
-        Main.screen.print("Day: " + (int)Common.currentDay );
+        Main.screen.print("Day: " + (int)Common.currentDay + 1 );
         
         // print fps
         screen.setTextPosition( 0, 0 );
@@ -479,11 +479,8 @@ public class Main extends State {
         winnerImage.draw(Main.screen, 110 - 13,  winY + marginV + 2);
         winnerImage.draw(Main.screen, 110 + 23,  winY + marginV + 2);
 
-        Main.screen.setTextPosition( winX, winY + 30);
-        Main.screen.textColor = 3;
-        Main.screen.print("    You made it throught the night!");
-        Main.screen.setTextPosition( winX, winY  + 45);
-        Main.screen.print("     Continue to the next day (A)?");
+        Main.drawTextCellCentered( winX, winY + 30, winW, "You made it throught the night!" );
+        Main.drawTextCellCentered( winX, winY + 43, winW, "Continue to the next day (A)?" );
 
         //Main.screen.setTextPosition( 80, 88  + 15);
         //Main.screen.textColor = 3;
@@ -501,13 +498,9 @@ public class Main extends State {
         int marginV = 2;
         DrawPanel(winX, winY, winW, winH);
         
-        screen.setTextPosition( winX,   winY + 10);
-        screen.textColor = 3;
-        screen.print("      You lost! Undeads will rule");
-        screen.setTextPosition( winX,   winY + 20);
-        screen.print("  the world with the power of coffee!");
-        screen.setTextPosition( winX, winY + 40);
-        screen.print("             Restart (A)?");
+        Main.drawTextCellCentered( winX, winY + 10, winW, "You lost! Undeads will rule" );
+        Main.drawTextCellCentered( winX, winY + 20, winW, "the world with the power of coffee!" );
+        Main.drawTextCellCentered( winX, winY + 40, winW, "Restart (A)?" );
     }
 
     public static int getNextFreeEvent()
@@ -568,6 +561,21 @@ public class Main extends State {
         
         // Draw the hightlight
         Common.panelHighLightImage.draw( Main.screen, x+8, y+6, false, false, true );
+    }
+    
+    
+    public static void drawTextCellCentered( float cellX, float cellY, float cellWidth, String text)    
+    {
+        float fullTextWidth = Main.screen.textWidth(text);
+        float currX = cellX + (cellWidth/2) - (fullTextWidth/2);
+        float currY = cellY;
+        Main.screen.setTextPosition( currX-1, currY-1 );
+        Main.screen.textColor = 1;
+        Main.screen.print( text );
+        Main.screen.setTextPosition( currX, currY );
+        Main.screen.textColor = 3;
+        Main.screen.print(  text);
+        
     }
 
 }
