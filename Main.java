@@ -54,7 +54,6 @@ public class Main extends State {
     // Images
     Coffee coffee; // an animated sprite imported from Aseprite
     Pattern background; // static image
-    Bubble bubbleImage;
     Castle castleImage;
     Zombie zombieWithCoffee;
     Winner winnerImage;
@@ -110,6 +109,12 @@ public class Main extends State {
         Common.panelImage7 = new Panel7();
         Common.panelHighLightImage = new PanelHighLight();
 
+        Common.bubbleImage =  new Bubble();
+        Common.bubbleVertImage =  new BubbleVert();
+        Common.bubbleHorizImage =  new BubbleHoriz();
+        Common.bubbleCornerImage =  new BubbleCorner();
+        Common.bubbleTipImage =  new BubbleTip();
+        Common.mattiImage = new Matti(); 
         Common.uiButtonImage = new UiButton();
         
         Common.currentDay = 1;
@@ -137,7 +142,6 @@ public class Main extends State {
         
         //
         background = new Pattern();
-        bubbleImage =  new Bubble();
         castleImage = new Castle();
         barH = new HorizBarEntity(0, 88-2);
         barV = new VertBarEntity(110-2, 0);
@@ -208,7 +212,7 @@ public class Main extends State {
         textLineArray2[4] = "MORE COFFEE!";
         textLineArray1[5] = "Hey! How are";
         textLineArray2[5] = "you today?";
-        //Common.events[getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, bubbleImage, textLineArray1, textLineArray2, arrCount );
+        //Common.events[getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
         
         // Set Common.events for random sounds.
         Common.events[getNextFreeEvent()].setSfxEvent((long)3*1000, sfx2, 15000, 40000 );
@@ -565,6 +569,47 @@ public class Main extends State {
         Common.panelHighLightImage.draw( Main.screen, x+8, y+6, false, false, true );
     }
     
+    public static void drawBubble(int x, int y, int w, int h)
+    {
+        // Fill the center area.
+        Main.screen.fillRect( x+4, y+4, w-8, h-8, 2 );
+
+        // Draw edges
+        int count = (w-4-4) / 16;
+        for( int i=0; i<count; i+=1 )
+        {
+            // Top and bottom edge
+            Common.bubbleHorizImage.draw(Main.screen, x + 4 + (i*16),  y, false, false, true);
+            Common.bubbleHorizImage.draw(Main.screen, x + 4 + (i*16),  y + h - 4, false, true, true);
+        }
+        // Draw last piece
+        if(count>0)
+        {
+            Common.bubbleHorizImage.draw(Main.screen, x + w - 20,  y, false, false, true); 
+            Common.bubbleHorizImage.draw(Main.screen, x + w - 20,  y + h - 4, false, true, true );
+        }
+        
+        count = (h - 4 - 4) / 16;
+        for( int j=0; j<count; j+=1 )
+        {
+            // Left and right edge
+            Common.bubbleVertImage.draw(Main.screen, x,          y + 4 + (j*16), false, false, true);
+            Common.bubbleVertImage.draw(Main.screen, x + w - 4,  y + 4 + (j*16), true, false, true);
+        }
+        // Draw last piece
+        if(count>0)
+        {
+            Common.bubbleVertImage.draw(Main.screen, x,           y + h - 4 - 16, false, false, true); 
+            Common.bubbleVertImage.draw(Main.screen, x + w - 4,   y + h - 4 - 16, true, false, true); 
+        }
+        
+        // Draw corners
+        Common.bubbleCornerImage.draw(Main.screen, x,  y, false, false, true);
+        Common.bubbleCornerImage.draw(Main.screen, x + w - 4,  y, true, false, true);
+        Common.bubbleCornerImage.draw(Main.screen, x,  y + h - 4, false, true, true);
+        Common.bubbleCornerImage.draw(Main.screen, x + w - 4,  y + h - 4, true, true, true);
+    }
+    
     
     public static void drawTextCellCentered( float cellX, float cellY, float cellWidth, String text)    
     {
@@ -578,6 +623,60 @@ public class Main extends State {
         Main.screen.textColor = 3;
         Main.screen.print(  text);
         
+    }
+    
+    public static void drawButtonAndLabel( float winX, float winY, float cellWidth, String text, String buttonName)    
+    {
+        // Draw the C button text
+        //int winX = 0;
+        //int winY = 176-16;
+        //int winW = 220;
+        //String text = "   Menu";
+        Main.drawTextCellCentered( winX, winY, cellWidth, text );
+        
+        // Button
+        float fullTextWidth = Main.screen.textWidth(text);
+        float currX = winX + (cellWidth/2) - (fullTextWidth/2);
+        float currY = winY;
+        Common.uiButtonImage.draw( Main.screen, (int)(currX-4), currY - 3, false, false, true );
+        //System.out.println("x="+(int)(currX-4)+", y="+(currY - 3));
+
+        // "A"
+        //String label = text.substring( 0, 1 );
+        //System.out.println("label="+label);
+        Main.screen.setTextPosition( currX+1, currY+1 );
+        Main.screen.textColor = 1;
+        Main.screen.print( buttonName );
+        Main.screen.setTextPosition( currX, currY );
+        Main.screen.textColor = 3;
+        Main.screen.print( buttonName );
+    }
+
+    public static void printBackStory()    
+    {
+        drawBubble(5,5,210,100);
+        
+        // Draw tip
+        Common.bubbleTipImage.draw(Main.screen, 110,  5 + 100 - 4, true, false, true);
+        
+        // Draw Matti
+        Common.mattiImage.draw(Main.screen, 220-Common.mattiImage.width(),  176-Common.mattiImage.height(), true, false, true);
+        
+        int currX = 10; 
+        int currY = 10;
+        int incY = 10;
+        Main.screen.setTextPosition( currX, currY );
+        
+          //               123456789#123456789#123456789#123456789    
+        Main.screen.print("The climate change has destroyed");  currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("all except one coffee farm in");  currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("the world. You have the last");   currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("healthy farm! Just unfortunately");       currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("it locates on the ancient indian");      currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("graveyard, which has consquences."); currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("The other problem is that people");  currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("are hungry for coffee, and that");   currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("turn them to zombies at night!");    currY += incY; Main.screen.setTextPosition( currX, currY );
     }
 
 }

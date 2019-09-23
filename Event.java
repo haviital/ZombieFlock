@@ -166,17 +166,17 @@ class Event
             waitingForEvent = EVENT_END_TUTORIAL_BUBBLE;
             isDrawingState = true; 
             phase = 0;
-            phaseTimePeriod = (long)(4*1000);
+            phaseTimePeriod = (long)(2*1000);
             phaseEndTime = Common.currentFrameStartTimeMs + phaseTimePeriod;
             phaseCheckPointTimePeriod = (long)(2*1000);
             phaseCheckPointTime = Common.currentFrameStartTimeMs + phaseCheckPointTimePeriod;
-            lastPhase = arrCount/2 - 1; // the rest are random thoughts
+            lastPhase = arrCount; // the rest are random thoughts
             
             // Random thoughts?
             if(Math.random( 0, 30 ) == 1)
             {
-                int thoughtNum = Math.random( 0, 3 );
-                lastPhase = 0;  // Only one bubble.
+                //int thoughtNum = Math.random( 0, 3 );
+                //lastPhase = 0;  // Only one bubble.
                 
                 // Copy random a thought
                 //textLineArray1[0] = textLineArray1[arrCount/2 + thoughtNum];
@@ -245,7 +245,7 @@ class Event
                 phaseEndTime = Common.currentFrameStartTimeMs + (long)(500);
                 //!!HV TEST
                 System.out.println("phase++ ***********");
-                if(phase>lastPhase)
+                if(phase>=lastPhase)
                 {
                     clear(); // end event
                     System.out.println("end ***********");
@@ -319,15 +319,19 @@ class Event
             {
                 phase++;
                 phaseEndTime = Common.currentFrameStartTimeMs + phaseTimePeriod;
+                System.out.println("wait: EVENT_END_TUTORIAL_BUBBLE. phase="+phase+", last phase="+lastPhase);
                 phaseCheckPointTime = Common.currentFrameStartTimeMs + phaseCheckPointTimePeriod;
                 if(phase>lastPhase)
+                {
+                    System.out.println("wait: EVENT_END_TUTORIAL_BUBBLE. ==> END");
                     clear(); // end event
+                }
             }
             
             // Draw bubble until the checkpoint time.
             if(waitingForEvent != EVENT_NONE && phaseCheckPointTime > Common.currentFrameStartTimeMs)
             {
-                image.draw(screen, 100, 60);
+                image.draw(screen, 100, 60, false, false, true);
                 screen.setTextPosition( 100+5, 60+5 );
                 screen.textColor = 0;
                 screen.print(textLineArray1[phase]);

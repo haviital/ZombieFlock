@@ -25,7 +25,6 @@ public class MainDay extends State {
 
     
     // Images
-    Bubble bubbleImage;
     Winner winnerImage;
     CastleDay castleDayImage;
     Coffee coffee; 
@@ -71,7 +70,6 @@ public class MainDay extends State {
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         
         //
-        bubbleImage =  new Bubble();
         timeMeterEntity =  new TimeMeterEntity();
         winnerImage = new Winner();
         castleDayImage = new CastleDay();
@@ -112,6 +110,28 @@ public class MainDay extends State {
 
         Common.tilemap = new map();
         
+        // Initialize tutoriel bubbles
+        if( Common.isTutorialActive )
+        {
+            int arrCount = 6;
+            String textLineArray1[] = new String[arrCount];
+            String textLineArray2[] = new String[arrCount];
+            //                  "12345678901"
+            textLineArray1[0] = "Move to left";
+            textLineArray2[0] = "and right to";
+            textLineArray1[1] = "collect ";
+            textLineArray2[1] = "beans.";
+            textLineArray1[2] = "Get enough";
+            textLineArray2[2] = "coffee to";
+            textLineArray1[3] = "survive the";
+            textLineArray2[3] = "night!";
+            textLineArray1[4] = "Beware of";
+            textLineArray2[4] = "skeletons";
+            textLineArray1[5] = "and avoid";
+            textLineArray2[5] = "bushes.";
+            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
+        }
+        
         // sfx1 = new arrigd_zombie_roar_3(0);
         // sfx2 = new breviceps_zombie_gargles(0);
         // sfx3 = new crocytc_zombie3(0);
@@ -137,8 +157,8 @@ public class MainDay extends State {
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
         //!!HV
-        currentBeanCount = 500;
-        Common.heroEntity.y = 95*16;
+        //currentBeanCount = 500;
+        //Common.heroEntity.y = 95*16;
     }
     
     // 
@@ -341,7 +361,7 @@ public class MainDay extends State {
         int winX = 0;
         int winY = 88-30;
         int winW = 220;
-        int winH = 2*30;
+        int winH = 2*30 + 3;
         int marginV = 2;
         
         Main.DrawPanel(winX, winY, winW, winH);
@@ -369,7 +389,7 @@ public class MainDay extends State {
         float fullTextWidth = Main.screen.textWidth("A  Continue");
         float currX = winX + (winW/2) - (fullTextWidth/2);
         float currY = winY + 45;
-        Common.uiButtonImage.draw( Main.screen, (int)(currX-6), currY - 5, false, false, true );
+        Common.uiButtonImage.draw( Main.screen, (int)(currX-4), currY - 3, false, false, true );
 
         // "A"
         String text = "A";

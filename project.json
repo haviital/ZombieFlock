@@ -958,6 +958,52 @@
 		"\\UiButton.png": {
 			"sdcard": false,
 			"implements": ""
+		},
+		"\\UiButton - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\EnemyEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\MenuDlg.java": {
+			"sdcard": false
+		},
+		"\\Matti.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bubble - Copy (2).png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bubble - Copy (3).png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bubble - Copy (4).png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BubbleCorner.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BubbleHoriz.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BubbleVert.png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\Bubble (2).png": {
+			"implements": "",
+			"sdcard": false
+		},
+		"\\BubbleTip.png": {
+			"implements": "",
+			"sdcard": false
 		}
 	}
 }

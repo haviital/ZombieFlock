@@ -14,6 +14,16 @@ import Event;
 public class MainStartupScreen extends State 
 {
     
+    // Member data
+     TitleBrew titleBrewImage;
+     TitleCup titleCupImage;
+     TitleHands titleHandsImage;
+     TitleOfTheUndead titleOfTheUndeadImage;
+     missozzy_zombie_02 soundEffect;
+     long programStartTimeMs; // the start time of the program
+     MenuDlg menuDlg;
+     boolean doPrintBackStory;
+     
     // Avoid allocation in a State's constructor.
     // Allocate on init instead.
     void init(){
@@ -42,10 +52,10 @@ public class MainStartupScreen extends State
         // Create image animation events.
         Common.events[0].setMoveAnimEvent(3*1000, 8*1000,  0,  70,  0,  4, titleHandsImage, null, false, 2, 2 );
         Common.events[1].setGfxPrimitiveMoveAnimEvent(0, 999*1000,  0, 70, 0, 70,  
-                Event.GFX_PRIMITIVE_RECT, 220, 176 , 8, false );
+                Event.GFX_PRIMITIVE_RECT, 220, 176 , 12, false );
         Common.events[2].setMoveAnimEvent(0, 2*1000,  -titleCupImage.width(), 70,  2, 70, titleCupImage, null, false, 0, 0 );
         Common.events[3].setMoveAnimEvent(0, 2*1000, 220, 78, 76, 78, titleBrewImage, null, false, 0, 0 );
-        Common.events[4].setMoveAnimEvent(2*1000, 3*1000,  2,176,  2,137, titleOfTheUndeadImage, null, false, 0, 0 );
+        Common.events[4].setMoveAnimEvent(2*1000, 3*1000,  2,176,  2,135, titleOfTheUndeadImage, null, false, 0, 0 );
         
         Common.events[5].setSfxEvent( 4*1000, soundEffect, 0, 0 ); 
 
@@ -65,12 +75,37 @@ public class MainStartupScreen extends State
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
 
         // Change to a new state when A is pressed
-        if( Button.A.justPressed() )
+        if( ( menuDlg == null  && Button.A.justPressed() ) ||
+            ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 0 ) || // Selected "Play" in the menu
+            ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 1 ) // Selected "Tutorial" in the menu
+        )
         {
+            if( menuDlg != null && menuDlg.focusIndex == 1)
+                Common.isTutorialActive = true;
+            
             // Restart the game
             Common.totalBeanCount = 0;
             Common.totalCoffeeCount = 0;
             Game.changeState( new MainLevelMap() );
+        }
+            
+        if( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 2 ) // Selected "Info" in the menu
+        {
+            doPrintBackStory = true;
+            //printBackStory() 
+        }
+            
+        // 
+        if( Button.C.justPressed() )
+        {
+            int arrCount = 3;
+            String textLineArray[] = new String[arrCount];
+            textLineArray[0] = "Play";
+            textLineArray[1] = "Tutorial";
+            textLineArray[2] = "Info";
+
+            //
+            menuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, textLineArray );
         }
             
         // *** UPDATE
@@ -101,32 +136,44 @@ public class MainStartupScreen extends State
             }
         }
 
+        if( menuDlg != null )
+            menuDlg.update();
+
         // *** DRAW
         
-        // Draw status pane background.
-        Main.screen.fillRect(0,0, 220, 80, 11 );
-        //Main.screen.fillRect(0,70, 220, 176, 8 );
-
-        // Draw Common.events
-        for(int i=0; i < Common.MAX_EVENTS; i++)
+        if( doPrintBackStory )
         {
-            if(!Common.events[i].isFree() && Common.events[i].isDrawingState)
-                Common.events[i].draw(Main.screen);
+            Main.screen.clear( 12 );
+            Main.printBackStory(); 
+        }
+        else
+        {
+            // Draw status pane background.
+            Main.screen.fillRect(0,0, 220, 80, 11 );
+            //Main.screen.fillRect(0,70, 220, 176, 8 );
+    
+            // Draw Common.events
+            for(int i=0; i < Common.MAX_EVENTS; i++)
+            {
+                if(!Common.events[i].isFree() && Common.events[i].isDrawingState)
+                    Common.events[i].draw(Main.screen);
+            }
+            
+            //
+            
+            //
+            Main.drawButtonAndLabel( 0, 176-14, 220, "C  Menu", "C");
+    
+            // Draw menu if open
+            if( menuDlg != null )
+                menuDlg.draw();
         }
         
-
         // Update the screen with everything that was drawn
         Main.screen.flush();
     }
  
  
-    // Member data
-     TitleBrew titleBrewImage;
-     TitleCup titleCupImage;
-     TitleHands titleHandsImage;
-     TitleOfTheUndead titleOfTheUndeadImage;
-     missozzy_zombie_02 soundEffect;
-     long programStartTimeMs; // the start time of the program
 }
 
 

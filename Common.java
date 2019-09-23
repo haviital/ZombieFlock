@@ -38,6 +38,14 @@ class Common
     static Panel7 panelImage7;
     static PanelHighLight panelHighLightImage;
     static UiButton uiButtonImage;
+    static Bubble bubbleImage;
+    static BubbleVert bubbleVertImage;
+    static BubbleHoriz bubbleHorizImage;
+    static BubbleCorner bubbleCornerImage;
+    static BubbleTip bubbleTipImage;
+    static Matti mattiImage;
+    
+    static boolean isTutorialActive;
     
     public static void freeResources()
     {

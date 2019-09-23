@@ -29,6 +29,8 @@ class HeroEntity extends Hero
     { 
         velX = 2;
         velY = 2 + (Common.currentDay * 0.3 );
+        if( Common.isTutorialActive )
+            velY /= 2;  // Slow down in tutorial mode.
         halfWidth = width() / 2;
         halfHeight = height() / 2;
         x = 110;
