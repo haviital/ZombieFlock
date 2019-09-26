@@ -1004,6 +1004,23 @@
 		"\\BubbleTip.png": {
 			"implements": "",
 			"sdcard": false
+		},
+		"\\Bat2.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\bat3.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\LICENSE - Copy": {
+			"sdcard": false
+		},
+		"\\LICENSE.MIT": {
+			"sdcard": false
+		},
+		"\\LICENSE.readme": {
+			"sdcard": false
 		}
 	}
 }

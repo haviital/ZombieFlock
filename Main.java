@@ -1,17 +1,4 @@
-// Code: by Hannu Viitala, MIT license. 
-
-// Graphics:
-// @hanski, CCBY 3.0
-// @vampirics, CCBY 3.0
-
-// Sounds from Freesound.org:
-// Breviceps, CC0 1.0
-// CrocyTC, CC0 1.0
-// ArriGD, CC0 1.0
-// Missozzy, CCBY 3.0
-// Missozzy, CCBY 3.0
-// Thanra, CC0 1.0
-
+//
 import femto.mode.HiRes16Color;
 import femto.Game;
 import femto.State;
