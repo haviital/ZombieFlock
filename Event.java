@@ -170,7 +170,7 @@ class Event
             phaseEndTime = Common.currentFrameStartTimeMs + phaseTimePeriod;
             phaseCheckPointTimePeriod = (long)(2*1000);
             phaseCheckPointTime = Common.currentFrameStartTimeMs + phaseCheckPointTimePeriod;
-            lastPhase = arrCount; // the rest are random thoughts
+            lastPhase = arrCount-1; // the rest are random thoughts
             
             // Random thoughts?
             if(Math.random( 0, 30 ) == 1)
@@ -331,12 +331,32 @@ class Event
             // Draw bubble until the checkpoint time.
             if(waitingForEvent != EVENT_NONE && phaseCheckPointTime > Common.currentFrameStartTimeMs)
             {
-                image.draw(screen, 100, 60, false, false, true);
-                screen.setTextPosition( 100+5, 60+5 );
-                screen.textColor = 0;
-                screen.print(textLineArray1[phase]);
-                screen.setTextPosition( 100+5, 60+5+8 );
-                screen.print(textLineArray2[phase]);
+                // Draw bubble.
+                float fullTextWidth = Main.screen.textWidth(textLineArray1[phase]);
+                float fullTextWidth2 = Main.screen.textWidth(textLineArray2[phase]);
+                if( fullTextWidth2 > fullTextWidth )
+                    fullTextWidth = fullTextWidth2;
+                float bubbleW = fullTextWidth + 10;
+                float bubbleX = 220 - bubbleW - 2;
+                float bubbleY = 10;
+                float bubbleH = 2*8 + 10;
+                float tipRelPos = bubbleW-10;
+                System.out.println("fullTextWidth="+fullTextWidth+", fullTextWidth2="+fullTextWidth2+", bubbleW="+bubbleW);
+                Main.drawBubble((int)bubbleX, (int)bubbleY, (int)bubbleW, (int)bubbleH, (int)tipRelPos);
+                
+                // Draw text
+                Main.drawPlainTextCellCentered( bubbleX, bubbleY+5,   bubbleW, textLineArray1[phase], 0);
+                Main.drawPlainTextCellCentered( bubbleX, bubbleY+5+8, bubbleW, textLineArray2[phase], 0);   
+
+                //public static void drawTextCellCentered( float cellX, float cellY, float cellWidth, String text)    
+
+            
+                //image.draw(screen, 100, 60, false, false, true);
+                //screen.setTextPosition( 100+5, 60+5 );
+                //screen.textColor = 0;
+                //screen.print(textLineArray1[phase]);
+                //screen.setTextPosition( 100+5, 60+5+8 );
+                //screen.print(textLineArray2[phase]);
             }
          }
      }

@@ -30,6 +30,9 @@ class ZombieEntity
             // Change speed
             int sp = Math.random( 0, 4 );
             float speed = sp * 0.09f + (0.02f * Common.currentDay);
+            if( Common.isTutorialActive )
+                speed /= 2;  // Slow down in tutorial mode.
+
             
             // Change direction  
     

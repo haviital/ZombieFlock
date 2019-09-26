@@ -74,29 +74,58 @@ public class MainStartupScreen extends State
         // Read the current time. Substract the program start time to make the value smaller, so it fits to 32 bits. 
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
 
-        // Change to a new state when A is pressed
-        if( ( menuDlg == null  && Button.A.justPressed() ) ||
-            ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 0 ) || // Selected "Play" in the menu
-            ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 1 ) // Selected "Tutorial" in the menu
-        )
+        // Put this first
+        if( menuDlg != null )
+            menuDlg.update();
+
+        //System.out.print("menuDlg="+menuDlg+", menuDlg.pressedA="+menuDlg.pressedA);
+
+        // Pressed A in the back story window.
+        if( Button.A.justPressed() && Common.isTutorialActive && doPrintBackStory == true )
         {
-            if( menuDlg != null && menuDlg.focusIndex == 1)
-                Common.isTutorialActive = true;
-            
-            // Restart the game
+            // Start playing in the tutorial mode
+            Common.currentDay = 0;
             Common.totalBeanCount = 0;
             Common.totalCoffeeCount = 0;
-            Game.changeState( new MainLevelMap() );
+            Game.changeState( new MainDay() );
         }
-            
-        if( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 2 ) // Selected "Info" in the menu
+        
+        // Change to a new state when A is pressed
+        else if( ( menuDlg == null  && Button.A.justPressed() ) ||
+            ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 0 ) // Selected "Play" in the menu
+        )
         {
-            doPrintBackStory = true;
-            //printBackStory() 
+            System.out.print("Main.eepromCookie.flags="+Main.eepromCookie.flags);
+            if((Main.eepromCookie.flags & Main.eepromCookie.FLAG_TUTORIAL_PASSED) == 0)
+            {
+                String textLineArray1[] = new String[1];
+                String textLineArray2[] = new String[1];
+                textLineArray1[0] = "Please, pass the";
+                textLineArray2[0] = "tutorial first!";
+                Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent(0, Common.bubbleImage, textLineArray1, textLineArray2, 1 );
+            }
+            else
+            {
+                // Restart the game
+                Common.totalBeanCount = 0;
+                Common.totalCoffeeCount = 0;
+                Game.changeState( new MainLevelMap() );
+            }
         }
             
-        // 
-        if( Button.C.justPressed() )
+        else if( menuDlg != null  && menuDlg.pressedA ) // Selected a menu item
+        {
+            if( menuDlg.focusIndex == 1 ) // Selected "Tutorial" in the menu
+            {
+                doPrintBackStory = true;
+                Common.isTutorialActive = true;
+                menuDlg = null;
+            }
+       }
+            
+                
+         // 
+        else if( Button.C.justPressed() )
         {
             int arrCount = 3;
             String textLineArray[] = new String[arrCount];
@@ -136,15 +165,13 @@ public class MainStartupScreen extends State
             }
         }
 
-        if( menuDlg != null )
-            menuDlg.update();
-
         // *** DRAW
         
         if( doPrintBackStory )
         {
-            Main.screen.clear( 12 );
-            Main.printBackStory(); 
+            Main.screen.clear( 14 );
+            Main.drawBackStoryWindow(); 
+            Main.drawButtonAndLabel( 0, 176-14, 220, "A  Continue", "A");
         }
         else
         {

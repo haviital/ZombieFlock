@@ -113,22 +113,20 @@ public class MainDay extends State {
         // Initialize tutoriel bubbles
         if( Common.isTutorialActive )
         {
-            int arrCount = 6;
+            int arrCount = 5;
             String textLineArray1[] = new String[arrCount];
             String textLineArray2[] = new String[arrCount];
             //                  "12345678901"
             textLineArray1[0] = "Move to left";
-            textLineArray2[0] = "and right to";
-            textLineArray1[1] = "collect ";
+            textLineArray2[0] = "and right";
+            textLineArray1[1] = "to collect";
             textLineArray2[1] = "beans.";
-            textLineArray1[2] = "Get enough";
-            textLineArray2[2] = "coffee to";
-            textLineArray1[3] = "survive the";
-            textLineArray2[3] = "night!";
-            textLineArray1[4] = "Beware of";
-            textLineArray2[4] = "skeletons";
-            textLineArray1[5] = "and avoid";
-            textLineArray2[5] = "bushes.";
+            textLineArray1[2] = "Get enough coffee";
+            textLineArray2[2] = "to the store to";
+            textLineArray1[3] = "survive the night!";
+            textLineArray2[3] = "";
+            textLineArray1[4] = "Beware of skeletons";
+            textLineArray2[4] = "and avoid bushes.";
             Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
         }
         
@@ -189,10 +187,27 @@ public class MainDay extends State {
                 Common.totalBeanCount = 0;
                 Common.totalCoffeeCount = 0;
                 currentBeanCount = 0;
-                Game.changeState( new MainLevelMap() );
+                if( Common.isTutorialActive )
+                    Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
+                else
+                    Game.changeState( new MainLevelMap() );
             }
         }
+ 
+        // Exit to menu
+        else  if( Button.C.justPressed() )
+        {
+            // Restart the game
+            Common.totalBeanCount = 0;
+            Common.totalCoffeeCount = 0;
+            currentBeanCount = 0;
             
+            // Goto startup screen
+            Common.isTutorialActive = false;
+            Game.changeState( new MainStartupScreen() );
+       }
+            
+           
         // *** UPDATE
 
         if(!isGameOver && ! isWon && state == STATE_PLAYING)
@@ -288,6 +303,10 @@ public class MainDay extends State {
         Main.screen.textColor = 3;
         Main.screen.print("Day: " + (int)Common.currentDay );
         
+        // 
+        if(Common.isTutorialActive)
+            Main.drawButtonAndLabel( 0, 176-17, 220,"C  Exit tutorial", "C");
+
         // print fps
         Main.screen.setTextPosition( 0, 0 );
         Main.screen.textColor = 3;
@@ -383,22 +402,7 @@ public class MainDay extends State {
             coffee.draw(Main.screen, startCoffeeX + 80, startCoffeeY);
             
         Main.drawTextCellCentered( winX, winY + 30, winW, "That is your supply for the night!" );
-        Main.drawTextCellCentered( winX, winY + 45, winW, "   Continue" );
-        
-        // Button
-        float fullTextWidth = Main.screen.textWidth("A  Continue");
-        float currX = winX + (winW/2) - (fullTextWidth/2);
-        float currY = winY + 45;
-        Common.uiButtonImage.draw( Main.screen, (int)(currX-4), currY - 3, false, false, true );
-
-        // "A"
-        String text = "A";
-        Main.screen.setTextPosition( currX+1, currY+1 );
-        Main.screen.textColor = 1;
-        Main.screen.print( text );
-        Main.screen.setTextPosition( currX, currY );
-        Main.screen.textColor = 3;
-        Main.screen.print(  text);
+        Main.drawButtonAndLabel( winX, winY + 45, winW, "A  Continue", "A");
     }
 
 }

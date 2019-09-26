@@ -34,9 +34,13 @@ import TimeMeterEntity;
 import Common;
 import Event;
 
-class LevelPoints extends femto.Cookie {
-    LevelPoints(){
+class EepromCookie extends femto.Cookie {
+    
+    static final long FLAG_TUTORIAL_PASSED = 1;
+    
+    EepromCookie(){
         super();
+        flags = 0;
         begin("ZOMFLOCK"); // name of the cookie, up to 8 chars
     }
     int versionMajor;
@@ -46,7 +50,8 @@ class LevelPoints extends femto.Cookie {
     int levelPoints2; 
     int levelPoints3; 
     int levelPoints4; 
-    int levelPoints5; 
+    int levelPoints5;
+    long flags;
 }
 
 public class Main extends State {
@@ -81,7 +86,7 @@ public class Main extends State {
     
     // *** static variables and functions
     
-    static final var levelPoints = new LevelPoints();
+    static final var eepromCookie = new EepromCookie();
     
     public static HiRes16Color screen = new HiRes16Color(Pico8.palette(), TIC80.font());
     
@@ -95,12 +100,12 @@ public class Main extends State {
         
        // Create the level map.
         Common.levelPointsArray = new int[Common.LEVEL_MAP_COUNT];
-        Common.levelPointsArray[0] = levelPoints.levelPoints0;
-        Common.levelPointsArray[1] = levelPoints.levelPoints1;
-        Common.levelPointsArray[2] = levelPoints.levelPoints2;
-        Common.levelPointsArray[3] = levelPoints.levelPoints3;
-        Common.levelPointsArray[4] = levelPoints.levelPoints4;
-        Common.levelPointsArray[5] = levelPoints.levelPoints5;
+        Common.levelPointsArray[0] = eepromCookie.levelPoints0;
+        Common.levelPointsArray[1] = eepromCookie.levelPoints1;
+        Common.levelPointsArray[2] = eepromCookie.levelPoints2;
+        Common.levelPointsArray[3] = eepromCookie.levelPoints3;
+        Common.levelPointsArray[4] = eepromCookie.levelPoints4;
+        Common.levelPointsArray[5] = eepromCookie.levelPoints5;
         
         Common.panelImage1 = new Panel1();
         Common.panelImage2 = new Panel2();
@@ -197,22 +202,22 @@ public class Main extends State {
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
         
-        int arrCount = 6;
-        String textLineArray1[] = new String[arrCount];
-        String textLineArray2[] = new String[arrCount];
-        textLineArray1[0] = "Zombies are";
-        textLineArray2[0] = "coming!";
-        textLineArray1[1] = "They want";
-        textLineArray2[1] = "THE COFFEE!";
-        textLineArray1[2] = "We need to";
-        textLineArray2[2] = "push'em away";
-        textLineArray1[3] = "Zzzz.... oh!";
-        textLineArray2[3] = "I am sleepy.";
-        textLineArray1[4] = "HAHAHAHAAA!";
-        textLineArray2[4] = "MORE COFFEE!";
-        textLineArray1[5] = "Hey! How are";
-        textLineArray2[5] = "you today?";
-        //Common.events[getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
+        
+        // Initialize tutorial bubbles
+        if( Common.isTutorialActive )
+        {
+            int arrCount = 3;
+            String textLineArray1[] = new String[arrCount];
+            String textLineArray2[] = new String[arrCount];
+            //                  "12345678901"
+            textLineArray1[0] = "Zombies are coming!";
+            textLineArray2[0] = "They want the COFFEE!";
+            textLineArray1[1] = "Move the power";
+            textLineArray2[1] = "shields and keep them";
+            textLineArray1[2] = "away until the";
+            textLineArray2[2] = "morning comes.";
+            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
+        }
         
         // Set Common.events for random sounds.
         Common.events[getNextFreeEvent()].setSfxEvent((long)3*1000, sfx2, 15000, 40000 );
@@ -239,16 +244,23 @@ public class Main extends State {
         {
             if(isWon || isGameOver)
             {
-                // Go on to the map.
-                //Common.currentDay += 1;
                 Common.currentDay = 0;
                 Common.totalBeanCount = 0;
                 Common.totalCoffeeCount = 0;
-                Game.changeState( new MainLevelMap() );
+                if( !isWon && Common.isTutorialActive )
+                {
+                    // Restart tutorial.
+                    Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
+                }
+                else
+                {
+                    // Go on to the map.
+                    Game.changeState( new MainLevelMap() );
+                }
             }
         }
             
-        if( Button.B.justPressed() )
+        else if( Button.B.justPressed() )
         {
             //  if(currSfxNum==1) sfx1.play();
             //  else if(currSfxNum==2) sfx2.play();
@@ -261,6 +273,18 @@ public class Main extends State {
             //  if( currSfxNum>6 ) currSfxNum = 1;
         }
 
+        // Exit to menu
+        else  if( Button.C.justPressed() )
+        {
+            // Restart the game
+            Common.totalBeanCount = 0;
+            Common.totalCoffeeCount = 0;
+
+            // Goto startup screen
+            Common.isTutorialActive = false;
+            Game.changeState( new MainStartupScreen() );
+       }
+        
         // *** Update 
         
         if(!isGameOver)
@@ -331,12 +355,20 @@ public class Main extends State {
                 isWon = true;
                 isGameOver = true;
                 
+                // In tutorial mode, set tutorial passed!
+                if( Common.isTutorialActive )
+                {
+                    eepromCookie.flags |= eepromCookie.FLAG_TUTORIAL_PASSED;
+                    saveLevelPointsToEEPROM();
+                }
+                
                 // If this is a new record, save it to the EEPROM.
-                if( Common.totalCoffeeCount > Common.levelPointsArray[ Common.currentDay ] )
+                if( !Common.isTutorialActive && Common.totalCoffeeCount > Common.levelPointsArray[ Common.currentDay ] )
                 {
                     Common.levelPointsArray[ Common.currentDay ] = Common.totalCoffeeCount;
                     saveLevelPointsToEEPROM();
                 }
+                
             }
             normalizedTimeLeft = 0;
         }
@@ -366,6 +398,10 @@ public class Main extends State {
         Main.screen.textColor = 3;
         Main.screen.print("Day: " + (int)(Common.currentDay + 1) );
         
+        // 
+        if(Common.isTutorialActive)
+            Main.drawButtonAndLabel( 0, 176-17, 220,"C  Exit tutorial", "C");
+
         // print fps
         screen.setTextPosition( 0, 0 );
         screen.textColor = 3;
@@ -461,14 +497,14 @@ public class Main extends State {
 
     void saveLevelPointsToEEPROM()
     {
-        levelPoints.levelPoints0 = Common.levelPointsArray[0];
-        levelPoints.levelPoints1 = Common.levelPointsArray[1];
-        levelPoints.levelPoints2 = Common.levelPointsArray[2];
-        levelPoints.levelPoints3 = Common.levelPointsArray[3];
-        levelPoints.levelPoints4 = Common.levelPointsArray[4];
-        levelPoints.levelPoints5 = Common.levelPointsArray[5];
+        eepromCookie.levelPoints0 = Common.levelPointsArray[0];
+        eepromCookie.levelPoints1 = Common.levelPointsArray[1];
+        eepromCookie.levelPoints2 = Common.levelPointsArray[2];
+        eepromCookie.levelPoints3 = Common.levelPointsArray[3];
+        eepromCookie.levelPoints4 = Common.levelPointsArray[4];
+        eepromCookie.levelPoints5 = Common.levelPointsArray[5];
         //System.out.println("Main.levelPoints.levelPoints0=" + Main.levelPoints.levelPoints0);
-        levelPoints.saveCookie();
+        eepromCookie.saveCookie();
     }
     
     public static void DrawWinnerDialog(Image winnerImage)
@@ -486,7 +522,7 @@ public class Main extends State {
         winnerImage.draw(Main.screen, 110 + 23,  winY + marginV + 2);
 
         Main.drawTextCellCentered( winX, winY + 30, winW, "You made it throught the night!" );
-        Main.drawTextCellCentered( winX, winY + 43, winW, "Continue to the next day (A)?" );
+        Main.drawButtonAndLabel( winX, winY + 43, winW, "A  Continue", "A");
 
         //Main.screen.setTextPosition( 80, 88  + 15);
         //Main.screen.textColor = 3;
@@ -506,7 +542,7 @@ public class Main extends State {
         
         Main.drawTextCellCentered( winX, winY + 10, winW, "You lost! Undeads will rule" );
         Main.drawTextCellCentered( winX, winY + 20, winW, "the world with the power of coffee!" );
-        Main.drawTextCellCentered( winX, winY + 40, winW, "Restart (A)?" );
+        Main.drawButtonAndLabel( winX, winY + 40, winW, "A  Restart", "A");
     }
 
     public static int getNextFreeEvent()
@@ -569,10 +605,10 @@ public class Main extends State {
         Common.panelHighLightImage.draw( Main.screen, x+8, y+6, false, false, true );
     }
     
-    public static void drawBubble(int x, int y, int w, int h)
+    public static void drawBubble(int x, int y, int w, int h, int tipRelPosX)
     {
         // Fill the center area.
-        Main.screen.fillRect( x+4, y+4, w-8, h-8, 2 );
+        Main.screen.fillRect( x+4, y+4, w-8, h-8, 3 );
 
         // Draw edges
         int count = (w-4-4) / 16;
@@ -588,6 +624,10 @@ public class Main extends State {
             Common.bubbleHorizImage.draw(Main.screen, x + w - 20,  y, false, false, true); 
             Common.bubbleHorizImage.draw(Main.screen, x + w - 20,  y + h - 4, false, true, true );
         }
+        
+        // Draw tip
+        boolean tipMirrored = tipRelPosX > (w/2);
+        Common.bubbleTipImage.draw(Main.screen, x + tipRelPosX,  y + h - 4, tipMirrored, false, true);
         
         count = (h - 4 - 4) / 16;
         for( int j=0; j<count; j+=1 )
@@ -625,13 +665,19 @@ public class Main extends State {
         
     }
     
+    public static void drawPlainTextCellCentered( float cellX, float cellY, float cellWidth, String text, int color)    
+    {
+        float fullTextWidth = Main.screen.textWidth(text);
+        float currX = cellX + (cellWidth/2) - (fullTextWidth/2);
+        float currY = cellY;
+        Main.screen.setTextPosition( currX, currY );
+        Main.screen.textColor = color;
+        Main.screen.print( text);
+        
+    }
+    
     public static void drawButtonAndLabel( float winX, float winY, float cellWidth, String text, String buttonName)    
     {
-        // Draw the C button text
-        //int winX = 0;
-        //int winY = 176-16;
-        //int winW = 220;
-        //String text = "   Menu";
         Main.drawTextCellCentered( winX, winY, cellWidth, text );
         
         // Button
@@ -639,11 +685,6 @@ public class Main extends State {
         float currX = winX + (cellWidth/2) - (fullTextWidth/2);
         float currY = winY;
         Common.uiButtonImage.draw( Main.screen, (int)(currX-4), currY - 3, false, false, true );
-        //System.out.println("x="+(int)(currX-4)+", y="+(currY - 3));
-
-        // "A"
-        //String label = text.substring( 0, 1 );
-        //System.out.println("label="+label);
         Main.screen.setTextPosition( currX+1, currY+1 );
         Main.screen.textColor = 1;
         Main.screen.print( buttonName );
@@ -652,31 +693,35 @@ public class Main extends State {
         Main.screen.print( buttonName );
     }
 
-    public static void printBackStory()    
+    public static void drawBackStoryWindow()    
     {
-        drawBubble(5,5,210,100);
+        // Draw bubble
+        drawBubble(5,5,210,120, 145);
         
         // Draw tip
-        Common.bubbleTipImage.draw(Main.screen, 110,  5 + 100 - 4, true, false, true);
+        //Common.bubbleTipImage.draw(Main.screen, 110,  5 + 120 - 4, true, false, true);
         
         // Draw Matti
-        Common.mattiImage.draw(Main.screen, 220-Common.mattiImage.width(),  176-Common.mattiImage.height(), true, false, true);
+        Common.mattiImage.draw(Main.screen, 220-Common.mattiImage.width(),  176-Common.mattiImage.height(), false, false, true);
         
         int currX = 10; 
         int currY = 10;
         int incY = 10;
+        Main.screen.textColor = 12;
         Main.screen.setTextPosition( currX, currY );
         
-          //               123456789#123456789#123456789#123456789    
+          //               123456789#123456789#123456789#12345    
         Main.screen.print("The climate change has destroyed");  currY += incY; Main.screen.setTextPosition( currX, currY );
         Main.screen.print("all except one coffee farm in");  currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("the world. You have the last");   currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("healthy farm! Just unfortunately");       currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("it locates on the ancient indian");      currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("graveyard, which has consquences."); currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("The other problem is that people");  currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("are hungry for coffee, and that");   currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("turn them to zombies at night!");    currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("the world. Unfortunately that is");   currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("located on an ancient indian");       currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("graveyard. In the daytime, you must");      currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("collect the beans and escape the"); currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("skeleton army. At night, you have");  currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("to protect your coffee storage from");   currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("people which have been turned into");    currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("zombies because of their");    currY += incY; Main.screen.setTextPosition( currX, currY );
+        Main.screen.print("coffee-addiction.");    currY += incY; Main.screen.setTextPosition( currX, currY );
     }
 
 }

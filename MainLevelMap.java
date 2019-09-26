@@ -86,7 +86,7 @@ public class MainLevelMap extends State
             int dayNum = gridPosX + (gridPosY*3);
             if( dayNum <= maxLevelIndexAllowed )
             {
-                // Go on to the night level.
+                // Go on to the day level.
                 Common.currentDay = dayNum;
                 Common.totalBeanCount = 0;
                 Common.totalCoffeeCount = 0;
@@ -94,11 +94,22 @@ public class MainLevelMap extends State
             }
         }
 
-        if( Button.B.justPressed() ) 
+        else if( Button.B.justPressed() ) 
         {
             //save.score = Math.random(0, 1000); // update the score
         }
 
+        // Exit to menu
+        else  if( Button.C.justPressed() )
+        {
+            // Restart the game
+            Common.totalBeanCount = 0;
+            Common.totalCoffeeCount = 0;
+
+            // Goto startup screen
+            Common.isTutorialActive = false;
+            Game.changeState( new MainStartupScreen() );
+       }
         
         // *** DRAW
         
