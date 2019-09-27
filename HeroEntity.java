@@ -149,8 +149,48 @@ class HeroEntity extends Hero
             mainDay.currentBeanCount += 10;
         }
         
-        // Collision to tree.
-        if(isTilechanged && tileId == Common.TREE_MAP_TILE_ID)
+        float heroX2 = x;
+        float heroY2 = y;
+        float heroW2 = width();
+        float heroH2 = height();
+        float objX;
+        float objY;
+        float objW;
+        float objH;
+        boolean isIntersection;
+        
+        boolean isCollidedToBatsOrBushes = (isTilechanged && tileId == Common.TREE_MAP_TILE_ID);
+        if( ! isCollidedToBatsOrBushes )
+        {
+            // Collision to bats.
+            for(int i=0; i < Common.MAX_BATS; i++)
+            {
+                
+                if( ! mainDay.bats[i].isHit )
+                {
+                    //bats[i].drawMe(Main.screen);
+                    // skeleton rect
+                    objX = mainDay.bats[i].x + 2;
+                    objY = mainDay.bats[i].y + 2;
+                    objW = mainDay.bats[i].width()-4;
+                    objH = mainDay.bats[i].height()-4;
+                    boolean isIntersection = 
+                        (objX < heroX2 + heroW2) && 
+                        (objY < heroY2 + heroH2) &&
+                        (objX + objW > heroX2) && 
+                        (objY + objH > heroY2);
+                            
+                    if(isIntersection)
+                    {
+                        isCollidedToBatsOrBushes = true;
+                        mainDay.bats[i].isHit = true;
+                    }
+                }
+            }
+        }
+        
+        // Collision to bat or bush.
+        if(isCollidedToBatsOrBushes)
         {
             // Slow down.
             Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, 0, -10, 0, -10, null, crashSprite, true, 0, 0 );
@@ -167,15 +207,11 @@ class HeroEntity extends Hero
         // Collision to the first skeleton.
         
         // skeleton rect
-        float objX = Common.enemies[0].x + 2;
-        float objY = Common.enemies[0].y + 2;
-        float objW = Common.enemies[0].width()-4;
-        float objH = Common.enemies[0].height()-4;
-        float heroX2 = x;
-        float heroY2 = y;
-        float heroW2 = width();
-        float heroH2 = height();
-        boolean isIntersection = 
+        objX = Common.enemies[0].x + 2;
+        objY = Common.enemies[0].y + 2;
+        objW = Common.enemies[0].width()-4;
+        objH = Common.enemies[0].height()-4;
+        isIntersection = 
             (objX < heroX2 + heroW2) && 
             (objY < heroY2 + heroH2) &&
             (objX + objW > heroX2) && 

@@ -29,6 +29,7 @@ public class MainDay extends State {
     CastleDay castleDayImage;
     Coffee coffee; 
     Bean beanImage; 
+    BatEntity bats[]; 
 
     // Sounds
     arrigd_zombie_roar_3 sfx1;
@@ -53,6 +54,7 @@ public class MainDay extends State {
     long storedBeanCount;  //!!HV
     float castleX;
     float castleY;
+    long batLaunchY; // Launch bat at this point
    
     // Avoid allocation in a State's constructor.
     // Allocate on init instead.
@@ -79,6 +81,28 @@ public class MainDay extends State {
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
         beanImage = new Bean();
+        
+        // Bat entity
+        bats = new BatEntity[Common.MAX_BATS]; //
+        for(int i=0; i < Common.MAX_BATS; i++)
+            bats[i] = new BatEntity();
+            
+        long vel = 3;
+        bats[ 0 ].launchAtScreenTopYOn = 200;
+        bats[ 0 ].x = -16;
+        bats[ 0 ].y = 200 + 176;
+        bats[ 0 ].velX = vel;
+        bats[ 0 ].velY = 0;
+        bats[ 1 ].launchAtScreenTopYOn = 400;
+        bats[ 1 ].x = 220;
+        bats[ 1 ].y = 400 + 176;
+        bats[ 1 ].velX = -vel;
+        bats[ 1 ].velY = 0;
+        bats[ 2 ].launchAtScreenTopYOn = 600;
+        bats[ 2 ].x = -16;
+        bats[ 2 ].y = 600 + 176;
+        bats[ 2 ].velX = vel;
+        bats[ 2 ].velY = 0;
        
         //
         castleX = 110-(castleDayImage.width()/2);
@@ -91,9 +115,7 @@ public class MainDay extends State {
         Common.enemies = new EnemyEntity[Common.MAX_ENEMIES]; //
         int j=0;
         for(int i=0; i < Common.MAX_ENEMIES; i++, j++)
-        {
             Common.enemies[j] = new EnemyEntity();
-        }
         Common.enemies[0].x = 110;
         Common.enemies[0].followHeroOffsetX = 0;
         Common.enemies[0].followHeroOffsetY = Common.SKELETON_OFFSET_Y;
@@ -130,28 +152,7 @@ public class MainDay extends State {
             Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
         }
         
-        // sfx1 = new arrigd_zombie_roar_3(0);
-        // sfx2 = new breviceps_zombie_gargles(0);
-        // sfx3 = new crocytc_zombie3(0);
-        
-        
-        // sfx4 = new missozzy_zombie_02(0);
-        // sfx5 = new missozzy_zombie_04(0);
-        // sfx6 = new thanra_zombie_roar(0);
-        // currSfxNum = 1;
 
-        // Initialize the Mixer at 8khz
-        //Mixer.init(8000);
-        
-        //Common.events = new Event[Common.MAX_EVENTS]; //
-        //for(int i=0; i < Common.MAX_EVENTS; i++)
-        //{
-        //    Common.events[i] = new Event();
-        //}
-        
-        // Set Common.events for random sounds.
-        //Common.events[4].setSfxEvent((long)3*1000, sfx2, 15000, 40000 );
-        
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
         //!!HV
@@ -223,10 +224,8 @@ public class MainDay extends State {
             Common.heroEntity.update(Main.screen);
 
             for(int i=0; i < Common.MAX_ENEMIES; i++)
-            {
                 Common.enemies[i].update(Main.screen);
-            }
-    
+
             // Move camera to keep hero vertically in the center
             //System.out.println("height="+Common.tilemap.height()+", tileHeight="+Common.tilemap.tileHeight());
             Main.screen.cameraY = Common.heroEntity.y - 88;
@@ -243,7 +242,10 @@ public class MainDay extends State {
             {
                 castleY = (Common.tilemap.height()*16)-castleDayImage.height();
             }
-
+            
+            //
+            for(int i=0; i < Common.MAX_BATS; i++)
+                bats[i].update(Main.screen);
         }
         
         // *** DRAW
@@ -260,6 +262,10 @@ public class MainDay extends State {
             Common.enemies[i].drawMe(Main.screen);
         }
             
+        // Draw bat        
+        for(int i=0; i < Common.MAX_BATS; i++)
+            bats[i].drawMe(Main.screen);
+    
         // Draw castle
         castleDayImage.draw(Main.screen, castleX, castleY);
         
@@ -301,7 +307,7 @@ public class MainDay extends State {
         // Print day number
         Main.screen.setTextPosition( 220-(7*6), 0 );
         Main.screen.textColor = 3;
-        Main.screen.print("Day: " + (int)Common.currentDay );
+        Main.screen.print("Day: " + (int)(Common.currentDay+1) );
         
         // 
         if(Common.isTutorialActive)

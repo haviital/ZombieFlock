@@ -1021,6 +1021,30 @@
 		},
 		"\\LICENSE.readme": {
 			"sdcard": false
+		},
+		"\\Bat3.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Bat3.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\BatEntity.java": {
+			"sdcard": false
+		},
+		"\\Bat3 - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\450621__breviceps__step-into-water-puddle-wade.raw": {
+			"sdcard": false
+		},
+		"\\422981__dkiller2204__sfxwalkground4.raw": {
+			"sdcard": false
+		},
+		"\\459847__lewfres__wild-animal-scream.raw": {
+			"sdcard": false
 		}
 	}
 }

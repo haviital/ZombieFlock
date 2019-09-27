@@ -19,6 +19,7 @@ class Common
     static final int TREE_MAP_TILE_ID = 1;
     static final int SKELETON_OFFSET_Y = -30;
     static final int LEVEL_MAP_COUNT = 6;
+    static final int MAX_BATS = 3;
     
     static maps.map tilemap;
     static ZombieEntity[] zombies;
