@@ -1,0 +1,1 @@
+..\..\windows\arm\bin\arm-none-eabi-readelf -sW zombieflock.elf | findstr "OBJECT" | findstr "CastleDay" | findstr "getImageDataForScreen"

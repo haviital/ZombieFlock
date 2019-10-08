@@ -41,6 +41,13 @@ class EepromCookie extends femto.Cookie {
     long flags;
 }
 
+class Vector2d
+{
+    float x;
+    float y;
+}
+
+
 public class Main extends State {
     
     // Images
@@ -49,6 +56,7 @@ public class Main extends State {
     Castle castleImage;
     Zombie zombieWithCoffee;
     Winner winnerImage;
+    BombEntity bombs[];
 
     // Sounds
     //arrigd_zombie_roar_3 sfx1;
@@ -69,7 +77,10 @@ public class Main extends State {
     boolean isGameOver;
     boolean isWon;
     long programStartTimeMs; // the start time of the program
-    
+    long launchBombAt; // Launch bomb at this time.
+    Vector2d bombCoords[];
+    int bombCoordsMax = 4;
+    int bombCoordsNum = 0;
     
     // *** static variables and functions
     
@@ -109,7 +120,11 @@ public class Main extends State {
         Common.mattiImage = new Matti(); 
         Common.uiButtonImage = new UiButton();
         
-        Common.currentDay = 1;
+        Common.currentDay = 0;
+ 
+          //!!!HV
+        eepromCookie.flags |= eepromCookie.FLAG_TUTORIAL_PASSED;
+
         Game.run( TIC80.font(), new MainStartupScreen() );
         //Game.run( TIC80.font(), new MainDay() );
         //Game.run( TIC80.font(), new Main() );
@@ -122,7 +137,7 @@ public class Main extends State {
         System.out.println("init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         programStartTimeMs = System.currentTimeMillis() - 1; // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         
-        //!!HV make the level shorter
+        //!!!HV make the level shorter
         //programStartTimeMs -= 20*1000;
         
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
@@ -135,8 +150,8 @@ public class Main extends State {
         //
         background = new Pattern();
         castleImage = new Castle();
-        barH = new HorizBarEntity(0, 88-2);
-        barV = new VertBarEntity(110-2, 0);
+        barH = new HorizBarEntity(0, 88-2, this );
+        barV = new VertBarEntity( 110-2, 0, this );
         timeMeterEntity =  new TimeMeterEntity();
         winnerImage = new Winner();
         
@@ -189,6 +204,25 @@ public class Main extends State {
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
         
+        // Bombs
+        bombs = new BombEntity[Common.MAX_BOMBS]; //
+        for(int i=0; i < Common.MAX_BOMBS; i++)
+            bombs[i] = new BombEntity();
+            
+        // Bomb coords
+        bombCoords = new Vector2d[bombCoordsMax]; //
+        for(int i=0; i < bombCoordsMax; i++)
+            bombCoords[i] = new Vector2d();
+        bombCoords[ 0 ].x = 20;
+        bombCoords[ 0 ].y = 176-50-bombs[ 0 ].height();
+        bombCoords[ 1 ].x = 220-20-bombs[ 0 ].width();
+        bombCoords[ 1 ].y = 176-50-bombs[ 0 ].height();
+        bombCoords[ 2 ].x = 220-20-bombs[ 0 ].width();
+        bombCoords[ 2 ].y = 50;
+        bombCoords[ 3 ].x = 20;
+        bombCoords[ 3 ].y = 50;
+        // launch next bomb
+        launchBombAt = Common.currentFrameStartTimeMs + 20000 - (Common.currentDay*3000);
         
         // Initialize tutorial bubbles
         if( Common.isTutorialActive )
@@ -283,6 +317,33 @@ public class Main extends State {
                     Common.events[i].execute();
             }
 
+            // Should launch a new bomb?
+            if( launchBombAt < Common.currentFrameStartTimeMs )
+            {
+                //if( launchAtScreenTopYOn > 0)
+                {
+                    // find next free bat
+                    int i=0;
+                    for(; i < Common.MAX_BOMBS; i++)
+                        if( bombs[ i ].state == BombEntity.STATE_NOT_VISIBLE )
+                            break;
+                    if( i >= Common.MAX_BOMBS )
+                        i = 0; // No free bombs. Just steal the first one (should not happen!).
+                   
+                   // Launch bomb
+                    bombs[ i ].Launch( (float)bombCoords[ bombCoordsNum ].x, (float)bombCoords[ bombCoordsNum ].y );
+                    bombCoordsNum += 1;
+                    
+                    // launch next bomb
+                    launchBombAt = Common.currentFrameStartTimeMs + 20000 - (Common.currentDay*3000);
+                }
+                
+            }
+            
+            // Update bombs.
+            for(int i=0; i < Common.MAX_BOMBS; i++)
+                bombs[i].update();
+            
              for(int i=0; i < Common.MAX_ZOMBIES; i++)
             {
                 Common.zombies[i].update();
@@ -316,6 +377,10 @@ public class Main extends State {
         barV.draw(screen);
         barH.draw(screen);
         
+        // Draw bombs.
+        for(int i=0; i < Common.MAX_BOMBS; i++)
+            bombs[i].drawMe(screen);
+            
         // Draw the castle.
         if(!isGameOver)
             castleImage.draw(screen, Common.CASTLE_X, Common.CASTLE_Y);
@@ -359,15 +424,19 @@ public class Main extends State {
             }
             normalizedTimeLeft = 0;
         }
-        if( normalizedTimeLeft < 0.5)
+        if( normalizedTimeLeft < 0.5 + (Common.currentDay*0.1) )
         {
             barV.isHiddenPart[1] = true;
             barV.isHiddenPart[9] = true;
+            if( Common.currentDay > 3)
+                barV.isHiddenPart[5] = true;
         }
-        if( normalizedTimeLeft < 0.25)
+        if( normalizedTimeLeft < 0.25 + (Common.currentDay*0.1))
         {
             barH.isHiddenPart[1] = true;
             barH.isHiddenPart[11] = true;
+            if( Common.currentDay > 3)
+                barV.isHiddenPart[5] = true;
         }
 
         // Print time meter
@@ -431,7 +500,7 @@ public class Main extends State {
             {
                 // Mark the coffee as taken
                 Common.totalCoffeeCount -= 1;
-                if(Common.totalCoffeeCount>=0)
+                if(Common.totalCoffeeCount<=0)
                     isGameOver = true;
                 for(int j=0; j < 5; j++ )
                     if(!isCoffeeTaken[j])
@@ -553,7 +622,7 @@ public class Main extends State {
     public static void DrawPanel(int x, int y, int w, int h)
     {
         // Fill the center area.
-        Main.screen.fillRect( x+16, y+16, w-32, h-32, 15 );
+        Main.screen.fillRect( x+16, y+16, w-32, h-32, 12 );
 
         // Draw edges
         int count = (w - 32) / 16;
@@ -694,7 +763,7 @@ public class Main extends State {
         int currX = 10; 
         int currY = 10;
         int incY = 10;
-        Main.screen.textColor = 12;
+        Main.screen.textColor = 7;
         Main.screen.setTextPosition( currX, currY );
         
           //               123456789#123456789#123456789#12345    

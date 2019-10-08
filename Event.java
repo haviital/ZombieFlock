@@ -341,7 +341,7 @@ class Event
                 float bubbleY = 10;
                 float bubbleH = 2*8 + 10;
                 float tipRelPos = bubbleW-10;
-                System.out.println("fullTextWidth="+fullTextWidth+", fullTextWidth2="+fullTextWidth2+", bubbleW="+bubbleW);
+                //System.out.println("fullTextWidth="+fullTextWidth+", fullTextWidth2="+fullTextWidth2+", bubbleW="+bubbleW);
                 Main.drawBubble((int)bubbleX, (int)bubbleY, (int)bubbleW, (int)bubbleH, (int)tipRelPos);
                 
                 // Draw text

@@ -7,7 +7,18 @@ import Common;
 
 class HorizBarEntity 
 {
-   HorizBarEntity(float x, float y ) 
+    // Member data
+    
+    public BarH image;
+    public boolean test;
+    public float x;
+    public float y;
+    public float halfHeight;
+    public boolean isHiddenPart[];
+    public int partCount;
+    Main main;
+    
+   HorizBarEntity(float x, float y, Main mainPar ) 
     { 
         image =  new BarH();
         //velX = 0;
@@ -17,6 +28,7 @@ class HorizBarEntity
         halfHeight = image.height() / 2;
         partCount = 14;
         isHiddenPart = new boolean[partCount];
+        main = mainPar;
    }
     
     void setX(float x_) {x = x_; }
@@ -28,8 +40,8 @@ class HorizBarEntity
     {
         long currTime = System.currentTimeMillis();
 
-        oldX = x;
-        oldY = y;
+        float orgX = x;
+        float orgY = y;
 
         // Move the bar.
         if( Button.Up.isPressed() )
@@ -41,6 +53,12 @@ class HorizBarEntity
         if(y<0) y = 0;
         if(y>176-4) y = 176-4;
 
+        if( checkCollisionToBombs() )
+        {
+            x = orgX;
+            y = orgY;
+        }
+        
         checkCollisionToZombies();
     }
 
@@ -110,17 +128,27 @@ class HorizBarEntity
         }
     }
     
-    // Member data
-    
-    public BarH image;
-    public boolean test;
-    public float x;
-    public float y;
-    public float oldX;
-    public float oldY;
-    public float halfHeight;
-    public boolean isHiddenPart[];
-    public int partCount;
-    
+    boolean checkCollisionToBombs()
+    {
+        //sprite.draw(screen); // Animation is updated automatically
+        
+        // Center point of the bar
+        float barCenterY = y + halfHeight;
+        
+        for(int i=0; i < Common.MAX_BOMBS; i++)
+        {
+            BombEntity bomb =  main.bombs[i];
+            if( bomb.state == BombEntity.STATE_ACTIVE )
+            {
+                float bombCenterY = bomb.y + bomb.halfHeight;
+                float distOfCenters = barCenterY - bombCenterY;
+                float crashDist = halfHeight + bomb.halfHeight;
+                if( distOfCenters < crashDist && distOfCenters > -crashDist)
+                    return true;
+            }
+        }
+        
+        return false;
+    }
 }
 

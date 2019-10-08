@@ -128,7 +128,8 @@
 			"-lc",
 			"-lgcc",
 			"-lnosys",
-			"-Wl,--end-group"
+			"-Wl,--end-group",
+			"-Wl,-Map=${projectPath}/${projectName}.map"
 		]
 	},
 	"target": "Pokitto",
@@ -1044,6 +1045,109 @@
 			"sdcard": false
 		},
 		"\\459847__lewfres__wild-animal-scream.raw": {
+			"sdcard": false
+		},
+		"\\breviceps_step_into_water.raw": {
+			"sdcard": false
+		},
+		"\\dkiller2204_sfxwalkground4.raw": {
+			"sdcard": false
+		},
+		"\\lewfres_wild_animal_scream.raw": {
+			"sdcard": false
+		},
+		"\\breviceps_zombie_gargles - Copy.wav": {
+			"sdcard": false
+		},
+		"\\breviceps_zombie_gargle2.wav": {
+			"sdcard": false
+		},
+		"\\lewfres_wild_animal_scream - Copy.raw": {
+			"sdcard": false
+		},
+		"\\breviceps_zombie_gargle3.raw": {
+			"sdcard": false
+		},
+		"\\breviceps__step-into-water-puddle-wade.wav": {
+			"sdcard": false
+		},
+		"\\dkiller2204__sfxwalkground4.wav": {
+			"sdcard": false
+		},
+		"\\lewfres__wild-animal-scream.flac": {
+			"sdcard": false
+		},
+		"\\dkiller2204__sfxwalkground4-old1.wav": {
+			"sdcard": false
+		},
+		"\\lewfres__wild-animal-scream.wav": {
+			"sdcard": false
+		},
+		"\\lewfres__wild_animal_scream.wav": {
+			"sdcard": false
+		},
+		"\\breviceps__step_into_water_puddle_wade.wav": {
+			"sdcard": false
+		},
+		"\\347371__drfx__soft-grass-foot-step.wav": {
+			"sdcard": false
+		},
+		"\\drfx__soft_grass_foot_step.wav": {
+			"sdcard": false
+		},
+		"\\Bomb.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Dust - Copy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Bomb.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Dust - Copy.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieFlock.map": {
+			"sdcard": false
+		},
+		"\\ZombieFlock - Copy.elf": {
+			"sdcard": false
+		},
+		"\\New Text Document.txt": {
+			"sdcard": false
+		},
+		"\\findelf.cmd": {
+			"sdcard": false
+		},
+		"\\BatEntity - Copy.java": {
+			"sdcard": false
+		},
+		"\\BombEntity.java": {
+			"sdcard": false
+		},
+		"\\ZombieFlock.bin.old": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.Hp1364": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.p10468": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.p11412": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.Hp8996": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.gq8996": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.p14812": {
 			"sdcard": false
 		}
 	}

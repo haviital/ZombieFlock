@@ -52,7 +52,7 @@ public class MainStartupScreen extends State
         // Create image animation events.
         Common.events[0].setMoveAnimEvent(3*1000, 8*1000,  0,  70,  0,  4, titleHandsImage, null, false, 2, 2 );
         Common.events[1].setGfxPrimitiveMoveAnimEvent(0, 999*1000,  0, 70, 0, 70,  
-                Event.GFX_PRIMITIVE_RECT, 220, 176 , 12, false );
+                Event.GFX_PRIMITIVE_RECT, 220, 176 , 7, false );
         Common.events[2].setMoveAnimEvent(0, 2*1000,  -titleCupImage.width(), 70,  2, 70, titleCupImage, null, false, 0, 0 );
         Common.events[3].setMoveAnimEvent(0, 2*1000, 220, 78, 76, 78, titleBrewImage, null, false, 0, 0 );
         Common.events[4].setMoveAnimEvent(2*1000, 3*1000,  2,176,  2,135, titleOfTheUndeadImage, null, false, 0, 0 );
@@ -80,8 +80,19 @@ public class MainStartupScreen extends State
 
         //System.out.print("menuDlg="+menuDlg+", menuDlg.pressedA="+menuDlg.pressedA);
 
+        // !!HV
+        if( Button.B.justPressed() )
+        {
+            // Start playing in the tutorial mode
+            Common.currentDay = 5;
+            Common.totalBeanCount = 40*5;
+            Common.totalCoffeeCount = 5;
+            Game.changeState( new Main() );
+        }
+        
         // Pressed A in the back story window.
-        if( Button.A.justPressed() && Common.isTutorialActive && doPrintBackStory == true )
+        boolean justPressedA = Button.A.justPressed();
+        if( justPressedA && Common.isTutorialActive && doPrintBackStory == true )
         {
             // Start playing in the tutorial mode
             Common.currentDay = 0;
@@ -91,7 +102,7 @@ public class MainStartupScreen extends State
         }
         
         // Change to a new state when A is pressed
-        else if( ( menuDlg == null  && Button.A.justPressed() ) ||
+        else if( ( menuDlg == null  && justPressedA ) ||
             ( menuDlg != null  && menuDlg.pressedA && menuDlg.focusIndex == 0 ) // Selected "Play" in the menu
         )
         {
@@ -107,9 +118,15 @@ public class MainStartupScreen extends State
             else
             {
                 // Restart the game
-                Common.totalBeanCount = 0;
-                Common.totalCoffeeCount = 0;
-                Game.changeState( new MainLevelMap() );
+                // Common.totalBeanCount = 0;
+                // Common.totalCoffeeCount = 0;
+                // Game.changeState( new MainLevelMap() );
+                
+                //!!HV
+                Common.currentDay = 0;
+                Common.totalBeanCount = 120;
+                Common.totalCoffeeCount = 3;
+                Game.changeState( new Main() );
             }
         }
             

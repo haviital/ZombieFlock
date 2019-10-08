@@ -6,7 +6,19 @@ import Common;
 
 class VertBarEntity 
 {
-    VertBarEntity(float x, float y ) 
+    // Member data
+    
+    public BarV image;
+    public float x;
+    public float y;
+    //public float velX;
+    //public float velY;
+    public float halfWidth;
+    public boolean isHiddenPart[];
+    public int partCount;
+    Main main;
+    
+    VertBarEntity(float x, float y, Main mainPar ) 
     { 
         image = new BarV();
         //velX = 0;
@@ -16,6 +28,7 @@ class VertBarEntity
         halfWidth = image.width() / 2;
         partCount = 11;
         isHiddenPart = new boolean[partCount];
+        main = mainPar;
     }
     
     void setX(float x_) {x = x_; }
@@ -26,6 +39,9 @@ class VertBarEntity
     void update()
     {
         long currTime = System.currentTimeMillis();
+        
+        float orgX = x;
+        float orgY = y;
 
         // Move the bar.
         if( Button.Left.isPressed() )
@@ -36,6 +52,12 @@ class VertBarEntity
         // Check limits
         if(x<0) x = 0;
         if(x>220-4) x = 220-4;
+        
+        if( checkCollisionToBombs() )
+        {
+            x = orgX;
+            y = orgY;
+        }
         
         checkCollisionToZombies();
     }
@@ -102,17 +124,28 @@ class VertBarEntity
             }
         }
     }
-    
-    // Member data
-    
-    public BarV image;
-    public float x;
-    public float y;
-    //public float velX;
-    //public float velY;
-    public float halfWidth;
-    public boolean isHiddenPart[];
-    public int partCount;
-    
+
+    boolean checkCollisionToBombs()
+    {
+        //sprite.draw(screen); // Animation is updated automatically
+        
+        // Center point of the bar
+        float barCenterX = x + halfWidth;
+        
+        for(int i=0; i < Common.MAX_BOMBS; i++)
+        {
+            BombEntity bomb =  main.bombs[i];
+            if( bomb.state == BombEntity.STATE_ACTIVE )
+            {
+                float bombCenterX = bomb.x + bomb.halfWidth;
+                float distOfCenters = barCenterX - bombCenterX;
+                float crashDist = halfWidth + bomb.halfWidth;
+                if( distOfCenters < crashDist && distOfCenters > -crashDist)
+                    return true;
+            }
+        }
+        
+        return false;
+    }
 }
 

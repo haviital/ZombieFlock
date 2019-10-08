@@ -31,14 +31,6 @@ public class MainDay extends State {
     Bean beanImage; 
     BatEntity bats[]; 
 
-    // Sounds
-    arrigd_zombie_roar_3 sfx1;
-    breviceps_zombie_gargles sfx2;
-    crocytc_zombie3 sfx3;
-    missozzy_zombie_02 sfx4;
-    missozzy_zombie_04 sfx5;
-    thanra_zombie_roar sfx6;
-    
     //HiRes16Color screen; // the screenmode we want to draw with
     TimeMeterEntity timeMeterEntity;
     int currSfxNum;
@@ -54,7 +46,8 @@ public class MainDay extends State {
     long storedBeanCount;  //!!HV
     float castleX;
     float castleY;
-    long batLaunchY; // Launch bat at this point
+    long launchAtScreenTopYOn; // Launch bat at this point
+    boolean nextBatGoEast; // Bat direction
    
     // Avoid allocation in a State's constructor.
     // Allocate on init instead.
@@ -87,23 +80,7 @@ public class MainDay extends State {
         for(int i=0; i < Common.MAX_BATS; i++)
             bats[i] = new BatEntity();
             
-        long vel = 3;
-        bats[ 0 ].launchAtScreenTopYOn = 200;
-        bats[ 0 ].x = -16;
-        bats[ 0 ].y = 200 + 176;
-        bats[ 0 ].velX = vel;
-        bats[ 0 ].velY = 0;
-        bats[ 1 ].launchAtScreenTopYOn = 400;
-        bats[ 1 ].x = 220;
-        bats[ 1 ].y = 400 + 176;
-        bats[ 1 ].velX = -vel;
-        bats[ 1 ].velY = 0;
-        bats[ 2 ].launchAtScreenTopYOn = 600;
-        bats[ 2 ].x = -16;
-        bats[ 2 ].y = 600 + 176;
-        bats[ 2 ].velX = vel;
-        bats[ 2 ].velY = 0;
-       
+
         //
         castleX = 110-(castleDayImage.width()/2);
         
@@ -155,7 +132,7 @@ public class MainDay extends State {
 
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
-        //!!HV
+        //!!!HV
         //currentBeanCount = 500;
         //Common.heroEntity.y = 95*16;
     }
@@ -240,10 +217,46 @@ public class MainDay extends State {
             }
             else
             {
-                castleY = (Common.tilemap.height()*16)-castleDayImage.height();
+                castleY =(Common.tilemap.height()*16)-castleDayImage.height();
             }
             
-            //
+            // Should launch a new bat?
+            if(Main.screen.cameraY > launchAtScreenTopYOn)
+            {
+                if( launchAtScreenTopYOn > 0)
+                {
+                    // find next free bat
+                    int i=0;
+                    for(; i < Common.MAX_BATS; i++)
+                        if( ! bats[i].isActive )
+                            break;
+                    if( i >= Common.MAX_BATS )
+                        i = 0; // No free bats. Just steal the first one(!).
+                   
+                    long vel = 3;
+                    if( nextBatGoEast )
+                    {
+                        bats[ i ].x = -16;
+                        bats[ i ].velX = vel;
+                    }
+                    else
+                    {
+                        bats[ i ].x = 220;
+                        bats[ i ].velX = -vel;
+                    }
+                    bats[ i ].y = launchAtScreenTopYOn + 150;
+                    bats[ i ].velY = 0;
+                    bats[ i ].isHit = false;
+                    bats[ i ].playSfx();
+                }
+                
+                // Next bat parameters
+                nextBatGoEast = !nextBatGoEast;
+                launchAtScreenTopYOn += 500 - (Common.currentDay * 70 );
+            }
+
+            
+            // update bats
             for(int i=0; i < Common.MAX_BATS; i++)
                 bats[i].update(Main.screen);
         }
@@ -262,7 +275,7 @@ public class MainDay extends State {
             Common.enemies[i].drawMe(Main.screen);
         }
             
-        // Draw bat        
+        // Draw bats        
         for(int i=0; i < Common.MAX_BATS; i++)
             bats[i].drawMe(Main.screen);
     

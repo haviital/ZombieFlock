@@ -1,0 +1,38 @@
+{ "frames": [
+   {
+    "filename": "Bomb 0.png",
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16},
+    "duration": 150
+   },
+   {
+    "filename": "Bomb 1.png",
+    "frame": { "x": 10, "y": 16, "w": 2, "h": 2 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x":0, "y": 0, "w": 2, "h": 2 },
+    "sourceSize": { "w": 2, "h": 2},
+    "duration": 150
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.9",
+  "image": "Bomb.png",
+  "format": "RGBA8888",
+  "size": { "w": 14, "h": 16 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "runActivating", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "runActive", "from": 0, "to": 0, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

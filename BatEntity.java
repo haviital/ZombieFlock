@@ -13,16 +13,22 @@ class BatEntity extends Bat3
     public float halfWidth;
     public float halfHeight;
     boolean isHit;
+    boolean isActive;
+    
+    // Sounds
+    lewfres__wild_animal_scream batSfx;
 
     BatEntity() 
     { 
-        velX = 0;
-        velY = 0;
-        halfWidth = width() / 2;
-        halfHeight = height() / 2;
-        x = 0;
-        y = 0;
         run();
+        
+        // Sfx
+        batSfx = new lewfres__wild_animal_scream(0);
+    }
+    
+    void playSfx()
+    {
+        batSfx.play();  // Scream!
     }
     
     void update(HiRes16Color screen)
@@ -31,6 +37,7 @@ class BatEntity extends Bat3
         {
             x += velX;
             y += velY;
+            
         }
     }
 

@@ -1,0 +1,1773 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+                              3.o (symbol from plugin) (__cxa_allocate_exception)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+                              3.o (symbol from plugin) (__cxa_pure_virtual)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+                              3.o (symbol from plugin) (__cxa_throw_bad_array_new_length)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o) (std::terminate())
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+                              3.o (symbol from plugin) (operator delete(void*, unsigned int))
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+                              3.o (symbol from plugin) (__cxa_throw)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                              3.o (symbol from plugin) (vtable for __cxxabiv1::__class_type_info)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o) (__cxxabiv1::__terminate_handler)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o) (__cxa_begin_catch)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o) (__cxxabiv1::__unexpected_handler)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o) (__cxa_get_globals_fast)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o) (vtable for __cxxabiv1::__si_class_type_info)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o) (std::type_info::~type_info())
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o) (abort)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (__libc_init_array)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+                              1.o (symbol from plugin) (malloc)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (memset)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+                              1.o (symbol from plugin) (malloc_usable_size)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o) (_free_r)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o) (_malloc_r)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o) (_malloc_usable_size_r)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o) (raise)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o) (_kill_r)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o) (strcmp)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o) (_impure_ptr)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o) (errno)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o) (__retarget_lock_acquire_recursive)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o) (_Unwind_Complete)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(libunwind.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o) (restore_core_regs)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o) (_getpid)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o) (_kill)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o) (_exit)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o) (memcpy)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+                              C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o (__aeabi_uidiv)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                              C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o (__aeabi_idiv)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+                              C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o (__aeabi_ldivmod)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+                              C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o (__aeabi_lmul)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+                              C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o (__gcc_personality_v0)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o) (__divdi3)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o) (__clzdi2)
+c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+                              c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o) (__clzsi2)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+errno               0x4               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+__lock___env_recursive_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+ .data          0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ .text          0x00000000       0x78 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.attributes
+                0x00000000       0x1b c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .data          0x00000000        0x0 2.o
+ .bss           0x00000000        0x0 2.o
+ .data          0x00000000        0x0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+ .data          0x00000000        0x0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ .data          0x00000000        0x0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text._ZN9__gnu_cxx9__freeresEv
+                0x00000000       0x18 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text.__cxa_allocate_dependent_exception
+                0x00000000       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text.__cxa_free_dependent_exception
+                0x00000000       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .text.__cxa_deleted_virtual
+                0x00000000        0x6 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .text.unlikely.__cxa_bad_cast
+                0x00000000        0x6 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .text.unlikely.__cxa_bad_typeid
+                0x00000000        0x6 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x00000000        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .text._ZSt10unexpectedv
+                0x00000000       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .text._ZSt13set_terminatePFvvE
+                0x00000000       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .text._ZSt14set_unexpectedPFvvE
+                0x00000000       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .text.__cxa_rethrow
+                0x00000000       0x72 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text.__cxa_get_exception_ptr
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text.__cxa_end_catch
+                0x00000000       0x4e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text._ZSt18uncaught_exceptionv
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text._ZSt19uncaught_exceptionsv
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .text.__cxa_get_globals_fast
+                0x00000000        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .text._ZNSt9type_infoD0Ev
+                0x00000000        0xe c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x00000000        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .rodata._ZTVSt9type_info
+                0x00000000       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text._init_signal_r
+                0x00000000       0x2a c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text._signal_r
+                0x00000000       0x32 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text.__sigtramp_r
+                0x00000000       0x46 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text.signal   0x00000000       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text._init_signal
+                0x00000000       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text.__sigtramp
+                0x00000000       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1a c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xcc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(libunwind.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(libunwind.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .ARM.extab.text.unlikely
+                0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .text          0x00000000      0x114 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000000       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+ .debug_frame   0x00000000      0x118 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+ .ARM.extab     0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+ .eh_frame      0x00000000        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+ .ARM.attributes
+                0x00000000       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+ .text          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+ .data          0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+ .bss           0x00000000        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash256        0x00000000         0x00040000         xr
+Ram0_32          0x10000100         0x00007f00         xrw
+Ram1_2           0x20000000         0x00000800         xrw
+Ram2USB_2        0x20004000         0x00000800         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+LOAD 2.o
+LOAD C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+LOAD C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+LOAD C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+LOAD C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+START GROUP
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libsupc++_nano.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a
+END GROUP
+START GROUP
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a
+END GROUP
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtend.o
+LOAD c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+                0x00040000                __top_MFlash256 = 0x40000
+                0x10008000                __top_Ram0_32 = 0x10008000
+                0x20000800                __top_Ram1_2 = 0x20000800
+                0x20004800                __top_Ram2USB_2 = 0x20004800
+
+.text           0x00000000    0x3350c
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xc0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x00000000                g_pfnVectors
+                0x000000c0                . = ALIGN (0x4)
+                0x000000c0                __section_table_start = .
+                0x000000c0                __data_section_table = .
+                0x000000c0        0x4 LONG 0x34410 LOADADDR (.data)
+                0x000000c4        0x4 LONG 0x10000100 ADDR (.data)
+                0x000000c8        0x4 LONG 0x74 SIZEOF (.data)
+                0x000000cc        0x4 LONG 0x34410 LOADADDR (.data_RAM2)
+                0x000000d0        0x4 LONG 0x20000000 ADDR (.data_RAM2)
+                0x000000d4        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000d8        0x4 LONG 0x34410 LOADADDR (.data_RAM3)
+                0x000000dc        0x4 LONG 0x20004000 ADDR (.data_RAM3)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM3)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000178 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x134 SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x20000000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4        0x4 LONG 0x20004000 ADDR (.bss_RAM3)
+                0x000000f8        0x4 LONG 0x0 SIZEOF (.bss_RAM3)
+                0x000000fc                __bss_section_table_end = .
+                0x000000fc                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000fc      0x1b8 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+                0x000000fc                ResetISR
+ *(.text*)
+ .text          0x000002b4       0x48 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x000002fc        0x4 ff
+ .text          0x00000300      0x358 2.o
+                0x00000300                PVCOPY
+                0x0000038c                SystemInit
+ .text          0x00000658     0x5c48 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x00000658                uc_Main::saveLevelPointsToEEPROM()
+                0x00000cc4                uc_Array<uc_Dust, true>::__mark__(int)
+                0x00000d94                uc_Array<up_java::up_lang::uc_String, true>::__mark__(int)
+                0x00000e60                uc_Array<up_femto::uc_TileSet, true>::__mark__(int)
+                0x000010ec                uc_Main::__instanceof__(unsigned long)
+                0x00001100                uc_Main::__sizeof__()
+                0x00001104                uc_Main::drawCoffees()
+                0x00001448                uc_Main::checkZombiesCollisionToCastle()
+                0x0000168c                uc_MainLevelMap::shutdown()
+                0x0000168c                uc_Main::shutdown()
+                0x00001f30                uc_Array<uc_BatEntity, true>::__mark__(int)
+                0x00002030                uc_Main::__mark__(int)
+                0x000022e0                up_femto::uc_Image::draw(up_femto::up_mode::uc_HiRes16Color*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, bool, bool, bool) [clone .constprop.53]
+                0x0000237c                up_femto::up_mode::uc_ScreenMode::fillRect(long, long, long, long, long) [clone .constprop.48]
+                0x0000255c                up_femto::up_mode::uc_ScreenMode::fillRect(long, long, long, long, long) [clone .constprop.47]
+                0x00002734                up_femto::up_mode::uc_ScreenMode::fillRect(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool) [clone .constprop.45]
+                0x000029bc                up_femto::up_mode::uc_Direct::drawHLine(long, long, long, long) [clone .constprop.41]
+                0x00002aa0                up_femto::up_mode::uc_Direct::drawHLine(long, long, long, long) [clone .constprop.40]
+                0x00002b84                up_femto::up_mode::uc_ScreenMode::putchar(char) [clone .part.127]
+                0x00002cbc                up_femto::up_mode::uc_ScreenMode::print(up_java::up_lang::uc_String*) [clone .constprop.43]
+                0x00002d7c                uc_Main::drawPlainTextCellCentered(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, up_java::up_lang::uc_String*, long) [clone .constprop.7]
+                0x00002f64                up_femto::up_mode::uc_ScreenMode::print(long) [clone .constprop.10]
+                0x00003084                up_femto::uc_Cookie::freeBlock(long) [clone .part.53]
+                0x00003124                uc_Array<uc_Vector2d, true>::uc_Array(long)
+                0x00003124                uc_Array<uc_Vector2d, true>::uc_Array(long) [clone .lto_priv.145]
+                0x00003250                uc_Array<uc_BombEntity, true>::uc_Array(long) [clone .lto_priv.146]
+                0x00003250                uc_Array<uc_BombEntity, true>::uc_Array(long)
+                0x000032a8                uc_Array<uc_ZombieEntity, true>::uc_Array(long)
+                0x000032a8                uc_Array<uc_ZombieEntity, true>::uc_Array(long) [clone .lto_priv.147]
+                0x0000332c                uc_Array<unsigned short, false>::uc_Array(long) [clone .lto_priv.150]
+                0x0000332c                uc_Array<unsigned short, false>::uc_Array(long)
+                0x000033f0                uc_Array<signed char, false>::uc_Array(long) [clone .lto_priv.151]
+                0x000033f0                uc_Array<signed char, false>::uc_Array(long)
+                0x00003474                up_java::up_lang::uc_String* operator+<FixedPoints::SFixed<23u, 8u> >(up_java::up_lang::uc_String&, FixedPoints::SFixed<23u, 8u>)
+                0x0000351c                up_java::up_lang::uc_String* operator+<long long>(up_java::up_lang::uc_String&, long long)
+                0x0000362c                uc_Array<up_java::up_lang::uc_String, true>::uc_Array(long)
+                0x0000362c                uc_Array<up_java::up_lang::uc_String, true>::uc_Array(long) [clone .lto_priv.144]
+                0x000036b4                uc_Array<uc_EnemyEntity, true>::uc_Array(long) [clone .lto_priv.161]
+                0x000036b4                uc_Array<uc_EnemyEntity, true>::uc_Array(long)
+                0x0000370c                uc_Array<uc_Event, true>::uc_Array(long)
+                0x0000370c                uc_Array<uc_Event, true>::uc_Array(long) [clone .lto_priv.149]
+                0x000037dc                uc_Array<uc_BatEntity, true>::uc_Array(long) [clone .lto_priv.162]
+                0x000037dc                uc_Array<uc_BatEntity, true>::uc_Array(long)
+                0x00003834                up_java::up_lang::uc_String* operator+<long>(up_java::up_lang::uc_String&, long)
+                0x0000394c                uc_Array<uc_Dust, true>::uc_Array(long)
+                0x0000394c                uc_Array<uc_Dust, true>::uc_Array(long) [clone .lto_priv.163]
+                0x000039ac                uc_Main::drawTextCellCentered(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, up_java::up_lang::uc_String*)
+                0x00003c18                uc_Main::drawButtonAndLabel(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, up_java::up_lang::uc_String*, up_java::up_lang::uc_String*)
+                0x00003f04                uc_Main::drawBubble(long, long, long, long, long)
+                0x000044f0                uc_Event::draw(up_femto::up_mode::uc_HiRes16Color*) [clone .constprop.5]
+                0x00004c14                uc_Main::DrawPanel(long, long, long, long)
+                0x00005258                uc_Main::getNextFreeEvent()
+                0x0000537c                uc_Main::DrawLoserDialog()
+                0x000054c4                uc_Main::update()
+ .text.startup  0x000062a0      0xc54 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x000066ac                main
+ .text          0x00006ef4     0x679c C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+                0x00006ef4                up_femto::up_mode::uc_HiRes16Color::loadPalette(void const*)
+                0x00006f84                uc_Panel6::width()
+                0x00006f84                uc_Panel6::height()
+                0x00006f84                uc_Panel2::width()
+                0x00006f84                uc_Panel4::width()
+                0x00006f84                uc_Beans::width()
+                0x00006f84                uc_BubbleHoriz::width()
+                0x00006f84                up_maps::uc_Tileset::height()
+                0x00006f84                uc_Panel1::height()
+                0x00006f84                uc_Panel4::height()
+                0x00006f84                uc_Panel7::height()
+                0x00006f84                up_maps::uc_Tileset::width()
+                0x00006f84                uc_Panel7::width()
+                0x00006f84                uc_Panel2::height()
+                0x00006f84                uc_BubbleVert::height()
+                0x00006f84                uc_PointsRectBody::width()
+                0x00006f84                uc_Beans::height()
+                0x00006f84                uc_Panel1::width()
+                0x00006f84                uc_Enemy::height()
+                0x00006f88                up_maps::uc_Tileset::tileCount()
+                0x00006f88                uc_Dust::height()
+                0x00006f88                uc_BubbleTip::height()
+                0x00006f8c                uc_Dust::width()
+                0x00006f90                uc_BarV::width()
+                0x00006f90                uc_BubbleCorner::height()
+                0x00006f90                uc_BubbleCorner::width()
+                0x00006f90                uc_BubbleVert::width()
+                0x00006f90                uc_BubbleHoriz::height()
+                0x00006f94                uc_Vector2d::__mark__(int)
+                0x00006fdc                uc_lewfres__wild_animal_scream::__sizeof__()
+                0x00006fdc                uc_breviceps__step_into_water_puddle_wade::__sizeof__()
+                0x00006fdc                uc_missozzy_zombie_02::__sizeof__()
+                0x00006fdc                up_maps::uc_Tileset::__sizeof__()
+                0x00006fdc                up_femto::up_input::uc_Button::__sizeof__()
+                0x00006fdc                up_femto::uc_MenuState::__sizeof__()
+                0x00006fdc                up_maps::uc_map::__sizeof__()
+                0x00006fe0                up_femto::uc_Cookie::__mark__(int)
+                0x00007058                uc_EepromCookie::__mark__(int)
+                0x000070c8                uc_EepromCookie::__instanceof__(unsigned long)
+                0x000070d8                uc_EepromCookie::__sizeof__()
+                0x000070dc                up_java::up_lang::uc_String::__mark__(int)
+                0x00007118                up_java::up_lang::uc_String::__instanceof__(unsigned long)
+                0x0000712c                up_java::up_util::uc_Random::__sizeof__()
+                0x0000712c                up_java::up_lang::uc_String::__sizeof__()
+                0x00007130                up_femto::uc_Cookie::__instanceof__(unsigned long)
+                0x0000713c                up_femto::uc_Cookie::__sizeof__()
+                0x00007140                up_femto::uc_Cookie::isMyBlock(long)
+                0x000071fc                up_femto::uc_Cookie::findMyNextBlock()
+                0x00007300                up_femto::uc_Cookie::writeQueue(char)
+                0x00007378                up_femto::uc_Cookie::readQueue()
+                0x000073f4                up_femto::uc_Cookie::eraseKeytableEntry(long)
+                0x0000745c                up_femto::uc_Cookie::blockIsOwnedBy(long, long)
+                0x00007518                up_femto::uc_Cookie::cleanKeytable()
+                0x00007748                up_femto::uc_Cookie::reserveBlock()
+                0x00007838                up_femto::uc_Cookie::formatKeytable()
+                0x000078a4                up_femto::uc_Cookie::readBlock(long, uc_Array<char, false>*)
+                0x00007930                up_femto::uc_Cookie::getBlockTableEntry(long)
+                0x0000797c                up_femto::uc_Cookie::readKeytableEntry(long, uc_Array<char, false>*)
+                0x000079f8                up_femto::uc_Cookie::writeKeyToKeytable(uc_Array<char, false>*, long)
+                0x00007a64                up_femto::uc_Cookie::isFreeBlock(long)
+                0x00007ab4                up_femto::uc_Cookie::getFreeBlocks()
+                0x00007b40                up_femto::uc_Cookie::getAssignedBlocks()
+                0x00007c44                up_femto::uc_Cookie::getFreeKeytableSlot()
+                0x00007ca4                up_femto::uc_Cookie::exists(uc_Array<char, false>*)
+                0x00007d6c                up_femto::uc_Cookie::loadCookie()
+                0x00007f38                up_femto::uc_Cookie::saveCookie()
+                0x00008120                up_femto::uc_Cookie::begin(up_java::up_lang::uc_String*)
+                0x00008220                up_femto::uc_Cookie::initialize()
+                0x00008638                up_femto::uc_State::preinit()
+                0x00008638                up_femto::uc_State::init()
+                0x00008638                up_femto::uc_State::shutdown()
+                0x00008638                uc_BombEntity::playSfx()
+                0x0000863c                uc_Coffee::__mark__(int)
+                0x0000868c                uc_RunSfx::__sizeof__()
+                0x0000868c                uc_Crash::__sizeof__()
+                0x0000868c                uc_Dust::__sizeof__()
+                0x00008690                uc_Coffee::run()
+                0x0000879c                uc_Pattern::__mark__(int)
+                0x000087ec                up_java::up_lang::uc_Object::__sizeof__()
+                0x000087ec                uc_PanelHighLight::__sizeof__()
+                0x000087ec                uc_Panel4::__sizeof__()
+                0x000087ec                uc_Bubble::__sizeof__()
+                0x000087ec                uc_TitleOfTheUndead::__sizeof__()
+                0x000087ec                uc_TitleBrew::__sizeof__()
+                0x000087ec                uc_TitleHands::__sizeof__()
+                0x000087ec                uc_BubbleVert::__sizeof__()
+                0x000087ec                uc_TitleCup::__sizeof__()
+                0x000087ec                up_java::up_lang::uc_Runtime::__sizeof__()
+                0x000087ec                uc_UiButton::__sizeof__()
+                0x000087ec                uc_Panel2::__sizeof__()
+                0x000087ec                uc_Beans::__sizeof__()
+                0x000087ec                uc_BubbleHoriz::__sizeof__()
+                0x000087ec                up_femto::up_input::uc_ButtonListener::__sizeof__()
+                0x000087ec                uc_PointsRectEnds::__sizeof__()
+                0x000087ec                uc_Panel6::__sizeof__()
+                0x000087ec                uc_CastleDay::__sizeof__()
+                0x000087ec                uc_Matti::__sizeof__()
+                0x000087ec                uc_Panel1::__sizeof__()
+                0x000087ec                uc_BubbleCorner::__sizeof__()
+                0x000087ec                uc_Panel7::__sizeof__()
+                0x000087ec                uc_Bean::__sizeof__()
+                0x000087ec                uc_Lock::__sizeof__()
+                0x000087ec                up_java::up_lang::uc_Exception::__sizeof__()
+                0x000087ec                uc_BubbleTip::__sizeof__()
+                0x000087ec                uc_PointsRectBody::__sizeof__()
+                0x000087ec                uc_LevelMapItem::__sizeof__()
+                0x000087f0                uc_Pattern::width()
+                0x000087f4                uc_Pattern::height()
+                0x00008800                uc_Castle::__mark__(int)
+                0x00008850                uc_CastleDay::width()
+                0x00008854                uc_CastleDay::height()
+                0x00008858                uc_Matti::isTransparent()
+                0x00008858                uc_TitleOfTheUndead::isTransparent()
+                0x00008858                uc_TitleBrew::isTransparent()
+                0x00008858                uc_LevelMapItem::isTransparent()
+                0x00008858                uc_Bubble::isTransparent()
+                0x00008858                uc_TitleHands::isTransparent()
+                0x00008858                uc_TitleCup::isTransparent()
+                0x00008858                uc_Beans::isTransparent()
+                0x00008858                uc_BubbleTip::isTransparent()
+                0x00008858                uc_CastleDay::isTransparent()
+                0x00008858                uc_BubbleCorner::isTransparent()
+                0x00008858                uc_PointsRectEnds::isTransparent()
+                0x00008858                uc_PanelHighLight::isTransparent()
+                0x00008858                uc_Lock::isTransparent()
+                0x00008858                uc_Bean::isTransparent()
+                0x00008858                uc_UiButton::isTransparent()
+                0x00008858                uc_Panel6::isTransparent()
+                0x00008858                uc_Panel1::isTransparent()
+                0x00008864                uc_Zombie::__mark__(int)
+                0x000089c0                uc_Winner::__mark__(int)
+                0x00008a10                uc_PointsRectEnds::height()
+                0x00008a10                uc_Bat3::height()
+                0x00008a10                uc_PointsRectBody::height()
+                0x00008a20                uc_BombEntity::__mark__(int)
+                0x00008a74                up_femto::up_mode::uc_ScreenMode::__sizeof__()
+                0x00008a74                up_femto::up_mode::uc_Direct::__sizeof__()
+                0x00008a78                uc_BombEntity::drawMe(up_femto::up_mode::uc_HiRes16Color*)
+                0x00008a8c                uc_breviceps_zombie_gargles::__mark__(int)
+                0x00008af8                up_femto::up_sound::uc_Procedural::reset()
+                0x00008b00                up_femto::up_sound::uc_Procedural::play()
+                0x00009238                uc_MenuDlg::__sizeof__()
+                0x000098ac                uc_TimeMeterEntity::__mark__(int)
+                0x00009900                up_femto::up_mode::uc_HiRes16Color::__mark__(int)
+                0x000099a4                up_femto::up_mode::uc_HiRes16Color::__instanceof__(unsigned long)
+                0x000099b8                up_femto::up_mode::uc_HiRes16Color::__sizeof__()
+                0x000099b8                uc_MainLevelMap::__sizeof__()
+                0x000099bc                up_femto::up_mode::uc_HiRes16Color::beforeFlush()
+                0x000099f4                up_femto::up_mode::uc_HiRes16Color::flush()
+                0x00009bd4                up_femto::up_mode::uc_HiRes16Color::height()
+                0x00009bd4                up_femto::up_mode::uc_Direct::height()
+                0x00009bd8                up_femto::up_mode::uc_Direct::width()
+                0x00009bd8                uc_TitleHands::width()
+                0x00009bd8                up_femto::up_mode::uc_HiRes16Color::width()
+                0x00009bdc                up_femto::up_mode::uc_HiRes16Color::drawVLine(long, long, long, long)
+                0x00009c88                up_femto::up_mode::uc_HiRes16Color::drawHLine(long, long, long, long)
+                0x00009da4                up_femto::up_mode::uc_HiRes16Color::getPixel(unsigned long, unsigned long)
+                0x00009dd4                up_femto::up_mode::uc_HiRes16Color::setPixel(unsigned long, unsigned long, long)
+                0x00009e0c                up_femto::up_mode::uc_HiRes16Color::clear(long)
+                0x00009e90                uc_Panel1::__mark__(int)
+                0x00009ecc                uc_Panel1::__instanceof__(unsigned long)
+                0x00009ee0                uc_Panel1::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00009ee8                uc_Panel2::__mark__(int)
+                0x00009f24                uc_Panel2::__instanceof__(unsigned long)
+                0x00009f38                uc_Panel2::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00009f40                uc_Panel4::__mark__(int)
+                0x00009f7c                uc_Panel4::__instanceof__(unsigned long)
+                0x00009f90                uc_Panel4::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00009f98                uc_Panel6::__mark__(int)
+                0x00009fd4                uc_Panel6::__instanceof__(unsigned long)
+                0x00009fe8                uc_Panel6::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00009ff0                uc_Panel7::__mark__(int)
+                0x0000a02c                uc_Panel7::__instanceof__(unsigned long)
+                0x0000a040                uc_Panel7::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a048                uc_PanelHighLight::__mark__(int)
+                0x0000a084                uc_PanelHighLight::__instanceof__(unsigned long)
+                0x0000a098                uc_Enemy::width()
+                0x0000a098                uc_Crash::width()
+                0x0000a098                uc_UiButton::height()
+                0x0000a098                uc_UiButton::width()
+                0x0000a098                uc_PanelHighLight::width()
+                0x0000a098                uc_Hero::width()
+                0x0000a09c                uc_PanelHighLight::height()
+                0x0000a0a0                uc_PanelHighLight::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a0ac                uc_Bubble::__mark__(int)
+                0x0000a0e8                uc_Bubble::__instanceof__(unsigned long)
+                0x0000a0fc                uc_Bubble::width()
+                0x0000a100                uc_Bubble::height()
+                0x0000a104                uc_Bubble::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a10c                uc_BubbleVert::__mark__(int)
+                0x0000a148                uc_BubbleVert::__instanceof__(unsigned long)
+                0x0000a15c                uc_BubbleVert::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a168                uc_BubbleHoriz::__mark__(int)
+                0x0000a1a4                uc_BubbleHoriz::__instanceof__(unsigned long)
+                0x0000a1b8                uc_BubbleHoriz::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a1c4                uc_BubbleCorner::__mark__(int)
+                0x0000a200                uc_BubbleCorner::__instanceof__(unsigned long)
+                0x0000a214                uc_BubbleCorner::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a220                uc_BubbleTip::__mark__(int)
+                0x0000a25c                uc_BubbleTip::__instanceof__(unsigned long)
+                0x0000a270                uc_Crash::height()
+                0x0000a270                uc_BubbleTip::width()
+                0x0000a274                uc_BubbleTip::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a280                uc_Matti::__mark__(int)
+                0x0000a2bc                uc_Matti::__instanceof__(unsigned long)
+                0x0000a2d0                uc_Matti::width()
+                0x0000a2d4                uc_Matti::height()
+                0x0000a2d8                uc_Matti::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a2e0                uc_UiButton::__mark__(int)
+                0x0000a31c                uc_UiButton::__instanceof__(unsigned long)
+                0x0000a330                uc_UiButton::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000a33c                up_femto::uc_Game::__instanceof__(unsigned long)
+                0x0000a350                up_femto::uc_Game::__sizeof__()
+                0x0000a354                up_femto::uc_Game::uc_Game(void const*, up_femto::uc_State*)::{lambda()#1}::operator()() const::uc___anon__52::change(up_femto::up_input::uc_Button*) [clone .lto_priv.100]
+                0x0000a480                up_femto::uc_MenuState::__mark__(int)
+                0x0000a4cc                up_femto::uc_MenuState::__instanceof__(unsigned long)
+                0x0000a4e0                uc_MainStartupScreen::__instanceof__(unsigned long)
+                0x0000a4f4                uc_MainStartupScreen::__sizeof__()
+                0x0000a4f4                uc_EnemyEntity::__sizeof__()
+                0x0000a828                up_femto::uc_Cookie::freeBlock(long)
+                0x0000a838                up_femto::uc_Cookie::deleteCookie()
+                0x0000a9c4                uc_HorizBarEntity::__mark__(int)
+                0x0000aa9c                uc_VertBarEntity::__mark__(int)
+                0x0000ab74                up_femto::uc_Game::__mark__(int)
+                0x0000abfc                uc_MainStartupScreen::__mark__(int)
+                0x0000b0e4                up_femto::uc_MenuState::volume(up_femto::uc_Prompt*)
+                0x0000b314                up_femto::uc_MenuState::statistics(up_femto::uc_Prompt*)
+                0x0000b5a0                up_femto::uc_MenuState::update()
+                0x0000bc80                up_femto::up_mode::uc_HiRes16Color::initialize(void const*, void const*)
+                0x0000bebc                up_femto::uc_Game::changeState(up_femto::uc_State*)
+                0x0000bf14                uc_Main::init()
+ .text          0x0000d690     0x6eb8 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+                0x0000d690                uc_Event::isFree()
+                0x0000d6a0                up_femto::up_mode::uc_ScreenMode::fillRect(long, long, long, long, long)
+                0x0000d72c                up_femto::up_input::uc_Button::isPressed()
+                0x0000d74c                up_femto::up_input::uc_Button::justPressed()
+                0x0000d790                up_femto::up_mode::uc_ScreenMode::setTextPosition(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000d798                up_femto::uc_StateMachine::setState(up_femto::uc_State*)
+                0x0000d79c                uc_Event::clear()
+                0x0000d7ac                up_femto::uc_StateMachine::update()
+                0x0000d7ec                up_femto::uc_StateMachine::getState()
+                0x0000d7f0                up_maps::uc_mapData::__mark__(int)
+                0x0000d7f0                up_java::up_lang::uc_Runtime::__mark__(int)
+                0x0000d7f0                up_femto::up_input::uc_ButtonListener::__mark__(int)
+                0x0000d7f0                up_java::up_lang::uc_Exception::__mark__(int)
+                0x0000d82c                up_java::up_lang::uc_Runtime::__instanceof__(unsigned long)
+                0x0000d838                up_java::up_lang::uc_Runtime::totalMemory()
+                0x0000d848                up_java::up_lang::uc_Runtime::freeMemory()
+                0x0000d878                up_java::up_lang::uc_Runtime::availableProcessors()
+                0x0000d87c                up_femto::up_mode::uc_ScreenMode::__mark__(int)
+                0x0000d8b8                up_femto::up_mode::uc_ScreenMode::__instanceof__(unsigned long)
+                0x0000d8c4                up_femto::up_mode::uc_ScreenMode::textHeight()
+                0x0000d8d0                up_femto::up_mode::uc_ScreenMode::println(up_java::up_lang::uc_String*)
+                0x0000d90c                up_femto::up_mode::uc_ScreenMode::textWidth(up_java::up_lang::uc_String*)
+                0x0000d964                up_femto::up_mode::uc_ScreenMode::fillTriangle(long, long, long, long, long, long, signed char)
+                0x0000dc2c                up_femto::up_mode::uc_ScreenMode::drawLine(long, long, long, long, long)
+                0x0000de14                up_femto::up_mode::uc_ScreenMode::drawLine(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000de7c                up_femto::up_mode::uc_ScreenMode::fillCircle(long, long, long, long)
+                0x0000df50                up_femto::up_mode::uc_ScreenMode::fillCircle(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000df9c                up_femto::up_mode::uc_ScreenMode::drawCircle(long, long, long, long)
+                0x0000e100                up_femto::up_mode::uc_ScreenMode::drawCircle(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e14c                up_femto::up_mode::uc_ScreenMode::fillRect(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e1a8                up_femto::up_mode::uc_ScreenMode::drawRect(long, long, long, long, long)
+                0x0000e20c                up_femto::up_mode::uc_ScreenMode::drawRect(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e268                up_femto::up_mode::uc_ScreenMode::drawHLine(long, long, long, long)
+                0x0000e268                up_femto::up_mode::uc_ScreenMode::drawVLine(long, long, long, long)
+                0x0000e26c                up_femto::up_mode::uc_ScreenMode::drawVLine(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e2b8                up_femto::up_mode::uc_ScreenMode::drawHLine(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e304                up_femto::up_mode::uc_ScreenMode::setPixel(unsigned long, unsigned long, long)
+                0x0000e308                up_femto::up_mode::uc_ScreenMode::setPixel(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long, bool)
+                0x0000e340                up_femto::up_mode::uc_ScreenMode::setTextColor(long)
+                0x0000e344                up_femto::up_mode::uc_ScreenMode::flush()
+                0x0000e3c8                up_femto::up_mode::uc_ScreenMode::fps()
+                0x0000e3e4                uc_Event::__instanceof__(unsigned long)
+                0x0000e3f0                uc_Event::__sizeof__()
+                0x0000e3f4                up_femto::uc_Sprite::setFlipped(bool)
+                0x0000e408                up_femto::uc_Sprite::setMirrored(bool)
+                0x0000e41c                uc_ZombieEntity::__instanceof__(unsigned long)
+                0x0000e428                uc_ZombieEntity::draw(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000e434                uc_ZombieEntity::getX()
+                0x0000e43c                uc_ZombieEntity::setY(FixedPoints::SFixed<23u, 8u>)
+                0x0000e444                uc_ZombieEntity::setX(FixedPoints::SFixed<23u, 8u>)
+                0x0000e44c                uc_ZombieEntity::getY()
+                0x0000e454                up_femto::uc_Sprite::updateAnimation()
+                0x0000e4f4                up_femto::uc_Sprite::setPosition(FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000e4fc                up_femto::uc_Sprite::draw(up_femto::up_mode::uc_HiRes16Color*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000e52c                up_femto::uc_Sprite::setStatic(bool)
+                0x0000e540                up_femto::uc_Sprite::isFlipped()
+                0x0000e548                up_femto::uc_Sprite::isMirrored()
+                0x0000e550                up_femto::uc_Sprite::isStatic()
+                0x0000e558                up_femto::uc_Sprite::getEndFrame()
+                0x0000e55c                up_femto::uc_Sprite::getStartFrame()
+                0x0000e560                up_femto::uc_Sprite::getCurrentFrame()
+                0x0000e564                uc_Bomb::runActive()
+                0x0000e5dc                uc_Bomb::runActivating()
+                0x0000e65c                uc_Bomb::getFrameDataForScreen(unsigned long, up_femto::up_mode::uc_HiRes16Color*)
+                0x0000e668                up_femto::up_input::uc_Button::__mark__(int)
+                0x0000e6dc                up_femto::up_input::uc_Button::__instanceof__(unsigned long)
+                0x0000e6e8                up_femto::up_input::uc_Button::__class_initializer__()::{lambda()#1}::operator()() const::uc___anon__65::change(up_femto::up_input::uc_Button*) [clone .lto_priv.101]
+                0x0000e6f8                up_femto::up_input::uc_Button::intpin()
+                0x0000e714                up_femto::up_input::uc_Button::detach()
+                0x0000e71c                up_femto::up_input::uc_Button::attach(up_femto::up_input::uc_ButtonListener*)
+                0x0000e720                uc_MainDay::__instanceof__(unsigned long)
+                0x0000e734                uc_MainDay::__sizeof__()
+                0x0000e734                uc_HeroEntity::__sizeof__()
+                0x0000e738                uc_Event::draw(up_femto::up_mode::uc_HiRes16Color*)
+                0x0000ee7c                uc_Event::setGfxPrimitiveMoveAnimEvent(long long, long long, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, long long, long long, long long, long long, bool)
+                0x0000ef8c                uc_Event::setMoveAnimEvent(long long, long long, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, up_femto::uc_Image*, up_femto::uc_Sprite*, bool, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000f084                uc_Event::setSpiralAnimationEffect(long long, up_femto::uc_Sprite*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000f1d0                uc_Event::setSfxEvent(long long, up_femto::up_sound::uc_Procedural*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x0000f2cc                uc_Event::setTutorialBubbleEvent(long long, uc_Bubble*, uc_Array<up_java::up_lang::uc_String, true>*, uc_Array<up_java::up_lang::uc_String, true>*, long)
+                0x0000f37c                uc_Event::__mark__(int)
+                0x0000f44c                uc_ZombieEntity::__mark__(int)
+                0x0000f4c0                uc_MainDay::__mark__(int)
+                0x0000f620                up_femto::up_mode::uc_ScreenMode::putchar(char)
+                0x0000f644                up_femto::up_mode::uc_ScreenMode::print(long)
+                0x0000f754                up_femto::up_mode::uc_ScreenMode::print(unsigned long)
+                0x0000f850                up_femto::up_mode::uc_ScreenMode::print(up_java::up_lang::uc_String*)
+                0x0000f900                up_femto::up_mode::uc_ScreenMode::print(FixedPoints::SFixed<23u, 8u>)
+                0x0000f998                uc_Event::execute()
+                0x0000fcdc                uc_ZombieEntity::update()
+                0x0000ff20                uc_MainDay::DrawWinnerDayDialog()
+                0x000102dc                uc_MainDay::updateAndDrawBeanCount()
+                0x0001086c                up_java::up_lang::uc_System::currentTimeMillis()
+                0x000108cc                uc_MainDay::update()
+                0x000120bc                up_femto::uc_Sprite::__blit_4bpp(void const*, long, long, up_femto::up_mode::uc_HiRes16Color*, bool, bool)
+                0x00012498                up_femto::uc_Sprite::draw(up_femto::up_mode::uc_HiRes16Color*)
+                0x0001261c                uc_MainStartupScreen::update()
+                0x00013c04                uc_Event::setBubbleTextEvent(long long, up_java::up_lang::uc_String*, up_java::up_lang::uc_String*, uc_Bubble*)
+                0x00013d48                uc_MainStartupScreen::init()
+ .text          0x00014548     0x6774 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+                0x00014548                uc_MainLevelMap::__instanceof__(unsigned long)
+                0x00014564                up_femto::uc_Image::isTransparent()
+                0x00014568                uc_TimeMeter::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014570                up_java::up_lang::uc_Object::__instanceof__(unsigned long)
+                0x0001457c                uc_BarH::__mark__(int)
+                0x000145b8                uc_BarH::__instanceof__(unsigned long)
+                0x000145cc                uc_BarH::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x000145d8                uc_BarV::__mark__(int)
+                0x00014614                uc_BarV::__instanceof__(unsigned long)
+                0x00014628                uc_BarV::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014704                up_maps::uc_map::drawDayField(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014710                uc_EnemyEntity::__mark__(int)
+                0x00014764                uc_EnemyEntity::drawMe(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014770                uc_EnemyEntity::update(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014854                uc_HeroEntity::drawMe(up_femto::up_mode::uc_HiRes16Color*)
+                0x000148d4                up_maps::uc_BaseMap::height()
+                0x000148e0                uc_Hero::height()
+                0x00014974                up_femto::uc_Prompt::__instanceof__(unsigned long)
+                0x00014980                up_femto::uc_Prompt::__sizeof__()
+                0x00014984                up_femto::up_mode::uc_Direct::drawHLine(long, long, long, long)
+                0x00014d34                up_java::up_lang::uc_Exception::__instanceof__(unsigned long)
+                0x00014d40                up_femto::up_input::uc_ButtonListener::__instanceof__(unsigned long)
+                0x00014d4c                uc_TitleBrew::__mark__(int)
+                0x00014d88                uc_TitleBrew::__instanceof__(unsigned long)
+                0x00014d9c                uc_TitleBrew::width()
+                0x00014da0                uc_TitleBrew::height()
+                0x00014da4                uc_TitleBrew::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014dac                uc_TitleCup::__mark__(int)
+                0x00014de8                uc_TitleCup::__instanceof__(unsigned long)
+                0x00014dfc                uc_TitleCup::width()
+                0x00014e00                uc_TitleCup::height()
+                0x00014e04                uc_TitleCup::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014e0c                uc_TitleHands::__mark__(int)
+                0x00014e48                uc_TitleHands::__instanceof__(unsigned long)
+                0x00014e5c                uc_TitleHands::height()
+                0x00014e60                uc_TitleHands::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014e68                uc_TitleOfTheUndead::__mark__(int)
+                0x00014ea4                uc_TitleOfTheUndead::__instanceof__(unsigned long)
+                0x00014eb8                uc_TitleOfTheUndead::width()
+                0x00014ebc                uc_TitleOfTheUndead::height()
+                0x00014ec0                uc_TitleOfTheUndead::getImageDataForScreen(up_femto::up_mode::uc_HiRes16Color*)
+                0x00014ec8                uc_missozzy_zombie_02::__mark__(int)
+                0x00014f04                uc_missozzy_zombie_02::__instanceof__(unsigned long)
+                0x00014f18                uc_missozzy_zombie_02::update()
+                0x00014f38                uc_MenuDlg::__instanceof__(unsigned long)
+                0x00014f44                uc_MenuDlg::draw()
+                0x00014f50                uc_MenuDlg::update()
+                0x000151b4                uc_CastleDay::__mark__(int)
+                0x0001520c                uc_Bean::__mark__(int)
+                0x00015288                uc_BatEntity::drawMe(up_femto::up_mode::uc_HiRes16Color*)
+                0x000152ec                uc_BatEntity::update(up_femto::up_mode::uc_HiRes16Color*)
+                0x00015468                up_maps::uc_BaseMap::tileHeight()
+                0x000157c4                up_maps::uc_Tileset::__mark__(int)
+                0x00015968                uc_Dust::__mark__(int)
+                0x000159b8                uc_Dust::run()
+                0x00015ab8                uc_lewfres__wild_animal_scream::__mark__(int)
+                0x00015b28                uc_Zombie::~uc_Zombie() [clone .lto_priv.123]
+                0x00015b28                uc_Coffee::~uc_Coffee() [clone .lto_priv.124]
+                0x00015b28                uc_Dust::~uc_Dust() [clone .lto_priv.136]
+                0x00015b2c                uc_Bubble::~uc_Bubble() [clone .lto_priv.89]
+                0x00015b2c                uc_Castle::~uc_Castle() [clone .lto_priv.119]
+                0x00015b2c                uc_BarV::~uc_BarV() [clone .lto_priv.130]
+                0x00015b2c                uc_Beans::~uc_Beans() [clone .lto_priv.111]
+                0x00015b2c                uc_Panel1::~uc_Panel1() [clone .lto_priv.83]
+                0x00015b2c                uc_BubbleTip::~uc_BubbleTip() [clone .lto_priv.93]
+                0x00015b2c                uc_Panel4::~uc_Panel4() [clone .lto_priv.85]
+                0x00015b2c                uc_UiButton::~uc_UiButton() [clone .lto_priv.95]
+                0x00015b2c                uc_BubbleHoriz::~uc_BubbleHoriz() [clone .lto_priv.91]
+                0x00015b2c                uc_TitleHands::~uc_TitleHands() [clone .lto_priv.156]
+                0x00015b2c                uc_PanelHighLight::~uc_PanelHighLight() [clone .lto_priv.88]
+                0x00015b2c                uc_Panel2::~uc_Panel2() [clone .lto_priv.84]
+                0x00015b2c                uc_TitleOfTheUndead::~uc_TitleOfTheUndead() [clone .lto_priv.157]
+                0x00015b2c                uc_Panel6::~uc_Panel6() [clone .lto_priv.86]
+                0x00015b2c                uc_Matti::~uc_Matti() [clone .lto_priv.94]
+                0x00015b2c                uc_TitleCup::~uc_TitleCup() [clone .lto_priv.155]
+                0x00015b2c                uc_Panel7::~uc_Panel7() [clone .lto_priv.87]
+                0x00015b2c                uc_TitleBrew::~uc_TitleBrew() [clone .lto_priv.154]
+                0x00015b2c                uc_BubbleCorner::~uc_BubbleCorner() [clone .lto_priv.92]
+                0x00015b2c                uc_BubbleVert::~uc_BubbleVert() [clone .lto_priv.90]
+                0x00015b2c                uc_Winner::~uc_Winner() [clone .lto_priv.121]
+                0x00015b2c                uc_BarH::~uc_BarH() [clone .lto_priv.132]
+                0x00015b2c                uc_Pattern::~uc_Pattern() [clone .lto_priv.118]
+                0x00015b30                uc_breviceps_zombie_gargles::~uc_breviceps_zombie_gargles() [clone .lto_priv.122]
+                0x00015b30                uc_lewfres__wild_animal_scream::~uc_lewfres__wild_animal_scream() [clone .lto_priv.135]
+                0x00015b30                uc_missozzy_zombie_02::~uc_missozzy_zombie_02() [clone .lto_priv.158]
+                0x00015b54                SysTick_Handler
+                0x00015b64                up_java::up_lang::uc_Object::__mark__(int)
+                0x00015b84                NMI_Handler
+                0x00015b88                PendSV_Handler
+                0x00015b8c                SVC_Handler
+                0x00015b90                HardFault_Handler
+                0x00015b94                uc_Main::~uc_Main()
+                0x00015ba4                uc_Vector2d::~uc_Vector2d()
+                0x00015bb4                uc_EepromCookie::~uc_EepromCookie()
+                0x00015bc4                up_femto::uc_Cookie::~uc_Cookie()
+                0x00015bd4                uc_Coffee::~uc_Coffee()
+                0x00015bd4                uc_Zombie::~uc_Zombie()
+                0x00015be4                uc_Panel2::~uc_Panel2()
+                0x00015be4                uc_Castle::~uc_Castle()
+                0x00015be4                uc_TitleOfTheUndead::~uc_TitleOfTheUndead()
+                0x00015be4                uc_Panel1::~uc_Panel1()
+                0x00015be4                uc_Pattern::~uc_Pattern()
+                0x00015be4                uc_TitleBrew::~uc_TitleBrew()
+                0x00015be4                uc_BubbleTip::~uc_BubbleTip()
+                0x00015be4                uc_Winner::~uc_Winner()
+                0x00015be4                uc_UiButton::~uc_UiButton()
+                0x00015be4                uc_BarH::~uc_BarH()
+                0x00015be4                uc_Panel6::~uc_Panel6()
+                0x00015be4                uc_BubbleHoriz::~uc_BubbleHoriz()
+                0x00015be4                uc_Bubble::~uc_Bubble()
+                0x00015be4                uc_BubbleVert::~uc_BubbleVert()
+                0x00015be4                uc_TitleCup::~uc_TitleCup()
+                0x00015be4                uc_Panel7::~uc_Panel7()
+                0x00015be4                uc_Matti::~uc_Matti()
+                0x00015be4                uc_BarV::~uc_BarV()
+                0x00015be4                uc_TitleHands::~uc_TitleHands()
+                0x00015be4                uc_PanelHighLight::~uc_PanelHighLight()
+                0x00015be4                uc_BubbleCorner::~uc_BubbleCorner()
+                0x00015be4                uc_Panel4::~uc_Panel4()
+                0x00015bf4                uc_BombEntity::~uc_BombEntity()
+                0x00015c04                uc_missozzy_zombie_02::~uc_missozzy_zombie_02()
+                0x00015c04                uc_breviceps_zombie_gargles::~uc_breviceps_zombie_gargles()
+                0x00015c14                uc_HorizBarEntity::~uc_HorizBarEntity()
+                0x00015c24                uc_VertBarEntity::~uc_VertBarEntity()
+                0x00015c34                uc_TimeMeterEntity::~uc_TimeMeterEntity()
+                0x00015c44                up_femto::up_mode::uc_HiRes16Color::~uc_HiRes16Color()
+                0x00015c54                up_femto::uc_Game::~uc_Game()
+                0x00015c64                up_femto::uc_MenuState::~uc_MenuState()
+                0x00015c74                uc_MainStartupScreen::~uc_MainStartupScreen()
+                0x00015c84                uc_Event::~uc_Event()
+                0x00015c94                uc_ZombieEntity::~uc_ZombieEntity()
+                0x00015ca4                up_femto::up_input::uc_Button::~uc_Button()
+                0x00015cb4                uc_MainDay::~uc_MainDay()
+                0x00015cc4                uc_MainLevelMap::~uc_MainLevelMap()
+                0x00015d14                up_femto::uc_Prompt::~uc_Prompt()
+                0x00015d34                uc_MenuDlg::~uc_MenuDlg()
+                0x00015d74                up_java::up_lang::uc_Object::~uc_Object()
+                0x00015d84                uc_MainLevelMap::__mark__(int)
+                0x0001607c                up_femto::uc_Prompt::__mark__(int)
+                0x000160f0                uc_MenuDlg::__mark__(int)
+                0x00016164                uc_BatEntity::__mark__(int)
+                0x000161d0                up_java::up_lang::uc_String::~uc_String()
+                0x00016288                uc_MenuDlg::drawMenu()
+                0x000163cc                operator delete(void*)
+                0x000163e8                up_femto::uc_Image::__blit_4bpp(void const*, long, long, up_femto::up_mode::uc_HiRes16Color*, bool, bool)
+                0x000167b8                up_femto::uc_Image::draw(up_femto::up_mode::uc_HiRes16Color*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>, bool, bool, bool)
+                0x00016860                up_femto::uc_Image::draw(up_femto::up_mode::uc_HiRes16Color*, FixedPoints::SFixed<23u, 8u>, FixedPoints::SFixed<23u, 8u>)
+                0x00016b0c                uc_Main::~uc_Main() [clone .lto_priv.160]
+                0x00016b0c                uc_Main::~uc_Main() [clone .lto_priv.153]
+                0x00016b10                uc_Vector2d::~uc_Vector2d() [clone .lto_priv.126]
+                0x00016b10                uc_Vector2d::~uc_Vector2d() [clone .lto_priv.138]
+                0x00016b14                uc_EepromCookie::~uc_EepromCookie() [clone .lto_priv.109]
+                0x00016b14                uc_EepromCookie::~uc_EepromCookie() [clone .lto_priv.81]
+                0x00016b18                up_femto::uc_Cookie::~uc_Cookie() [clone .lto_priv.82]
+                0x00016b18                up_femto::uc_Cookie::~uc_Cookie() [clone .lto_priv.110]
+                0x00016b1c                uc_BombEntity::~uc_BombEntity() [clone .lto_priv.137]
+                0x00016b1c                uc_BombEntity::~uc_BombEntity() [clone .lto_priv.125]
+                0x00016b20                uc_HorizBarEntity::~uc_HorizBarEntity() [clone .lto_priv.131]
+                0x00016b20                uc_HorizBarEntity::~uc_HorizBarEntity() [clone .lto_priv.142]
+                0x00016b24                uc_VertBarEntity::~uc_VertBarEntity() [clone .lto_priv.129]
+                0x00016b24                uc_VertBarEntity::~uc_VertBarEntity() [clone .lto_priv.141]
+                0x00016b28                uc_TimeMeterEntity::~uc_TimeMeterEntity() [clone .lto_priv.134]
+                0x00016b28                uc_TimeMeterEntity::~uc_TimeMeterEntity() [clone .lto_priv.120]
+                0x00016b2c                up_femto::up_mode::uc_HiRes16Color::~uc_HiRes16Color() [clone .lto_priv.107]
+                0x00016b2c                up_femto::up_mode::uc_HiRes16Color::~uc_HiRes16Color() [clone .lto_priv.79]
+                0x00016b30                up_java::up_lang::uc_Exception::~uc_Exception()
+                0x00016b30                up_femto::up_palette::uc_Pico8::~uc_Pico8()
+                0x00016b30                up_java::up_lang::uc_Runtime::~uc_Runtime()
+                0x00016b40                up_femto::uc_Game::~uc_Game() [clone .lto_priv.97]
+                0x00016b40                up_femto::uc_Game::~uc_Game() [clone .lto_priv.113]
+                0x00016b44                up_femto::uc_MenuState::~uc_MenuState() [clone .lto_priv.114]
+                0x00016b44                up_femto::uc_MenuState::~uc_MenuState() [clone .lto_priv.99]
+                0x00016b48                uc_MainStartupScreen::~uc_MainStartupScreen() [clone .lto_priv.112]
+                0x00016b48                uc_MainStartupScreen::~uc_MainStartupScreen() [clone .lto_priv.96]
+                0x00016b4c                up_java::up_lang::uc_Runtime::~uc_Runtime() [clone .lto_priv.78]
+                0x00016b4c                up_java::up_lang::uc_Exception::~uc_Exception() [clone .lto_priv.98]
+                0x00016b4c                up_java::up_lang::uc_Exception::~uc_Exception() [clone .lto_priv.106]
+                0x00016b50                uc_Event::~uc_Event() [clone .lto_priv.140]
+                0x00016b50                uc_Event::~uc_Event() [clone .lto_priv.128]
+                0x00016b54                uc_ZombieEntity::~uc_ZombieEntity() [clone .lto_priv.139]
+                0x00016b54                uc_ZombieEntity::~uc_ZombieEntity() [clone .lto_priv.127]
+                0x00016b58                up_femto::up_input::uc_Button::~uc_Button() [clone .lto_priv.77]
+                0x00016b58                up_femto::up_input::uc_Button::~uc_Button() [clone .lto_priv.105]
+                0x00016b5c                uc_MainDay::~uc_MainDay() [clone .lto_priv.103]
+                0x00016b5c                uc_MainDay::~uc_MainDay() [clone .lto_priv.116]
+                0x00016b60                uc_MainLevelMap::~uc_MainLevelMap() [clone .lto_priv.102]
+                0x00016b60                uc_MainLevelMap::~uc_MainLevelMap() [clone .lto_priv.115]
+                0x00016b64                up_femto::uc_Prompt::~uc_Prompt() [clone .lto_priv.133]
+                0x00016b64                up_femto::uc_Prompt::~uc_Prompt() [clone .lto_priv.143]
+                0x00016b68                uc_MenuDlg::~uc_MenuDlg() [clone .lto_priv.152]
+                0x00016b68                uc_MenuDlg::~uc_MenuDlg() [clone .lto_priv.159]
+                0x00016b6c                up_java::up_lang::uc_String::~uc_String() [clone .lto_priv.108]
+                0x00016b6c                up_java::up_lang::uc_String::~uc_String() [clone .lto_priv.80]
+                0x00016ba4                up_java::up_lang::uc_Object::__gc__()
+                0x00016cf4                __wrap_malloc
+                0x00016d28                operator new(unsigned int)
+                0x00016dc4                __str__T::operator up_java::up_lang::uc_String*()
+                0x00016e10                uc_MainLevelMap::update()
+                0x00017d08                uc_MainLevelMap::init()
+                0x00018030                up_java::up_lang::uc_Math::random(long, long)
+                0x000181dc                up_femto::uc_Prompt::show()
+                0x0001886c                up_java::up_lang::uc_Math::random()
+                0x000189b8                uc_HeroEntity::update(up_femto::up_mode::uc_HiRes16Color*)
+                0x00019734                operator+(up_java::up_lang::uc_String&, up_java::up_lang::uc_String&)
+                0x00019864                uc_Array<bool, false>::uc_Array(long) [clone .lto_priv.148]
+                0x00019864                uc_Array<bool, false>::uc_Array(long)
+                0x000198e4                up_java::up_lang::uc_Object::~uc_Object() [clone .lto_priv.76]
+                0x000198e4                up_java::up_lang::uc_Object::~uc_Object() [clone .lto_priv.104]
+                0x000198e8                miniftoa(FixedPoints::SFixed<23u, 8u>, char*)
+                0x00019a18                I2C0_IRQHandler
+                0x00019a18                SSP1_IRQHandler
+                0x00019a18                USBWakeup_IRQHandler
+                0x00019a18                PIN_INT7_IRQHandler
+                0x00019a18                BOD_WDT_IRQHandler
+                0x00019a18                RTC_IRQHandler
+                0x00019a18                USART0_IRQHandler
+                0x00019a18                USART1_4_IRQHandler
+                0x00019a18                USB_FIQHandler
+                0x00019a18                PIN_INT4_IRQHandler
+                0x00019a18                PIN_INT3_IRQHandler
+                0x00019a18                IntDefaultHandler
+                0x00019a18                PIN_INT6_IRQHandler
+                0x00019a18                USART2_3_IRQHandler
+                0x00019a18                PIN_INT5_IRQHandler
+                0x00019a18                GINT0_IRQHandler
+                0x00019a18                TIMER32_1_IRQHandler
+                0x00019a18                FMC_IRQHandler
+                0x00019a18                USB_IRQHandler
+                0x00019a18                SCT0_1_IRQHandler
+                0x00019a18                PIN_INT2_IRQHandler
+                0x00019a18                GINT1_IRQHandler
+                0x00019a18                ADCB_IRQHandler
+                0x00019a18                SSP0_IRQHandler
+                0x00019a18                I2C1_IRQHandler
+                0x00019a18                DMA_IRQHandler
+                0x00019a18                TIMER16_1_IRQHandler
+                0x00019a18                ADCA_IRQHandler
+                0x00019a18                TIMER16_0_IRQHandler
+                0x00019a1c                __wrap_exit
+                0x00019b54                __wrap__sbrk
+                0x00019b84                uc_MainDay::init()
+ .text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.4
+                0x0001acbc       0x68 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.5
+                0x0001ad24       0x48 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text.__cxa_allocate_exception
+                0x0001ad6c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+                0x0001ad6c                __cxa_allocate_exception
+ .text.__cxa_free_exception
+                0x0001ad98       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+                0x0001ad98                __cxa_free_exception
+ .text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+                0x0001adbc       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .text.__cxa_pure_virtual
+                0x0001ade8        0x6 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+                0x0001ade8                __cxa_pure_virtual
+ .text.unlikely.__cxa_throw_bad_array_new_length
+                0x0001adee        0x6 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+                0x0001adee                __cxa_throw_bad_array_new_length
+ .text._ZN10__cxxabiv111__terminateEPFvvE
+                0x0001adf4        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+                0x0001adf4                __cxxabiv1::__terminate(void (*)())
+ .text._ZSt9terminatev
+                0x0001adfc       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+                0x0001adfc                std::terminate()
+ .text._ZSt13get_terminatev
+                0x0001ae0c        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+                0x0001ae0c                std::get_terminate()
+ .text._ZSt14get_unexpectedv
+                0x0001ae18        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+                0x0001ae18                std::get_unexpected()
+ .text._ZdlPvj  0x0001ae24        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+                0x0001ae24                operator delete(void*, unsigned int)
+ .text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+                0x0001ae2c       0x30 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .text.__cxa_init_primary_exception
+                0x0001ae5c       0x4c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+                0x0001ae5c                __cxa_init_primary_exception
+ .text.__cxa_throw
+                0x0001aea8       0x32 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+                0x0001aea8                __cxa_throw
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0001aeda       0x34 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001aeda                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+ .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0001af0e        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af0e                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ *fill*         0x0001af1a        0x2 ff
+ .text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0001af1c       0x18 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af1c                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x0001af1c                __cxxabiv1::__class_type_info::~__class_type_info()
+ .text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0001af34       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af34                __cxxabiv1::__class_type_info::~__class_type_info()
+ .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0001af48       0x3a c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af48                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0001af82       0x1a c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af82                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0001af9c       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x0001af9c                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+ .text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+                0x0001afc0       0x3a c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .text.__cxa_begin_catch
+                0x0001affa       0x4e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+                0x0001affa                __cxa_begin_catch
+ .text.__cxa_get_globals
+                0x0001b048        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+                0x0001b048                __cxa_get_globals
+ .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x0001b050       0x18 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0001b050                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0001b050                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+ .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x0001b068       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0001b068                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+ .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0001b07c       0x32 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0001b07c                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x0001b0ae       0x80 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0001b0ae                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0001b12e       0x22 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0001b12e                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ .text._ZNSt9type_infoD2Ev
+                0x0001b150        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                0x0001b150                std::type_info::~type_info()
+                0x0001b150                std::type_info::~type_info()
+ .text._ZNKSt9type_info14__is_pointer_pEv
+                0x0001b152        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                0x0001b152                std::type_info::__is_pointer_p() const
+                0x0001b152                std::type_info::__is_function_p() const
+ .text._ZNKSt9type_infoeqERKS_
+                0x0001b156       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                0x0001b156                std::type_info::operator==(std::type_info const&) const
+ .text.abort    0x0001b182        0xe c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+                0x0001b182                abort
+ .text.__libc_init_array
+                0x0001b190       0x48 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+                0x0001b190                __libc_init_array
+ .text.malloc   0x0001b1d8       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+                0x0001b1d8                malloc
+ .text.free     0x0001b1ec       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+                0x0001b1ec                free
+ .text.memset   0x0001b200       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+                0x0001b200                memset
+ .text.malloc_usable_size
+                0x0001b210       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+                0x0001b210                malloc_usable_size
+ .text._free_r  0x0001b224       0x94 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+                0x0001b224                _free_r
+ .text._malloc_r
+                0x0001b2b8       0xbc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0001b2b8                _malloc_r
+ .text._malloc_usable_size_r
+                0x0001b374       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+                0x0001b374                _malloc_usable_size_r
+ .text._sbrk_r  0x0001b384       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+                0x0001b384                _sbrk_r
+ .text._raise_r
+                0x0001b3a8       0x54 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+                0x0001b3a8                _raise_r
+ .text.raise    0x0001b3fc       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+                0x0001b3fc                raise
+ .text._kill_r  0x0001b410       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+                0x0001b410                _kill_r
+ .text._getpid_r
+                0x0001b434        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+                0x0001b434                _getpid_r
+ .text          0x0001b43c       0x14 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+                0x0001b43c                strcmp
+ .text.__malloc_lock
+                0x0001b450       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+                0x0001b450                __malloc_lock
+ .text.__malloc_unlock
+                0x0001b460       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+                0x0001b460                __malloc_unlock
+ .text.__retarget_lock_acquire_recursive
+                0x0001b470        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x0001b470                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0001b472        0x2 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x0001b472                __retarget_lock_release_recursive
+ .text          0x0001b474      0xa38 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+                0x0001b740                _Unwind_GetCFA
+                0x0001b744                __gnu_Unwind_RaiseException
+                0x0001b798                __gnu_Unwind_ForcedUnwind
+                0x0001b7ac                __gnu_Unwind_Resume
+                0x0001b7f4                __gnu_Unwind_Resume_or_Rethrow
+                0x0001b810                _Unwind_Complete
+                0x0001b814                _Unwind_DeleteException
+                0x0001b824                _Unwind_VRS_Get
+                0x0001b874                _Unwind_VRS_Set
+                0x0001b8c4                __gnu_Unwind_Backtrace
+                0x0001bc24                __aeabi_unwind_cpp_pr0
+                0x0001bc30                __aeabi_unwind_cpp_pr1
+                0x0001bc3c                __aeabi_unwind_cpp_pr2
+                0x0001bc48                _Unwind_VRS_Pop
+ .text          0x0001beac      0x144 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(libunwind.o)
+                0x0001beac                __restore_core_regs
+                0x0001beac                restore_core_regs
+                0x0001bed8                __gnu_Unwind_Restore_VFP
+                0x0001bedc                __gnu_Unwind_Save_VFP
+                0x0001bee0                __gnu_Unwind_Restore_VFP_D
+                0x0001bee4                __gnu_Unwind_Save_VFP_D
+                0x0001bee8                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x0001beec                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x0001bef0                __gnu_Unwind_Restore_WMMXD
+                0x0001bef4                __gnu_Unwind_Save_WMMXD
+                0x0001bef8                __gnu_Unwind_Restore_WMMXC
+                0x0001befc                __gnu_Unwind_Save_WMMXC
+                0x0001bf00                ___Unwind_RaiseException
+                0x0001bf00                _Unwind_RaiseException
+                0x0001bf30                _Unwind_Resume
+                0x0001bf30                ___Unwind_Resume
+                0x0001bf60                _Unwind_Resume_or_Rethrow
+                0x0001bf60                ___Unwind_Resume_or_Rethrow
+                0x0001bf90                _Unwind_ForcedUnwind
+                0x0001bf90                ___Unwind_ForcedUnwind
+                0x0001bfc0                ___Unwind_Backtrace
+                0x0001bfc0                _Unwind_Backtrace
+ .text          0x0001bff0      0x390 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+                0x0001c044                __gnu_unwind_execute
+                0x0001c338                __gnu_unwind_frame
+                0x0001c360                _Unwind_GetRegionStart
+                0x0001c36c                _Unwind_GetLanguageSpecificData
+ .text.unlikely
+                0x0001c380        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+                0x0001c380                _Unwind_GetDataRelBase
+                0x0001c386                _Unwind_GetTextRelBase
+ .text          0x0001c38c      0x1d4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x0001c38c                __divsi3
+                0x0001c38c                __aeabi_idiv
+                0x0001c558                __aeabi_idivmod
+ .text          0x0001c560        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x0001c560                __aeabi_idiv0
+                0x0001c560                __aeabi_ldiv0
+ .text          0x0001c564       0x48 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+                0x0001c564                __aeabi_ldivmod
+ .text          0x0001c5ac       0x54 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+                0x0001c5ac                __muldi3
+                0x0001c5ac                __aeabi_lmul
+ .text          0x0001c600       0x38 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+                0x0001c600                __gnu_ldivmod_helper
+ .text          0x0001c638      0x2f0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+                0x0001c848                __gcc_personality_v0
+ .text          0x0001c928      0x1cc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+                0x0001c928                __divdi3
+ .text          0x0001caf4       0x18 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+                0x0001caf4                __clzdi2
+ .text          0x0001cb0c       0x3c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+                0x0001cb0c                __clzsi2
+ .text._getpid  0x0001cb48       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+                0x0001cb48                _getpid
+ .text._kill    0x0001cb58       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+                0x0001cb58                _kill
+ .text._exit    0x0001cb68        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x0001cb68                _exit
+ .text.memcpy   0x0001cb6c       0x12 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0001cb6c                memcpy
+ *(.rodata .rodata.*)
+ *fill*         0x0001cb7e        0x2 ff
+ .rodata        0x0001cb80      0xb20 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x0001cb80                vtable for uc_Array<up_femto::uc_TileSet, true>
+                0x0001cb9c                vtable for uc_Array<up_java::up_lang::uc_String, true>
+                0x0001cd44                vtable for up_java::up_lang::uc_String
+                0x0001ce58                _ZZN8up_femto10up_palette8uc_Pico87paletteEvE1d.lto_priv.117
+                0x0001d140                vtable for uc_MainStartupScreen
+                0x0001d20c                vtable for uc_MainDay
+                0x0001d240                vtable for uc_MainLevelMap
+                0x0001d298                vtable for up_femto::up_mode::uc_ScreenMode
+                0x0001d680                __managed__
+                0x0001d684                vtable for up_java::up_lang::uc_Object
+ .rodata.str1.4
+                0x0001d6a0      0x15a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ *fill*         0x0001d7fa        0x2 ff
+ .rodata        0x0001d7fc     0x426b C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+                0x0001dae4                vtable for uc_TimeMeterEntity
+                0x0001db1c                vtable for uc_Winner
+                0x0001db78                vtable for uc_Event
+                0x0001dc54                vtable for uc_Coffee
+ *fill*         0x00021a67        0x1 ff
+ .rodata.str1.4
+                0x00021a68      0x179 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+                                0x191 (size before relaxing)
+ *fill*         0x00021be1        0x3 ff
+ .rodata        0x00021be4      0x21a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ *fill*         0x00021dfe        0x2 ff
+ .rodata.str1.4
+                0x00021e00      0x421 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+                                0x4f1 (size before relaxing)
+ *fill*         0x00022221        0x3 ff
+ .rodata        0x00022224    0x110fc C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ .rodata.str1.4
+                0x00033320       0xc0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+                                0x121 (size before relaxing)
+ .rodata._ZTIN10__cxxabiv117__class_type_infoE
+                0x000333e0        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x000333e0                typeinfo for __cxxabiv1::__class_type_info
+ .rodata._ZTSN10__cxxabiv117__class_type_infoE
+                0x000333ec       0x22 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x000333ec                typeinfo name for __cxxabiv1::__class_type_info
+ *fill*         0x0003340e        0x2 ff
+ .rodata._ZTVN10__cxxabiv117__class_type_infoE
+                0x00033410       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+                0x00033410                vtable for __cxxabiv1::__class_type_info
+ .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
+                0x0003343c        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x0003343c                typeinfo for __cxxabiv1::__si_class_type_info
+ .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
+                0x00033448       0x25 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x00033448                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x0003346d        0x3 ff
+ .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
+                0x00033470       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+                0x00033470                vtable for __cxxabiv1::__si_class_type_info
+ .rodata._ZTISt9type_info
+                0x0003349c        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                0x0003349c                typeinfo for std::type_info
+ .rodata._ZTSSt9type_info
+                0x000334a4        0xd c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+                0x000334a4                typeinfo name for std::type_info
+ *fill*         0x000334b1        0x3 ff
+ .rodata        0x000334b4       0x34 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+                0x000334e8                . = ALIGN (0x4)
+                0x000334e8                . = ALIGN (0x4)
+ *(.init)
+ .init          0x000334e8        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+                0x000334e8                _init
+ .init          0x000334ec        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+                0x000334f4                . = ALIGN (0x4)
+                0x000334f4                __preinit_array_start = .
+ *(.preinit_array)
+                0x000334f4                __preinit_array_end = .
+                0x000334f4                . = ALIGN (0x4)
+                0x000334f4                __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x000334f4        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x000334f8        0x4 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ .init_array    0x000334fc        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+                0x00033500                __init_array_end = .
+ *(.fini)
+ .fini          0x00033500        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+                0x00033500                _fini
+ .fini          0x00033504        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+                0x0003350c                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *crtend.o(.ctors)
+                0x0003350c                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *crtend.o(.dtors)
+ *(vtable)
+                0x0003350c                PROVIDE (_codesize = .)
+
+.glue_7         0x0003350c        0x0
+ .glue_7        0x0003350c        0x0 linker stubs
+
+.glue_7t        0x0003350c        0x0
+ .glue_7t       0x0003350c        0x0 linker stubs
+
+.vfp11_veneer   0x0003350c        0x0
+ .vfp11_veneer  0x0003350c        0x0 linker stubs
+
+.v4_bx          0x0003350c        0x0
+ .v4_bx         0x0003350c        0x0 linker stubs
+
+.iplt           0x0003350c        0x0
+ .iplt          0x0003350c        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+
+.ARM.extab      0x0003350c      0x734
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x0003350c      0x1b8 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ .ARM.extab.text.startup
+                0x000336c4       0x71 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ *fill*         0x00033735        0x3 
+ .ARM.extab     0x00033738      0x21f C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+ *fill*         0x00033957        0x1 
+ .ARM.extab     0x00033958      0x15a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ *fill*         0x00033ab2        0x2 
+ .ARM.extab     0x00033ab4      0x141 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ *fill*         0x00033bf5        0x3 
+ .ARM.extab.after_vectors
+                0x00033bf8        0xc C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ .ARM.extab     0x00033c04       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+ .ARM.extab     0x00033c28        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .ARM.extab     0x00033c34        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+                0x00033c40                __exidx_start = .
+
+.eh_frame       0x00033c40        0x0
+ .eh_frame      0x00033c40        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+
+.ARM.exidx      0x00033c40      0x7d0
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x00033c50      0x188 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                                0x2a8 (size before relaxing)
+ .ARM.exidx.text.startup
+                0x00033dd8       0x18 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ .ARM.exidx     0x00033df0      0x1d8 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+                                0x5a0 (size before relaxing)
+ .ARM.exidx     0x00033fc8      0x1c0 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+                                0x2e8 (size before relaxing)
+ .ARM.exidx     0x00034188      0x190 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+                                0x748 (size before relaxing)
+ .ARM.exidx.after_vectors
+                0x00033c40       0x10 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx     0x00034318       0x90 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+                                 0xd8 (size before relaxing)
+ .ARM.exidx     0x000343a8       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+                                 0x38 (size before relaxing)
+ .ARM.exidx.text.unlikely
+                0x000343d0        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+                                 0x10 (size before relaxing)
+ .ARM.exidx     0x000343d8       0x30 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-c.o)
+                                 0x48 (size before relaxing)
+ .ARM.exidx     0x00034408        0x8 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+                0x00034410                __exidx_end = .
+                0x00034410                _etext = .
+
+.rel.dyn        0x00034410        0x0
+ .rel.iplt      0x00034410        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+
+.mtb_buffer_RAM2
+ *(.mtb.$RAM2*)
+ *(.mtb.$RAM1_2*)
+
+.data_RAM2      0x20000000        0x0 load address 0x00034410
+ FILL mask 0xff
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$Ram1_2)
+ *(.data.$RAM2*)
+ *(.data.$Ram1_2*)
+                0x20000000                . = ALIGN (0x4)
+
+.mtb_buffer_RAM3
+ *(.mtb.$RAM3*)
+ *(.mtb.$RAM2USB_2*)
+
+.data_RAM3      0x20004000        0x0 load address 0x00034410
+ FILL mask 0xff
+ *(.ramfunc.$RAM3)
+ *(.ramfunc.$Ram2USB_2)
+ *(.data.$RAM3*)
+ *(.data.$Ram2USB_2*)
+                0x20004000                . = ALIGN (0x4)
+
+.mtb_buffer_default
+ *(.mtb*)
+
+.uninit_RESERVED
+                0x10000100        0x0
+ *(.bss.$RESERVED*)
+                0x10000100                . = ALIGN (0x4)
+                0x10000100                _end_uninit_RESERVED = .
+
+.data           0x10000100       0x74 load address 0x00034410
+ FILL mask 0xff
+                0x10000100                _data = .
+ *(.ramfunc*)
+ *(.data*)
+ .data          0x10000100        0x8 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x10000100                up_femto::up_sound::uc_Mixer::multiplier
+                0x10000104                up_femto::up_mode::uc_ScreenMode::frameTime
+ .data._ZN10__cxxabiv119__terminate_handlerE
+                0x10000108        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+                0x10000108                __cxxabiv1::__terminate_handler
+ .data._ZN10__cxxabiv120__unexpected_handlerE
+                0x1000010c        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+                0x1000010c                __cxxabiv1::__unexpected_handler
+ .data._impure_ptr
+                0x10000110        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+                0x10000110                _impure_ptr
+ .data.impure_data
+                0x10000114       0x60 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+                0x10000174                . = ALIGN (0x4)
+                0x10000174                _edata = .
+
+.igot.plt       0x10000174        0x0 load address 0x00034484
+ .igot.plt      0x10000174        0x0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+
+.bss_RAM2       0x20000000        0x0
+ *(.bss.$RAM2*)
+ *(.bss.$Ram1_2*)
+                0x20000000                . = ALIGN (0x4)
+
+.bss_RAM3       0x20004000        0x0
+ *(.bss.$RAM3*)
+ *(.bss.$Ram2USB_2*)
+                0x20004000                . = ALIGN (0x4)
+
+.bss            0x10000178      0x134
+                0x10000178                _bss = .
+ *(.bss*)
+ .bss           0x10000178       0x1c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x10000194        0x4 
+ .bss           0x10000198       0xd9 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                0x10000198                uc_Common::levelPointsArray
+                0x1000019c                uc_Main::eepromCookie
+                0x100001a0                up_java::up_lang::uc_Object::__gray_count__
+                0x100001ac                up_femto::up_sound::uc_Mixer::channel0
+                0x100001b0                up_femto::up_sound::uc_Mixer::channel1
+                0x100001b4                up_femto::up_sound::uc_Mixer::channel2
+                0x100001b8                up_femto::up_sound::uc_Mixer::channel3
+                0x100001bc                up_femto::up_sound::uc_Mixer::shifter
+                0x100001c0                uc_Common::totalCoffeeCount
+                0x100001c8                uc_Main::screen
+                0x100001cc                uc_Common::zombies
+                0x100001d0                uc_Common::tilemap
+                0x100001d4                uc_Common::enemies
+                0x100001d8                uc_Common::heroEntity
+                0x100001dc                uc_Common::events
+                0x100001e0                __allocated_memory__
+                0x100001e4                up_java::up_lang::uc_Math::rng
+                0x100001e8                up_java::up_lang::uc_Object::__first__
+                0x100001ec                up_femto::up_input::uc_Button::A
+                0x100001f0                up_femto::up_input::uc_Button::B
+                0x100001f4                up_femto::up_input::uc_Button::C
+                0x100001f8                up_femto::up_input::uc_Button::Up
+                0x100001fc                up_femto::up_input::uc_Button::Down
+                0x10000200                up_femto::up_input::uc_Button::Left
+                0x10000204                up_femto::up_input::uc_Button::Right
+                0x10000208                up_java::up_lang::uc_Runtime::_instance
+                0x1000020c                up_femto::uc_Game::instance
+                0x10000230                uc_Common::bubbleImage
+                0x10000244                uc_Common::mattiImage
+                0x10000248                up_java::up_lang::uc_System::bootTime
+                0x10000250                __timer
+                0x10000258                uc_Common::currentDay
+                0x10000260                uc_Common::currentFrameStartTimeMs
+                0x10000268                uc_Common::totalBeanCount
+                0x10000270                uc_Common::isTutorialActive
+ *fill*         0x10000271        0x3 
+ .bss           0x10000274        0x4 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ .bss._ZN12_GLOBAL__N_114emergency_poolE
+                0x10000278       0x10 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .bss._ZL10eh_globals
+                0x10000288        0xc c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .bss.__malloc_free_list
+                0x10000294        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x10000294                __malloc_free_list
+ .bss.__malloc_sbrk_start
+                0x10000298        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x10000298                __malloc_sbrk_start
+ *(COMMON)
+ COMMON         0x1000029c        0x4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+                0x1000029c                errno
+ COMMON         0x100002a0        0x9 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x100002a0                __lock___atexit_recursive_mutex
+                0x100002a1                __lock___arc4random_mutex
+                0x100002a2                __lock___env_recursive_mutex
+                0x100002a3                __lock___sinit_recursive_mutex
+                0x100002a4                __lock___malloc_recursive_mutex
+                0x100002a5                __lock___at_quick_exit_mutex
+                0x100002a6                __lock___dd_hash_mutex
+                0x100002a7                __lock___tz_mutex
+                0x100002a8                __lock___sfp_recursive_mutex
+                0x100002ac                . = ALIGN (0x4)
+ *fill*         0x100002a9        0x3 
+                0x100002ac                _ebss = .
+                [!provide]                PROVIDE (end = .)
+                0x100002ac                __end__ = .
+
+.noinit_RAM2    0x20000000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$Ram1_2*)
+                0x20000000                . = ALIGN (0x4)
+
+.noinit_RAM3    0x20004000        0x0
+ *(.noinit.$RAM3*)
+ *(.noinit.$Ram2USB_2*)
+                0x20004000                . = ALIGN (0x4)
+
+.noinit         0x100002ac        0x0
+                0x100002ac                _noinit = .
+ *(.noinit*)
+                0x100002ac                . = ALIGN (0x4)
+                0x100002ac                _end_noinit = .
+                0x100002ac                PROVIDE (_pvHeapStart = .)
+                0x10008000                PROVIDE (_vStackTop = (__top_Ram0_32 - 0x0))
+OUTPUT(C:\\bin\\FemtoIDE\\IDE-windows\\projects\\ZombieFlock/ZombieFlock.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x28
+ .ARM.attributes
+                0x00000000       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x22 2.o
+ .ARM.attributes
+                0x0000006c       0x2a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+ .ARM.attributes
+                0x00000096       0x2a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+ .ARM.attributes
+                0x000000c0       0x2a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ .ARM.attributes
+                0x000000ea       0x2a C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+ .ARM.attributes
+                0x00000114       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .ARM.attributes
+                0x00000140       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .ARM.attributes
+                0x0000016c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .ARM.attributes
+                0x00000198       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .ARM.attributes
+                0x000001c4       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+ .ARM.attributes
+                0x000001f0       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .ARM.attributes
+                0x0000021c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+ .ARM.attributes
+                0x00000248       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_term_handler.o)
+ .ARM.attributes
+                0x00000274       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .ARM.attributes
+                0x000002a0       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_unex_handler.o)
+ .ARM.attributes
+                0x000002cc       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .ARM.attributes
+                0x000002f8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+ .ARM.attributes
+                0x00000324       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .ARM.attributes
+                0x00000350       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+ .ARM.attributes
+                0x0000037c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000003a8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x000003d4       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000400       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+ .ARM.attributes
+                0x0000042c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x00000458       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00000484       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000004b0       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000004dc       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .ARM.attributes
+                0x00000508       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+ .ARM.attributes
+                0x00000534       0x1c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000550       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000057c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x000005a8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x000005d4       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000600       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+ .ARM.attributes
+                0x0000062c       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(libunwind.o)
+ .ARM.attributes
+                0x0000064a       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .ARM.attributes
+                0x00000676       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000694       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000006b2       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x000006d0       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+ .ARM.attributes
+                0x000006fc       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x00000728       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x00000754       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+ .ARM.attributes
+                0x00000772       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+ .ARM.attributes
+                0x00000790       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .ARM.attributes
+                0x000007bc       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+ .ARM.attributes
+                0x000007e8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000814       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x00000840       0x1e c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp/crtn.o
+
+.comment        0x00000000       0x75
+ .comment       0x00000000       0x75 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans0.ltrans.o
+                                 0x76 (size before relaxing)
+ .comment       0x00000075       0x76 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans1.ltrans.o
+ .comment       0x00000075       0x76 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans2.ltrans.o
+ .comment       0x00000075       0x76 C:\Users\hannu\AppData\Local\Temp\cc9WIQbF.ltrans3.ltrans.o
+
+.debug_frame    0x00000000      0xe70
+ .debug_frame   0x00000000       0xe0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_alloc.o)
+ .debug_frame   0x000000e0       0x40 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(pure.o)
+ .debug_frame   0x00000120       0x58 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_aux_runtime.o)
+ .debug_frame   0x00000178       0xb0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_terminate.o)
+ .debug_frame   0x00000228       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(del_ops.o)
+ .debug_frame   0x00000250       0x78 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_throw.o)
+ .debug_frame   0x000002c8       0xd0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(class_type_info.o)
+ .debug_frame   0x00000398       0x8c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_catch.o)
+ .debug_frame   0x00000424       0x30 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(eh_globals.o)
+ .debug_frame   0x00000454       0xa4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(si_class_type_info.o)
+ .debug_frame   0x000004f8       0x88 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++_nano.a(tinfo.o)
+ .debug_frame   0x00000580       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-abort.o)
+ .debug_frame   0x000005a8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000005d4       0x40 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00000614       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000634       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-msize.o)
+ .debug_frame   0x0000065c       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000688       0x30 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x000006b8       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000006d8       0x2c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000704       0xe0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signal.o)
+ .debug_frame   0x000007e4       0x44 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-signalr.o)
+ .debug_frame   0x00000828       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strcmp.o)
+ .debug_frame   0x00000848       0x40 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00000888       0x48 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x000008d0       0xb0 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x00000980      0x2b4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(unwind-arm.o)
+ .debug_frame   0x00000c34       0xf4 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(pr-support.o)
+ .debug_frame   0x00000d28       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000d48       0x34 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+ .debug_frame   0x00000d7c       0x30 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(bpabi.o)
+ .debug_frame   0x00000dac       0x3c c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v6-m/nofp\libgcc.a(_divdi3.o)
+ .debug_frame   0x00000de8       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .debug_frame   0x00000e08       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+ .debug_frame   0x00000e28       0x20 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+ .debug_frame   0x00000e48       0x28 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+
+.stab           0x00000000       0x3c
+ .stab          0x00000000       0x24 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)
+ .stab          0x00000024       0x18 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(kill.o)
+                                 0x24 (size before relaxing)
+
+.stabstr        0x00000000       0x76
+ .stabstr       0x00000000       0x76 c:/bin/femtoide/ide-windows/windows/arm/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(getpid.o)

@@ -4,6 +4,27 @@ import femto.input.Button;
 
 import Common;
 
+class RunSfx extends drfx__soft_grass_foot_step {
+  float time;
+  public float speed = 1.5;
+  
+  RunSfx(char channel)
+  {
+      super(channel);
+  }
+
+  public void reset(){
+    time = 0;
+    super.reset();
+  }
+
+  ubyte update(){
+    time += speed;
+    t = (int) time; // "t" is the current sample in Bark. Maybe add Math.round?
+    return super.update();
+  }
+}
+
 class HeroEntity extends Hero 
 {
    
@@ -24,6 +45,11 @@ class HeroEntity extends Hero
     int prevTileID;
     float prevY;
     float dustHalfWidth;
+    long runSfxReplayTimeAt;
+    
+    // Sounds
+    RunSfx runSfx;
+    breviceps__step_into_water_puddle_wade pickBeanSfx;
 
     HeroEntity(MainDay mainDayPar) 
     { 
@@ -45,6 +71,10 @@ class HeroEntity extends Hero
             dustArray[i] = new Dust();
         currenDustIndex = 0;
         dustHalfWidth = dustArray[0].width() / 2;
+        
+        // Sfx
+        runSfx  = new RunSfx(1);
+        pickBeanSfx  = new breviceps__step_into_water_puddle_wade(1);
     }
     
     void update(HiRes16Color screen)
@@ -98,6 +128,13 @@ class HeroEntity extends Hero
        // check checkCollision
         checkCollision();
         
+        // Play sfx
+        if(y > prevY && runSfxReplayTimeAt < Common.currentFrameStartTimeMs)
+        {
+            runSfx.speed = (Math.random() * 2.0) + 0.5; // 0.5 - 1.5
+            runSfx.play();
+            runSfxReplayTimeAt = Common.currentFrameStartTimeMs + 230;
+        }
     }
 
     void checkCollision()
@@ -147,6 +184,7 @@ class HeroEntity extends Hero
             Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, heroX, heroY, 110, heroY-88-20, beansImage, null, false, 0, 0 );
             //System.out.println("CRASH!");
             mainDay.currentBeanCount += 10;
+            pickBeanSfx.play();
         }
         
         float heroX2 = x;
@@ -269,6 +307,7 @@ class HeroEntity extends Hero
         
        // Store prev values 
         prevTileID = tileId;
+        
    }
     
     void drawMe(HiRes16Color screen)
