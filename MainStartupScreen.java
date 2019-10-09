@@ -23,6 +23,9 @@ public class MainStartupScreen extends State
      long programStartTimeMs; // the start time of the program
      MenuDlg menuDlg;
      boolean doPrintBackStory;
+     boolean isInfoScreenActive;
+     int arrCount = 3;
+     String textLineArray[];
      
     // Avoid allocation in a State's constructor.
     // Allocate on init instead.
@@ -59,6 +62,11 @@ public class MainStartupScreen extends State
         
         Common.events[5].setSfxEvent( 4*1000, soundEffect, 0, 0 ); 
 
+        arrCount = 3;
+        textLineArray[] = new String[arrCount];
+        textLineArray[0] = "Play";
+        textLineArray[1] = "Tutorial";
+        textLineArray[2] = "Info";
     }
     
     // 
@@ -84,13 +92,13 @@ public class MainStartupScreen extends State
         if( Button.B.justPressed() )
         {
             // Start playing in the tutorial mode
-            Common.currentDay = 5;
+            Common.currentDay = 2;
             Common.totalBeanCount = 40*5;
             Common.totalCoffeeCount = 5;
             Game.changeState( new Main() );
         }
         
-        // Pressed A in the back story window.
+        // Pressed A in the back story window?
         boolean justPressedA = Button.A.justPressed();
         if( justPressedA && Common.isTutorialActive && doPrintBackStory == true )
         {
@@ -99,6 +107,15 @@ public class MainStartupScreen extends State
             Common.totalBeanCount = 0;
             Common.totalCoffeeCount = 0;
             Game.changeState( new MainDay() );
+        }
+        
+        // Pressed A in the info window?
+        else if( justPressedA && isInfoScreenActive == true )
+        {
+            // 
+            isInfoScreenActive = false;
+            // Create menu
+            menuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, textLineArray );
         }
         
         // Change to a new state when A is pressed
@@ -132,10 +149,18 @@ public class MainStartupScreen extends State
             
         else if( menuDlg != null  && menuDlg.pressedA ) // Selected a menu item
         {
+            // Start tutorial
             if( menuDlg.focusIndex == 1 ) // Selected "Tutorial" in the menu
             {
                 doPrintBackStory = true;
                 Common.isTutorialActive = true;
+                menuDlg = null;
+            }
+            
+            // show info
+            else if( menuDlg.focusIndex == 2 ) // Selected "Tutorial" in the menu
+            {
+                isInfoScreenActive = true;
                 menuDlg = null;
             }
        }
@@ -144,13 +169,7 @@ public class MainStartupScreen extends State
          // 
         else if( Button.C.justPressed() )
         {
-            int arrCount = 3;
-            String textLineArray[] = new String[arrCount];
-            textLineArray[0] = "Play";
-            textLineArray[1] = "Tutorial";
-            textLineArray[2] = "Info";
-
-            //
+            // Create menu
             menuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, textLineArray );
         }
             
@@ -187,8 +206,14 @@ public class MainStartupScreen extends State
         if( doPrintBackStory )
         {
             Main.screen.clear( 14 );
-            Main.drawBackStoryWindow(); 
+            Main.drawBackStoryWindow(0); 
             Main.drawButtonAndLabel( 0, 176-14, 220, "A  Continue", "A");
+        }
+        else if( isInfoScreenActive )
+        {
+            Main.screen.clear( 14 );
+            Main.drawBackStoryWindow(1); 
+            Main.drawButtonAndLabel( 0, 176-14, 220, "A  Back", "A");
         }
         else
         {
@@ -202,8 +227,6 @@ public class MainStartupScreen extends State
                 if(!Common.events[i].isFree() && Common.events[i].isDrawingState)
                     Common.events[i].draw(Main.screen);
             }
-            
-            //
             
             //
             Main.drawButtonAndLabel( 0, 176-14, 220, "C  Menu", "C");

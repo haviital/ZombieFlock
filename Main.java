@@ -13,7 +13,7 @@ import femto.sound.Procedural;
 import femto.palette.Pico8;
 
 import MainDay;
-import MainLevelMap;
+import MainLevelMap;b
 import ZombieEntity;
 import HorizBarEntity;
 import VertBarEntity;
@@ -59,14 +59,9 @@ public class Main extends State {
     BombEntity bombs[];
 
     // Sounds
-    //arrigd_zombie_roar_3 sfx1;
     breviceps_zombie_gargles sfx2;
-    //crocytc_zombie3 sfx3;
-    //missozzy_zombie_02 sfx4;
-    //missozzy_zombie_04 sfx5;
-    //thanra_zombie_roar sfx6;
-    
-    //HiRes16Color screen; // the screenmode we want to draw with
+    breviceps__step_into_water_puddle_wade zombiTakesCoffeeSfx;
+
     HorizBarEntity barH;
     VertBarEntity barV;
     TimeMeterEntity timeMeterEntity;
@@ -155,13 +150,8 @@ public class Main extends State {
         timeMeterEntity =  new TimeMeterEntity();
         winnerImage = new Winner();
         
-        // sfx1 = new arrigd_zombie_roar_3(0);
         sfx2 = new breviceps_zombie_gargles(0);
-        // sfx3 = new crocytc_zombie3(0);
-        // sfx4 = new missozzy_zombie_02(0);
-        // sfx5 = new missozzy_zombie_04(0);
-        // sfx6 = new thanra_zombie_roar(0);
-        // currSfxNum = 1;
+        zombiTakesCoffeeSfx  = new breviceps__step_into_water_puddle_wade(1);
 
         // Create events.
         Common.events = new Event[Common.MAX_EVENTS]; //
@@ -514,6 +504,9 @@ public class Main extends State {
                 
                 // Put the zombie away    
                 zomb.setX(-10);
+                
+                // Play sound.
+                zombiTakesCoffeeSfx.play();
             }
          }
     }
@@ -749,7 +742,7 @@ public class Main extends State {
         Main.screen.print( buttonName );
     }
 
-    public static void drawBackStoryWindow()    
+    public static void drawBackStoryWindow(int textNum)    
     {
         // Draw bubble
         drawBubble(5,5,210,120, 145);
@@ -766,18 +759,38 @@ public class Main extends State {
         Main.screen.textColor = 7;
         Main.screen.setTextPosition( currX, currY );
         
-          //               123456789#123456789#123456789#12345    
-        Main.screen.print("The climate change has destroyed");  currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("all except one coffee farm in");  currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("the world. Unfortunately that is");   currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("located on an ancient indian");       currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("graveyard. In the daytime, you must");      currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("collect the beans and escape the"); currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("skeleton army. At night, you have");  currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("to protect your coffee storage from");   currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("people which have been turned into");    currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("zombies because of their");    currY += incY; Main.screen.setTextPosition( currX, currY );
-        Main.screen.print("coffee-addiction.");    currY += incY; Main.screen.setTextPosition( currX, currY );
+        if(textNum==0)
+        {
+              //               123456789#123456789#123456789#12345    
+            Main.screen.print("The climate change has destroyed");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("all except one coffee farm in");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("the world. Unfortunately that is");   currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("located on an ancient Sami");       currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("graveyard. In the daytime, you must");      currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("collect the beans and escape the"); currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("skeleton army. At night, you have");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("to protect your coffee storage from");   currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("people which have been turned into");    currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("zombies because of their");    currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("coffee-addiction.");    currY += incY; Main.screen.setTextPosition( currX, currY );
+        }
+        else if(textNum==1)
+        {
+              //               123456789#123456789#123456789#12345    
+            Main.screen.print("V" + Common.VERSION_STRING + ", " + Common.DATE_STRING +  ", Hannu Viitala");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.textColor = 10;
+            Main.screen.print("Coding by @Hanski.");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("Graphics by @Hanski, @Vampirics,");   currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("Bagzie.");       currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("Sounds by Missozzy, Breviceps,");      currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("DRFX, lewfres."); currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.textColor = 12;
+            Main.screen.print("Greetings to the best community");  currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("ever, the Pokitto Forum!");   currY += incY; Main.screen.setTextPosition( currX, currY );
+            Main.screen.print("Cheers, Matti");   currY += incY; Main.screen.setTextPosition( currX, currY );
+        }
     }
 
 }
