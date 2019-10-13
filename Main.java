@@ -116,8 +116,7 @@ public class Main extends State {
         
         Common.currentDay = 0;
  
-          //!!!HV
-        eepromCookie.flags |= eepromCookie.FLAG_TUTORIAL_PASSED;
+        //eepromCookie.flags |= eepromCookie.FLAG_TUTORIAL_PASSED; //!!!HV
 
         Game.run( TIC80.font(), new MainStartupScreen() );
         //Game.run( TIC80.font(), new MainDay() );
@@ -131,8 +130,7 @@ public class Main extends State {
         System.out.println("init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         programStartTimeMs = System.currentTimeMillis() - 1; // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         
-        //!!!HV make the level shorter
-        //programStartTimeMs -= 20*1000;
+        //programStartTimeMs -= 20*1000; //!!!HV
         
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         

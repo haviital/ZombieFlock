@@ -2,8 +2,8 @@ import ZombieEntity;
 
 class Common 
 {
-    static final String VERSION_STRING = "0.5";
-    static final String DATE_STRING = "8-Oct-2019";
+    static final String VERSION_STRING = "0.6";
+    static final String DATE_STRING = "13-Oct-2019";
 
     static final int TARGET_X = 110;
     static final int TARGET_Y = 88;

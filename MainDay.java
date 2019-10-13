@@ -148,9 +148,9 @@ public class MainDay extends State {
 
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
-        //!!!HV
-        //currentBeanCount = 500;
-        //Common.heroEntity.y = 95*16;
+        
+        //currentBeanCount = 500; //!!!HV 
+        //Common.heroEntity.y = 95*16; //!!!HV
     }
     
     // 
