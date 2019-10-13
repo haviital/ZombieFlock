@@ -28,6 +28,9 @@ public class MainDay extends State {
     static final int MAP_TILE_HIGHT_IN_PIXELS = 16;
     static final int MAP_LEVEL_HIGHT_IN_PIXELS = MAP_LEVEL_HIGHT_IN_TILES * MAP_TILE_HIGHT_IN_PIXELS;
     static final int HALF_MAP_LEVEL_HIGHT_IN_PIXELS = MAP_LEVEL_HIGHT_IN_PIXELS / 2;
+    static final int MAP_LEVEL_WIDTH_IN_TILES = 14;
+    static final int MAP_TILE_WIDTH_IN_PIXELS = 16;
+    static final int MAP_LEVEL_WIDTH_IN_PIXELS = MAP_LEVEL_WIDTH_IN_TILES * MAP_TILE_WIDTH_IN_PIXELS;
 
     
     // Images
@@ -52,9 +55,10 @@ public class MainDay extends State {
     long storedBeanCount;  //!!HV
     float castleX;
     float castleY;
-    long launchAtScreenTopYOn; // Launch bat at this point
+    long launchBatAtScreenTopYOn; // Launch bat at this point
     boolean nextBatGoEast; // Bat direction
     int levelStartY;
+    int levelStartX;
    
     // Avoid allocation in a State's constructor
     // Allocate on init instead.
@@ -65,9 +69,11 @@ public class MainDay extends State {
         Main.screen.loadPalette(Pico8.palette());
         
         Main.screen.cameraX = 0;
-        levelStartY = (Common.currentDay % 3) * MAP_LEVEL_HIGHT_IN_PIXELS;
+        levelStartX = (Common.currentDay % 3) * MAP_LEVEL_WIDTH_IN_PIXELS;
+        levelStartY = 0;
+        Main.screen.cameraX = levelStartX;
         Main.screen.cameraY = levelStartY;
-        launchAtScreenTopYOn = levelStartY;
+        launchBatAtScreenTopYOn = levelStartY;
 
         // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         programStartTimeMs = System.currentTimeMillis() - 1; 
@@ -80,7 +86,8 @@ public class MainDay extends State {
         //castleDayImageHalfWidth = castleDayImage.width()/2;
         Common.heroEntity = new HeroEntity(this);
         Common.heroEntity.run();
-        Common.heroEntity.y = 88 + launchAtScreenTopYOn;
+        Common.heroEntity.x = 110 + levelStartX;
+        Common.heroEntity.y = 88 + levelStartY;
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
         beanImage = new Bean();
@@ -88,10 +95,10 @@ public class MainDay extends State {
         // Bat entity
         bats = new BatEntity[Common.MAX_BATS]; //
         for(int i=0; i < Common.MAX_BATS; i++)
-            bats[i] = new BatEntity();
+            bats[i] = new BatEntity(this);
             
         //
-        castleX = 110-(castleDayImage.width()/2);
+        castleX = levelStartX + 110-(castleDayImage.width()/2);
         
         // Create events.
         Common.events = new Event[Common.MAX_EVENTS]; //
@@ -102,15 +109,15 @@ public class MainDay extends State {
         int j=0;
         for(int i=0; i < Common.MAX_ENEMIES; i++, j++)
             Common.enemies[j] = new EnemyEntity();
-        Common.enemies[0].x = 110;
+        Common.enemies[0].x = levelStartX +  110;
         Common.enemies[0].followHeroOffsetX = 0;
         Common.enemies[0].followHeroOffsetY = Common.SKELETON_OFFSET_Y;
         Common.enemies[0].run();
-        Common.enemies[1].x = 110;
+        Common.enemies[1].x = levelStartX + 110;
         Common.enemies[1].followHeroOffsetX = -12;
         Common.enemies[1].followHeroOffsetY = Common.SKELETON_OFFSET_Y-20;
         Common.enemies[1].run2();
-        Common.enemies[2].x = 110;
+        Common.enemies[2].x = levelStartX + 110;
         Common.enemies[2].followHeroOffsetX = 12;
         Common.enemies[2].followHeroOffsetY = Common.SKELETON_OFFSET_Y-25;
         Common.enemies[2].run();
@@ -229,9 +236,9 @@ public class MainDay extends State {
             }
             
             // Should launch a new bat?
-            if(Common.currentDay > 0 && Main.screen.cameraY > launchAtScreenTopYOn)
+            if(Common.currentDay > 0 && Main.screen.cameraY > launchBatAtScreenTopYOn)
             {
-                if( launchAtScreenTopYOn > 0)
+                if( launchBatAtScreenTopYOn > 0)
                 {
                     // find next free bat
                     int i=0;
@@ -244,23 +251,24 @@ public class MainDay extends State {
                     long vel = 3;
                     if( nextBatGoEast )
                     {
-                        bats[ i ].x = -16;
+                        bats[ i ].x = levelStartX - 16;
                         bats[ i ].velX = vel;
                     }
                     else
                     {
-                        bats[ i ].x = 220;
+                        bats[ i ].x = levelStartX + 220;
                         bats[ i ].velX = -vel;
                     }
-                    bats[ i ].y = launchAtScreenTopYOn + 150;
+                    bats[ i ].y = launchBatAtScreenTopYOn + 150;
                     bats[ i ].velY = 0;
                     bats[ i ].isHit = false;
                     bats[ i ].playSfx();
+                    bats[ i ].isActive = true;
                 }
                 
                 // Next bat parameters
                 nextBatGoEast = !nextBatGoEast;
-                launchAtScreenTopYOn += 500 - (Common.currentDay * 70 );
+                launchBatAtScreenTopYOn += 500 - (Common.currentDay * 70 );
             }
 
             
@@ -340,7 +348,7 @@ public class MainDay extends State {
         Main.screen.print("FPS:" + (int)(Main.screen.fps()+0.5));
         
         //!!HV
-        System.out.println("castleY=" + (int)castleY + ", Main.screen.cameraY=" + (int)Main.screen.cameraY + ", levelStartY=" + (int)levelStartY + ", HALF_MAP_LEVEL_HIGHT_IN_PIXELS=" + (int)HALF_MAP_LEVEL_HIGHT_IN_PIXELS);
+        //System.out.println("castleY=" + (int)castleY + ", Main.screen.cameraY=" + (int)Main.screen.cameraY + ", levelStartY=" + (int)levelStartY + ", HALF_MAP_LEVEL_HIGHT_IN_PIXELS=" + (int)HALF_MAP_LEVEL_HIGHT_IN_PIXELS);
         // levelStartY + halfTilemapHeight - castleDayImage.height();
         
         // Update the screen with everything that was drawn

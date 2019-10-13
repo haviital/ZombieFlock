@@ -17,7 +17,7 @@ public class map extends BaseMap {
         draw(screen, 0);
     }
     int readDayField(int tileX, int tileY){
-        pointer addr = this.data + 4 + tileY*28 + tileX*2;
+        pointer addr = this.data + 4 + tileY*84 + tileX*2;
         return (((int)LDRB(addr)&1)<<8) + LDRB(addr+1);
     }
 

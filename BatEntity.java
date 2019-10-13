@@ -7,6 +7,7 @@ import Common;
 class BatEntity extends Bat3 
 {
    
+    MainDay mainDay;
     public float velX;
     public float velY;
     public float launchAtScreenTopYOn;
@@ -18,8 +19,9 @@ class BatEntity extends Bat3
     // Sounds
     lewfres__wild_animal_scream batSfx;
 
-    BatEntity() 
+    BatEntity(MainDay mainDayPar) 
     { 
+        mainDay = mainDayPar;
         run();
         
         // Sfx
@@ -33,19 +35,28 @@ class BatEntity extends Bat3
     
     void update(HiRes16Color screen)
     {
-        if(Main.screen.cameraY > launchAtScreenTopYOn)
+        if(isActive)
         {
-            x += velX;
-            y += velY;
+            if(Main.screen.cameraY > launchAtScreenTopYOn)
+            {
+                x += velX;
+                y += velY;
+                
+            }
             
+            if( x < mainDay.levelStartX - 16 || x > mainDay.levelStartX + 220 )
+                isActive = false;
         }
     }
 
     void drawMe(HiRes16Color screen)
     {
-        setMirrored( velX  <0 );    
-        setStatic( false );
-        draw(screen);
+        if(isActive)
+        {
+            setMirrored( velX  <0 );    
+            setStatic( false );
+            draw(screen);
+        }
     }
     
 }

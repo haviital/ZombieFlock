@@ -19,6 +19,7 @@ class RunSfx extends drfx__soft_grass_foot_step {
   }
 
   ubyte update(){
+    // Variate pitch
     time += speed;
     t = (int) time; // "t" is the current sample in Bark. Maybe add Math.round?
     return super.update();
@@ -59,7 +60,7 @@ class HeroEntity extends Hero
             velY /= 2;  // Slow down in tutorial mode.
         halfWidth = width() / 2;
         halfHeight = height() / 2;
-        x = 110;
+        //x = 110;
         //y = 88;
         //y = 46*16; //!!HV
         beansImage = new Beans();
@@ -92,25 +93,9 @@ class HeroEntity extends Hero
             x += velX;
         }
             
-            
         // Always go forward, if not stopped
-        //!!!HV if(stopUntilTime<Common.currentFrameStartTimeMs)
-            //!!!HV y += velY;
-        
-        //if( Button.Up.isPressed() )
-        //{
-        //    y -= velY;
-        //    
-        //    for(int i=0; i < Common.MAX_ENEMIES; i++)
-        //        Common.enemies[i].y -= velY;
-        //}
-        //else if( Button.Down.isPressed() )
-        //{
-        //    y += velY;
-        //    
-        //    for(int i=0; i < Common.MAX_ENEMIES; i++)
-        //        Common.enemies[i].y += velY;
-        //}
+        if(stopUntilTime<Common.currentFrameStartTimeMs)
+            y += velY;
         
         // Dust
         if( dustTime < Common.currentFrameStartTimeMs )
@@ -163,10 +148,10 @@ class HeroEntity extends Hero
         }
 
         // Check out of screen edges.
-        if( x < 0 )
-            x = 0;
-        if( x > 220 - width() )
-            x = 220 - width();
+        if( x < mainDay.levelStartX )
+            x = mainDay.levelStartX;
+        if( x > mainDay.levelStartX + 220 - width() )
+            x = mainDay.levelStartX + 220 - width();
 
         float heroX = x + halfWidth;
         int tileXIndex = ((int)heroX) >> 4;
@@ -181,7 +166,7 @@ class HeroEntity extends Hero
         {
             // Collect beans.
             //Common.events[0].setMoveAnimEvent(0, (long)1*1000, heroX, heroY, 110.90, -10.0, beansImage );
-            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, heroX, heroY, 110, heroY-88-20, beansImage, null, false, 0, 0 );
+            Common.events[Main.getNextFreeEvent()].setMoveAnimEvent(0, (long)500, heroX, heroY, mainDay.levelStartX+110, heroY-88-20, beansImage, null, false, 0, 0 );
             //System.out.println("CRASH!");
             mainDay.currentBeanCount += 10;
             pickBeanSfx.play();

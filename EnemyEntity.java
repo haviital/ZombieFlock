@@ -7,6 +7,13 @@ import Common;
 class EnemyEntity extends Enemy 
 {
    
+    public float velX;
+    public float velY;
+    public float halfWidth;
+    public float halfHeight;
+    float followHeroOffsetX;
+    float followHeroOffsetY;
+
     EnemyEntity() 
     { 
         velX = 1.5;
@@ -33,12 +40,5 @@ class EnemyEntity extends Enemy
         draw(screen);
     }
     
-    public float velX;
-    public float velY;
-    public float halfWidth;
-    public float halfHeight;
-    float followHeroOffsetX;
-    float followHeroOffsetY;
-
 }
 
