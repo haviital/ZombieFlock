@@ -60,7 +60,7 @@ class HeroEntity extends Hero
         halfWidth = width() / 2;
         halfHeight = height() / 2;
         x = 110;
-        y = 88;
+        //y = 88;
         //y = 46*16; //!!HV
         beansImage = new Beans();
         crashSprite = new Crash();
@@ -94,8 +94,8 @@ class HeroEntity extends Hero
             
             
         // Always go forward, if not stopped
-        if(stopUntilTime<Common.currentFrameStartTimeMs)
-            y += velY;
+        //!!!HV if(stopUntilTime<Common.currentFrameStartTimeMs)
+            //!!!HV y += velY;
         
         //if( Button.Up.isPressed() )
         //{
@@ -140,7 +140,7 @@ class HeroEntity extends Hero
     void checkCollision()
     {
         // Check out of tilemap end
-        if( y > Common.tilemap.height()*16)
+        if( y > mainDay.levelStartY + mainDay.MAP_LEVEL_HIGHT_IN_PIXELS)
         {
             // End the day level
             
@@ -275,9 +275,7 @@ class HeroEntity extends Hero
                 
         if(isIntersection)
         {
-            float halfTilemapHeight = (Common.tilemap.height() / 2) *16;
-
-            if(heroY < halfTilemapHeight)
+            if(heroY < mainDay.levelStartY + mainDay.HALF_MAP_LEVEL_HIGHT_IN_PIXELS)
             {
                 // First tower
                 

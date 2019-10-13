@@ -128,8 +128,7 @@
 			"-lc",
 			"-lgcc",
 			"-lnosys",
-			"-Wl,--end-group",
-			"-Wl,-Map=${projectPath}/${projectName}.map"
+			"-Wl,--end-group"
 		]
 	},
 	"target": "Pokitto",
@@ -1151,6 +1150,9 @@
 			"sdcard": false
 		},
 		"\\maps\\map.tmx.p10956": {
+			"sdcard": false
+		},
+		"\\maps\\map.tmx.Hp2500": {
 			"sdcard": false
 		}
 	}

@@ -46,27 +46,25 @@ class Event
         isDrawingState = false;
     }
     
-    public void setBubbleTextEvent(long startTime, String textLinePar1, String textLinePar2, Bubble bubbleImagePar ) 
+    public void setBubbleTextEvent(long startTime, String textLinePar1, String textLinePar2 ) 
     {
         System.out.println("wait: EVENT_START_BUBBLE");
         eventTime = Common.currentFrameStartTimeMs + startTime;
         waitingForEvent = EVENT_START_BUBBLE;
         isDrawingState = false;  
-        image = bubbleImagePar;
         textLineArray1[] = new String[1];
         textLineArray2[] = new String[1];
         textLineArray1[0] = textLinePar1;
         textLineArray2[0] = textLinePar2;
     }
     
-    public void setTutorialBubbleEvent(long startTime, Bubble bubbleImagePar, 
+    public void setTutorialBubbleEvent(long startTime, 
             String textLineArrayPar1[], String textLineArrayPar2[], int arrCountPar) 
     {
         System.out.println("wait: EVENT_START_TUTORIAL_BUBBLE");
         eventTime = Common.currentFrameStartTimeMs + startTime;
         waitingForEvent = EVENT_START_TUTORIAL_BUBBLE;
         isDrawingState = false;  
-        image = bubbleImagePar;
         arrCount = arrCountPar;
         textLineArray1 = textLineArrayPar1;
         textLineArray2 = textLineArrayPar2;

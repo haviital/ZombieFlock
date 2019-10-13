@@ -84,7 +84,7 @@ public class MainLevelMap extends State
         if( Button.A.justPressed() )
         {
             int dayNum = gridPosX + (gridPosY*3);
-            if( dayNum <= maxLevelIndexAllowed )
+            //!!!HV if( dayNum <= maxLevelIndexAllowed )
             {
                 // Go on to the day level.
                 Common.currentDay = dayNum;

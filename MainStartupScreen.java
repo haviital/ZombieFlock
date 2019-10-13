@@ -91,7 +91,7 @@ public class MainStartupScreen extends State
         // !!HV
         if( Button.B.justPressed() )
         {
-            // Start playing in the tutorial mode
+            // 
             Common.currentDay = 2;
             Common.totalBeanCount = 40*5;
             Common.totalCoffeeCount = 5;
@@ -130,20 +130,20 @@ public class MainStartupScreen extends State
                 String textLineArray2[] = new String[1];
                 textLineArray1[0] = "Please, pass the";
                 textLineArray2[0] = "tutorial first!";
-                Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent(0, Common.bubbleImage, textLineArray1, textLineArray2, 1 );
+                Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent(0, textLineArray1, textLineArray2, 1 );
             }
             else
             {
                 // Restart the game
-                // Common.totalBeanCount = 0;
-                // Common.totalCoffeeCount = 0;
-                // Game.changeState( new MainLevelMap() );
+                Common.totalBeanCount = 0;
+                Common.totalCoffeeCount = 0;
+                Game.changeState( new MainLevelMap() );
                 
                 //!!HV
-                Common.currentDay = 0;
-                Common.totalBeanCount = 120;
-                Common.totalCoffeeCount = 3;
-                Game.changeState( new Main() );
+                //Common.currentDay = 0;
+                //Common.totalBeanCount = 120;
+                //Common.totalCoffeeCount = 3;
+                //Game.changeState( new Main() );
             }
         }
             

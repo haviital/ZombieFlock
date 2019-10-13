@@ -20,8 +20,14 @@ import maps.map;
 
 public class MainDay extends State {
     
+    // States
     static final int STATE_PLAYING = 0;
     static final int STATE_IN_CHECKPOINT = 1;
+    
+    static final int MAP_LEVEL_HIGHT_IN_TILES = 110;
+    static final int MAP_TILE_HIGHT_IN_PIXELS = 16;
+    static final int MAP_LEVEL_HIGHT_IN_PIXELS = MAP_LEVEL_HIGHT_IN_TILES * MAP_TILE_HIGHT_IN_PIXELS;
+    static final int HALF_MAP_LEVEL_HIGHT_IN_PIXELS = MAP_LEVEL_HIGHT_IN_PIXELS / 2;
 
     
     // Images
@@ -48,8 +54,9 @@ public class MainDay extends State {
     float castleY;
     long launchAtScreenTopYOn; // Launch bat at this point
     boolean nextBatGoEast; // Bat direction
+    int levelStartY;
    
-    // Avoid allocation in a State's constructor.
+    // Avoid allocation in a State's constructor
     // Allocate on init instead.
     void init(){
         //System.gc();
@@ -58,8 +65,10 @@ public class MainDay extends State {
         Main.screen.loadPalette(Pico8.palette());
         
         Main.screen.cameraX = 0;
-        Main.screen.cameraY = 0;
-        
+        levelStartY = (Common.currentDay % 3) * MAP_LEVEL_HIGHT_IN_PIXELS;
+        Main.screen.cameraY = levelStartY;
+        launchAtScreenTopYOn = levelStartY;
+
         // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         programStartTimeMs = System.currentTimeMillis() - 1; 
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
@@ -71,6 +80,7 @@ public class MainDay extends State {
         //castleDayImageHalfWidth = castleDayImage.width()/2;
         Common.heroEntity = new HeroEntity(this);
         Common.heroEntity.run();
+        Common.heroEntity.y = 88 + launchAtScreenTopYOn;
         coffee = new Coffee();
         coffee.run(); // "run" is one of the animations in the spritesheet
         beanImage = new Bean();
@@ -80,7 +90,6 @@ public class MainDay extends State {
         for(int i=0; i < Common.MAX_BATS; i++)
             bats[i] = new BatEntity();
             
-
         //
         castleX = 110-(castleDayImage.width()/2);
         
@@ -126,7 +135,7 @@ public class MainDay extends State {
             textLineArray2[3] = "";
             textLineArray1[4] = "Beware of skeletons";
             textLineArray2[4] = "and avoid bushes.";
-            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
+            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, textLineArray1, textLineArray2, arrCount );
         }
         
 
@@ -188,7 +197,7 @@ public class MainDay extends State {
            
         // *** UPDATE
 
-        if(!isGameOver && ! isWon && state == STATE_PLAYING)
+        if(! isGameOver && ! isWon && state == STATE_PLAYING)
         {
             // Events
             for(int i=0; i < Common.MAX_EVENTS; i++)
@@ -206,22 +215,21 @@ public class MainDay extends State {
             // Move camera to keep hero vertically in the center
             //System.out.println("height="+Common.tilemap.height()+", tileHeight="+Common.tilemap.tileHeight());
             Main.screen.cameraY = Common.heroEntity.y - 88;
-            if(Main.screen.cameraY > Common.tilemap.height() * Common.tilemap.tileHeight() - 176 )
-                Main.screen.cameraY = Common.tilemap.height() * Common.tilemap.tileHeight() - 176;
+            if(Main.screen.cameraY > levelStartY + MAP_LEVEL_HIGHT_IN_PIXELS - 176 )
+                Main.screen.cameraY = levelStartY + MAP_LEVEL_HIGHT_IN_PIXELS - 176;
                 
             // Set castle position
-            float halfTilemapHeight = (Common.tilemap.height() / 2) *16;
-            if( Common.heroEntity.y < halfTilemapHeight +  castleDayImage.height() + 176)
+            if( Common.heroEntity.y < levelStartY + HALF_MAP_LEVEL_HIGHT_IN_PIXELS +  castleDayImage.height() + 176)
             {
-                castleY = halfTilemapHeight-castleDayImage.height();
+                castleY = levelStartY + HALF_MAP_LEVEL_HIGHT_IN_PIXELS - castleDayImage.height();
             }
             else
             {
-                castleY =(Common.tilemap.height()*16)-castleDayImage.height();
+                castleY = levelStartY + MAP_LEVEL_HIGHT_IN_PIXELS - castleDayImage.height();
             }
             
             // Should launch a new bat?
-            if(Main.screen.cameraY > launchAtScreenTopYOn)
+            if(Common.currentDay > 0 && Main.screen.cameraY > launchAtScreenTopYOn)
             {
                 if( launchAtScreenTopYOn > 0)
                 {
@@ -297,7 +305,7 @@ public class MainDay extends State {
         
         // Print time meter
         float normalizedDistanceToEnd = 
-            (((float)Common.tilemap.height()*16) - (float)(Common.heroEntity.y+Common.heroEntity.height())) / ((float)Common.tilemap.height()*16);
+            (MAP_LEVEL_HIGHT_IN_PIXELS - (float)(Common.heroEntity.y+Common.heroEntity.height()-levelStartY)) / MAP_LEVEL_HIGHT_IN_PIXELS;
         if(normalizedDistanceToEnd < 0) 
             normalizedDistanceToEnd = 0;
         timeMeterEntity.drawMeter( Main.screen, normalizedDistanceToEnd );
@@ -332,7 +340,8 @@ public class MainDay extends State {
         Main.screen.print("FPS:" + (int)(Main.screen.fps()+0.5));
         
         //!!HV
-        //System.out.println("totalBeanCount=" + Common.totalBeanCount + ", currentBeanCount=" + currentBeanCount);
+        System.out.println("castleY=" + (int)castleY + ", Main.screen.cameraY=" + (int)Main.screen.cameraY + ", levelStartY=" + (int)levelStartY + ", HALF_MAP_LEVEL_HIGHT_IN_PIXELS=" + (int)HALF_MAP_LEVEL_HIGHT_IN_PIXELS);
+        // levelStartY + halfTilemapHeight - castleDayImage.height();
         
         // Update the screen with everything that was drawn
         Main.screen.flush();
@@ -374,7 +383,10 @@ public class MainDay extends State {
             }
         }
         
-        // 
+        
+        
+        // *** Draw current bean count on tower
+        
         float px = castleX + 23 - Main.screen.cameraX;
         float py = castleY + 20 - Main.screen.cameraY;
 

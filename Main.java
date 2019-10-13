@@ -13,7 +13,7 @@ import femto.sound.Procedural;
 import femto.palette.Pico8;
 
 import MainDay;
-import MainLevelMap;b
+import MainLevelMap;
 import ZombieEntity;
 import HorizBarEntity;
 import VertBarEntity;
@@ -107,7 +107,6 @@ public class Main extends State {
         Common.panelImage7 = new Panel7();
         Common.panelHighLightImage = new PanelHighLight();
 
-        Common.bubbleImage =  new Bubble();
         Common.bubbleVertImage =  new BubbleVert();
         Common.bubbleHorizImage =  new BubbleHoriz();
         Common.bubbleCornerImage =  new BubbleCorner();
@@ -227,7 +226,7 @@ public class Main extends State {
             textLineArray2[1] = "shields and keep them";
             textLineArray1[2] = "away until the";
             textLineArray2[2] = "morning comes.";
-            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, Common.bubbleImage, textLineArray1, textLineArray2, arrCount );
+            Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, textLineArray1, textLineArray2, arrCount );
         }
         
         // Set Common.events for random sounds.

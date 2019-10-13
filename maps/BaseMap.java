@@ -29,7 +29,8 @@ public class BaseMap {
     int height(){
         pointer data = this.data;
         int height = LDRB(data+2);
-        return height;
+        //return height;
+        return 330; //!!!HV
     }
     
     int tileWidth(){
@@ -49,12 +50,13 @@ public class BaseMap {
         
         int width = LDRB(data++);
         int height = LDRB(data++);
+        height = 330; //!!!HV
         int tileWidth = this.sets[0].width();
         int tileHeight = this.sets[0].height();
         
         data += layer*(1 + width*2*height);
         int layerFlags = LDRB(data++);
-        
+
         if(layerFlags == 0) // hidden layer
             return;
 
@@ -62,6 +64,7 @@ public class BaseMap {
             for( int x=0; x<width; ++x ){
                 byte flags = (byte) LDRB(data++);
                 int tile  = (int) LDRB(data++);
+                System.out.println("tm.height="+height+ "tm.width="+width+ ", layerFlags="+layerFlags+", y="+y+ ", tile="+tile+ ", flags="+(int)flags);
                 if( (flags&1)==1 ) tile += 0x100;
                 if( tile == 0 )
                     continue;
