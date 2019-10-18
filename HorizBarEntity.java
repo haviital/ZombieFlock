@@ -23,6 +23,7 @@ class HorizBarEntity
         image =  new BarH();
         //velX = 0;
         //velY = 0;
+        image.still();
         setX(x);
         setY(y);
         halfHeight = image.height() / 2;

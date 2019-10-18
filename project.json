@@ -1154,6 +1154,22 @@
 		},
 		"\\maps\\map.tmx.Hp2500": {
 			"sdcard": false
+		},
+		"\\Bomb - Copy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\Bomb - Copy (2).json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\BarV.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\BarH.json": {
+			"sdcard": false,
+			"implements": ""
 		}
 	}
 }

@@ -23,6 +23,7 @@ class VertBarEntity
         image = new BarV();
         //velX = 0;
         //velY = 0;
+        image.still();
         setX(x);
         setY(y);
         halfWidth = image.width() / 2;
