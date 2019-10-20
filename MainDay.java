@@ -31,7 +31,6 @@ public class MainDay extends State {
     static final int MAP_LEVEL_WIDTH_IN_TILES = 14;
     static final int MAP_TILE_WIDTH_IN_PIXELS = 16;
     static final int MAP_LEVEL_WIDTH_IN_PIXELS = MAP_LEVEL_WIDTH_IN_TILES * MAP_TILE_WIDTH_IN_PIXELS;
-
     
     // Images
     Winner winnerImage;

@@ -11,8 +11,8 @@ class VertBarEntity
     public BarV image;
     public float x;
     public float y;
-    //public float velX;
-    //public float velY;
+    float velX;
+    float velY;
     public float halfWidth;
     public boolean isHiddenPart[];
     public int partCount;
@@ -26,6 +26,7 @@ class VertBarEntity
         image.still();
         setX(x);
         setY(y);
+        velX = Common.BAR_SPEED;
         halfWidth = image.width() / 2;
         partCount = 11;
         isHiddenPart = new boolean[partCount];
@@ -46,9 +47,13 @@ class VertBarEntity
 
         // Move the bar.
         if( Button.Left.isPressed() )
-            x -= Common.BAR_SPEED;
+        {
+            x -= velX;
+        }
         else if( Button.Right.isPressed() )
-            x += Common.BAR_SPEED;
+        {
+            x += velX;
+        }
             
         // Check limits
         if(x<0) x = 0;
@@ -56,8 +61,16 @@ class VertBarEntity
         
         if( checkCollisionToBombs() )
         {
-            x = orgX;
-            y = orgY;
+            // Slow down
+            image.run();
+            velX = Common.BAR_SPEED_ON_CRYSTAL;  
+        }
+        else
+        {
+            // Normal speed
+            image.still();
+            velX = Common.BAR_SPEED;
+            
         }
         
         checkCollisionToZombies();

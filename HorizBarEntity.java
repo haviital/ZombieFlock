@@ -13,6 +13,8 @@ class HorizBarEntity
     public boolean test;
     public float x;
     public float y;
+    float velX;
+    float velY;
     public float halfHeight;
     public boolean isHiddenPart[];
     public int partCount;
@@ -26,6 +28,7 @@ class HorizBarEntity
         image.still();
         setX(x);
         setY(y);
+        velY = Common.BAR_SPEED;
         halfHeight = image.height() / 2;
         partCount = 14;
         isHiddenPart = new boolean[partCount];
@@ -46,9 +49,9 @@ class HorizBarEntity
 
         // Move the bar.
         if( Button.Up.isPressed() )
-            y -= Common.BAR_SPEED;
+            y -= velY;
         else if( Button.Down.isPressed() )
-            y += Common.BAR_SPEED;
+            y += velY;
             
         // Check limits
         if(y<0) y = 0;
@@ -56,8 +59,16 @@ class HorizBarEntity
 
         if( checkCollisionToBombs() )
         {
-            x = orgX;
-            y = orgY;
+            // Slow down
+            image.run();
+            velY = Common.BAR_SPEED_ON_CRYSTAL;  
+        }
+        else
+        {
+            // Normal speed
+            image.still();
+            velY = Common.BAR_SPEED;
+            
         }
         
         checkCollisionToZombies();

@@ -1170,6 +1170,24 @@
 		"\\BarH.json": {
 			"sdcard": false,
 			"implements": ""
+		},
+		"\\ZombieClimb.png": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\BarH - Copy.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieClimb.json": {
+			"sdcard": false,
+			"implements": ""
+		},
+		"\\ZombieClimbEntity.java": {
+			"sdcard": false
+		},
+		"\\MainFinished.java": {
+			"sdcard": false
 		}
 	}
 }

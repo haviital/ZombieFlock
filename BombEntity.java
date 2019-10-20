@@ -10,7 +10,7 @@ class BombEntity extends Bomb
     static final long STATE_ACTIVATING = 1;
     static final long STATE_ACTIVE = 2;
 
-    static final long DELAY_BEFORE_ACTIVE_MS = 3000;
+    static final long DELAY_BEFORE_ACTIVE_MS = 1500;
     static final long DELAY_BEFORE_DISMISS = 5000;
     
     long activateTimeAt;

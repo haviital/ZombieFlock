@@ -94,7 +94,7 @@ public class MainStartupScreen extends State
              Common.currentDay = 2;
              Common.totalBeanCount = 40*5;
              Common.totalCoffeeCount = 5;
-             Game.changeState( new Main() );
+             Game.changeState( new MainFinished() );
          }
         
         // Pressed A in the back story window?

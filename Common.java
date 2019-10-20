@@ -2,8 +2,8 @@ import ZombieEntity;
 
 class Common 
 {
-    static final String VERSION_STRING = "0.6";
-    static final String DATE_STRING = "13-Oct-2019";
+    static final String VERSION_STRING = "0.7";
+    static final String DATE_STRING = "20-Oct-2019";
 
     static final int TARGET_X = 110;
     static final int TARGET_Y = 88;
@@ -11,7 +11,8 @@ class Common
     static final int MAX_ZOMBIES = ZOMBIES_PER_NEST*4;
     static final int MAX_ENEMIES = 3;
     static final int MAX_EVENTS = 10;
-    static final int BAR_SPEED = 2;
+    static final float BAR_SPEED = 2.0;
+    static final float BAR_SPEED_ON_CRYSTAL = 0.5;
     static final int BAR_THICKNESS = 4;
     static final int CASTLE_X = 110-28;
     static final int CASTLE_Y = 88-26;

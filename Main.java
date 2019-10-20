@@ -57,6 +57,7 @@ public class Main extends State {
     Zombie zombieWithCoffee;
     Winner winnerImage;
     BombEntity bombs[];
+    ZombieClimbEntity zombieClimbEntity;
 
     // Sounds
     breviceps_zombie_gargles sfx2;
@@ -76,6 +77,7 @@ public class Main extends State {
     Vector2d bombCoords[];
     int bombCoordsMax = 4;
     int bombCoordsNum = 0;
+    boolean waitForZombieToClimb;
     
     // *** static variables and functions
     
@@ -146,6 +148,7 @@ public class Main extends State {
         barV = new VertBarEntity( 110-2, 0, this );
         timeMeterEntity =  new TimeMeterEntity();
         winnerImage = new Winner();
+        zombieClimbEntity =  new ZombieClimbEntity();
         
         sfx2 = new breviceps_zombie_gargles(0);
         zombiTakesCoffeeSfx  = new breviceps__step_into_water_puddle_wade(1);
@@ -322,7 +325,7 @@ public class Main extends State {
                     bombCoordsNum += 1;
                     
                     // launch next bomb
-                    launchBombAt = Common.currentFrameStartTimeMs + 20000 - (Common.currentDay*3000);
+                    launchBombAt = Common.currentFrameStartTimeMs + 18000 - (Common.currentDay*3000);
                 }
                 
             }
@@ -335,13 +338,25 @@ public class Main extends State {
             {
                 Common.zombies[i].update();
             }
+            
+            //
+            if(zombieClimbEntity.isActive)
+                zombieClimbEntity.update(screen);
+            
+            // When the zombie is no more climbing, take one coffee
+            if(waitForZombieToClimb &&  ! zombieClimbEntity.isActive)
+            {
+                waitForZombieToClimb = false;
+                takeOneCoffee();
+            }
     
             //
             barH.update();
             barV.update();
             
             //
-            checkZombiesCollisionToCastle();
+            if(!waitForZombieToClimb)
+                checkZombiesCollisionToCastle();
             
         }
         
@@ -372,6 +387,10 @@ public class Main extends State {
         if(!isGameOver)
             castleImage.draw(screen, Common.CASTLE_X, Common.CASTLE_Y);
        
+        // If active, draw the climbing zombie
+        if(zombieClimbEntity.isActive)
+            zombieClimbEntity.drawMe(screen);
+                
         // Draw coffee or zombie on tower.
         drawCoffees();
         
@@ -382,7 +401,7 @@ public class Main extends State {
                 Common.events[i].draw(screen);
         }
         
-        // Set holes
+        // 
         float normalizedTimeLeft = ((float)Common.LEVEL_TIMEOUT - Common.currentFrameStartTimeMs) / (float)Common.LEVEL_TIMEOUT;
         if(normalizedTimeLeft <= 0) 
         {
@@ -411,19 +430,29 @@ public class Main extends State {
             }
             normalizedTimeLeft = 0;
         }
+        
+        // Make holes to power shields
         if( normalizedTimeLeft < 0.5 + (Common.currentDay*0.1) )
         {
             barV.isHiddenPart[1] = true;
             barV.isHiddenPart[9] = true;
             if( Common.currentDay > 3)
-                barV.isHiddenPart[5] = true;
+            {
+                barV.isHiddenPart[4] = true;
+                barV.isHiddenPart[6] = true;
+            }
         }
-        if( normalizedTimeLeft < 0.25 + (Common.currentDay*0.1))
+        
+        // Make even more holes to power shields
+        if( normalizedTimeLeft < 0.25 + (Common.currentDay*0.2))
         {
             barH.isHiddenPart[1] = true;
             barH.isHiddenPart[11] = true;
             if( Common.currentDay > 3)
-                barV.isHiddenPart[5] = true;
+            {
+                barV.isHiddenPart[4] = true;
+                barV.isHiddenPart[7] = true;
+            }
         }
 
         // Print time meter
@@ -485,27 +514,43 @@ public class Main extends State {
             // If zombie touches the castle, it will drink one coffee!
             if(isIntersection)
             {
-                // Mark the coffee as taken
-                Common.totalCoffeeCount -= 1;
-                if(Common.totalCoffeeCount<=0)
-                    isGameOver = true;
-                for(int j=0; j < 5; j++ )
-                    if(!isCoffeeTaken[j])
-                    {
-                        //System.out.println("checkZombiesCollisionToCastle(). i=" + i + ", j=" + j);
-                        isCoffeeTaken[j] = true;
-                        //if(j>=Common.totalCoffeeCount) 
-                        //    isGameOver = true;
-                        break;
-                    }
+                // Activate climbing zombie
+                if(! zombieClimbEntity.isActive)
+                    zombieClimbEntity.activate();
                 
+                // Another zombie cannot enter the castle during climbing
+                waitForZombieToClimb = true;
+                    
                 // Put the zombie away    
                 zomb.setX(-10);
                 
-                // Play sound.
-                zombiTakesCoffeeSfx.play();
             }
          }
+    }
+    
+    // 
+    void takeOneCoffee()
+    {
+        // Mark the coffee as taken
+        //Common.totalCoffeeCount -= 1;
+        //if(Common.totalCoffeeCount<=0)
+        //    isGameOver = true;
+        int  foundIndex=-1; 
+        for(int j=0; j < 5; j++ )
+            if(!isCoffeeTaken[j])
+            {
+                //System.out.println("checkZombiesCollisionToCastle(). i=" + i + ", j=" + j);
+                isCoffeeTaken[j] = true;
+                foundIndex = j;
+                break;
+            }
+        
+        // If all coffee have been taken, end the game.
+        if(foundIndex>=Common.totalCoffeeCount-1)
+            isGameOver = true;
+        
+        // Play sound.
+        zombiTakesCoffeeSfx.play();
     }
     
     // Draw coffee or zombie on tower.
