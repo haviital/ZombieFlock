@@ -17,13 +17,14 @@ public class Hero3D extends Hero
     float vec3Dy;
     float vec3Dz;
     float size;
-    float speedZ = -0.1;
+    float speedZ = -0.3;
+    
     
     void update()
     {
         vec3Dz += speedZ;
         if(vec3Dz<=5)
-            vec3Dz = 200;
+            vec3Dz = 150;
 
         float factor = 1.0 / vec3Dz;
         float newY = 4*176 * factor;
@@ -46,13 +47,13 @@ public class Enemy3D extends Enemy
     float vec3Dy;
     float vec3Dz;
     float size;
-    float speedZ = -0.1;
+    float speedZ = -0.3;
     
     void update()
     {
         vec3Dz += speedZ;
         if(vec3Dz<=5)
-            vec3Dz = 200;
+            vec3Dz = 150;
 
         float factor = 1.0 / vec3Dz;
 
@@ -79,7 +80,9 @@ public class MainFinished extends State
     long programStartTimeMs; // the start time of the program
     Hero3D hero;    
     Enemy3D enemyArr[];    
-    float posZ;
+    long changeColorAt;
+    int colorIndex;
+    long totalPoints;
 
     // Avoid allocation in a State's constructor.
     // Allocate on init instead.
@@ -94,12 +97,14 @@ public class MainFinished extends State
         programStartTimeMs = System.currentTimeMillis() - 1; 
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         
+        changeColorAt = Common.currentFrameStartTimeMs + 200;
+        
         hero = new Hero3D();
         hero.run();
         hero.x = 110;
         hero.y = 88;
         hero.vec3Dx = 0;
-        hero.vec3Dz = 200;
+        hero.vec3Dz = 150;
 
         enemyArr = new Enemy3D[3];
         for(int i=0; i < 3; i++)
@@ -110,15 +115,23 @@ public class MainFinished extends State
         enemyArr[0].x = 110;
         enemyArr[0].y = 88;
         enemyArr[0].vec3Dx = 0;
-        enemyArr[0].vec3Dz = 190;
+        enemyArr[0].vec3Dz = 140;
         enemyArr[1].x = 110-40;
         enemyArr[1].y = 88;
         enemyArr[1].vec3Dx = -40;
-        enemyArr[1].vec3Dz = 190;
+        enemyArr[1].vec3Dz = 140;
         enemyArr[2].x = 110+40;
         enemyArr[2].y = 88;
         enemyArr[2].vec3Dx = 40;
-        enemyArr[2].vec3Dz = 190;
+        enemyArr[2].vec3Dz = 140;
+        
+        // Calc total points
+        totalPoints = 0;
+        for(int i=0; i<Common.LEVEL_MAP_COUNT; i+=1)
+        {
+            totalPoints += 10 * Common.levelPointsArray[i];
+        }
+        
     }
     
     // 
@@ -152,7 +165,13 @@ public class MainFinished extends State
         
         // *** DRAW
         
-        Main.screen.clear(0);
+        if(Common.currentFrameStartTimeMs>changeColorAt)
+        {
+            changeColorAt = Common.currentFrameStartTimeMs + 500;
+            if(++colorIndex > 15)
+                colorIndex = 0;
+        }
+        Main.screen.clear(5);
         
         hero.drawMe();
         
@@ -161,30 +180,12 @@ public class MainFinished extends State
             enemyArr[i].drawMe();
         }
         
-        float currX = 5;
-        float currY = 5;
-        //             123456789#123456789#123456789#12345    
-        String text = "CONGRATULATIONS! You have now enough";
-        Main.screen.setTextPosition( currX+1, currY+1 );
-        Main.screen.textColor = 14;
-        Main.screen.print( text );
-        Main.screen.setTextPosition( currX, currY );
-        Main.screen.textColor = 15;
-        Main.screen.print(  text);
+        Main.drawTextCellCentered( 0, 5, 220, "CONGRATULATIONS ! You have now enough");
+        Main.drawTextCellCentered( 0, 15, 220, "power to exile the undeads for good!");
         
-        currX = 5;
-        currY = 15;
-        //      123456789#123456789#123456789#12345    
-        text = "power to drive away the undeads!!!";
-        Main.screen.setTextPosition( currX+1, currY+1 );
-        Main.screen.textColor = 14;
-        Main.screen.print( text );
-        Main.screen.setTextPosition( currX, currY );
-        Main.screen.textColor = 15;
-        Main.screen.print(  text);
-        //System.out.println("y=" + (int)y + ", size=" + (int)size);
+        Main.drawTextCellCentered( 0, 176-10, 220, "Best points: " + totalPoints);
         
-        // Update the screen with everything that was drawn
+       // Update the screen with everything that was drawn
         Main.screen.flush();
     }
  

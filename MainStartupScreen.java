@@ -91,10 +91,10 @@ public class MainStartupScreen extends State
          if( Button.B.justPressed() ) //!!!HV
          {
              // 
-             Common.currentDay = 2;
+             Common.currentDay = 5;
              Common.totalBeanCount = 40*5;
              Common.totalCoffeeCount = 5;
-             Game.changeState( new MainFinished() );
+             Game.changeState( new Main() );
          }
         
         // Pressed A in the back story window?

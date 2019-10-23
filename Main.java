@@ -132,7 +132,7 @@ public class Main extends State {
         System.out.println("init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         programStartTimeMs = System.currentTimeMillis() - 1; // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         
-        //programStartTimeMs -= 20*1000; //!!!HV
+        programStartTimeMs -= 20*1000; //!!!HV
         
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         
@@ -223,10 +223,10 @@ public class Main extends State {
             //                  "12345678901"
             textLineArray1[0] = "Zombies are coming!";
             textLineArray2[0] = "They want the COFFEE!";
-            textLineArray1[1] = "Move the power";
-            textLineArray2[1] = "shields and keep them";
+            textLineArray1[1] = "Move the force";
+            textLineArray2[1] = "fields and keep them";
             textLineArray1[2] = "away until the";
-            textLineArray2[2] = "morning comes.";
+            textLineArray2[2] = "the morning comes.";
             Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, textLineArray1, textLineArray2, arrCount );
         }
         
@@ -426,6 +426,13 @@ public class Main extends State {
                     Common.levelPointsArray[ Common.currentDay ] = Common.totalCoffeeCount;
                     saveLevelPointsToEEPROM();
                 }
+                
+                // If this is the last level, show the "finished" screen
+                if( Common.currentDay == 5 )
+                {
+                    Game.changeState( new MainFinished() );
+                }
+                
                 
             }
             normalizedTimeLeft = 0;
