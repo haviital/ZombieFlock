@@ -78,6 +78,8 @@ public class Main extends State {
     int bombCoordsMax = 4;
     int bombCoordsNum = 0;
     boolean waitForZombieToClimb;
+    String pauseMenuTextLineArray[];
+    MenuDlg pauseMenuDlg;
     
     // *** static variables and functions
     
@@ -132,7 +134,7 @@ public class Main extends State {
         System.out.println("init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         programStartTimeMs = System.currentTimeMillis() - 1; // minus 1 so that the Common.currentFrameStartTimeMs do not start from 0.
         
-        programStartTimeMs -= 20*1000; //!!!HV
+        //programStartTimeMs -= 20*1000; //!!!HV
         
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         
@@ -233,6 +235,11 @@ public class Main extends State {
         // Set Common.events for random sounds.
         Common.events[getNextFreeEvent()].setSfxEvent((long)3*1000, sfx2, 15000, 40000 );
         
+        pauseMenuTextLineArray[] = new String[3];
+        pauseMenuTextLineArray[0] = "Continue";
+        pauseMenuTextLineArray[1] = "Restart the day";
+        pauseMenuTextLineArray[2] = "Main menu";
+        
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
     }
     
@@ -250,55 +257,99 @@ public class Main extends State {
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         //System.out.println("update().currentFrameStartTimeMs=" + Common.currentFrameStartTimeMs);
         
-        // Change to a new state when A is pressed
-        if( Button.A.justPressed() )
+        // read keys
+        if( pauseMenuDlg != null )
         {
-            if(isWon || isGameOver)
+            pauseMenuDlg.update();
+            if(pauseMenuDlg.pressedA)
             {
-                Common.currentDay = 0;
-                Common.totalBeanCount = 0;
-                Common.totalCoffeeCount = 0;
-                if( !isWon && Common.isTutorialActive )
-                {
-                    // Restart tutorial.
-                    Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
+               if(pauseMenuDlg.focusIndex == 0)
+               {
+                   // "Continue"
+               }
+               else if(pauseMenuDlg.focusIndex == 1)
+               {
+                   // "Restart the day"
+                   
+                    // Restart the game
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+
+                    // Goto startup screen
+                    Common.isTutorialActive = false;
+                    Game.changeState( new MainDay() );
+               }
+               else if(pauseMenuDlg.focusIndex == 2)
+               {
+                    // "Main menu"
+                    
+                    // Restart the game
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+
+                    // Goto startup screen
+                    Common.isTutorialActive = false;
+                    Game.changeState( new MainStartupScreen() );
                 }
-                else
-                {
-                    // Go on to the map.
-                    Game.changeState( new MainLevelMap() );
-                }
+            
+                pauseMenuDlg = null;
             }
         }
-            
-        else if( Button.B.justPressed() )
+        else
         {
-            //  if(currSfxNum==1) sfx1.play();
-            //  else if(currSfxNum==2) sfx2.play();
-            //  else if(currSfxNum==3) sfx3.play();
-            //  else if(currSfxNum==4) sfx4.play();
-            //  else if(currSfxNum==5) sfx5.play();
-            //  else if(currSfxNum==6) sfx6.play();
-            
-            //  currSfxNum += 1;
-            //  if( currSfxNum>6 ) currSfxNum = 1;
-        }
-
-        // Exit to menu
-        else  if( Button.C.justPressed() )
-        {
-            // Restart the game
-            Common.totalBeanCount = 0;
-            Common.totalCoffeeCount = 0;
-
-            // Goto startup screen
-            Common.isTutorialActive = false;
-            Game.changeState( new MainStartupScreen() );
+            // Change to a new state when A is pressed
+            if( Button.A.justPressed() )
+            {
+                if(isWon || isGameOver)
+                {
+                    Common.currentDay = 0;
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+                    if( !isWon && Common.isTutorialActive )
+                    {
+                        // Restart tutorial.
+                        Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
+                    }
+                    else
+                    {
+                        // Go on to the map.
+                        Game.changeState( new MainLevelMap() );
+                    }
+                }
+            }
+                
+            else if( Button.B.justPressed() )
+            {
+                //  if(currSfxNum==1) sfx1.play();
+                //  else if(currSfxNum==2) sfx2.play();
+                //  else if(currSfxNum==3) sfx3.play();
+                //  else if(currSfxNum==4) sfx4.play();
+                //  else if(currSfxNum==5) sfx5.play();
+                //  else if(currSfxNum==6) sfx6.play();
+                
+                //  currSfxNum += 1;
+                //  if( currSfxNum>6 ) currSfxNum = 1;
+            }
+    
+            // Exit to menu
+            else  if( Button.C.justPressed() )
+            {
+                // Create menu
+                pauseMenuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, pauseMenuTextLineArray );
+                    
+                // // Restart the game
+                // Common.totalBeanCount = 0;
+                // Common.totalCoffeeCount = 0;
+    
+                // // Goto startup screen
+                // Common.isTutorialActive = false;
+                // Game.changeState( new MainStartupScreen() );
+           }
        }
         
         // *** Update 
         
-        if(!isGameOver)
+        if(!isGameOver && pauseMenuDlg == null)
         {
             // Events
             for(int i=0; i < Common.MAX_EVENTS; i++)
@@ -457,8 +508,8 @@ public class Main extends State {
             barH.isHiddenPart[11] = true;
             if( Common.currentDay > 3)
             {
-                barV.isHiddenPart[4] = true;
-                barV.isHiddenPart[7] = true;
+                barH.isHiddenPart[4] = true;
+                barH.isHiddenPart[7] = true;
             }
         }
 
@@ -482,10 +533,14 @@ public class Main extends State {
             Main.drawButtonAndLabel( 0, 176-17, 220,"C  Exit tutorial", "C");
 
         // print fps
-        screen.setTextPosition( 0, 0 );
-        screen.textColor = 3;
-        screen.print((int)(screen.fps()+0.5));
+        // screen.setTextPosition( 0, 0 );
+        // screen.textColor = 3;
+        // screen.print((int)(screen.fps()+0.5));
         
+        // Draw menu if open
+        if( pauseMenuDlg != null )
+            pauseMenuDlg.draw();
+                
         // Update the screen with everything that was drawn
         screen.flush();
     }

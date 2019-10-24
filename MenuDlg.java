@@ -53,7 +53,7 @@ class MenuDlg
     void drawMenu()    
     {
         int marginY = 11;
-        int focusMarginY = 25;
+        int focusMarginX = 20;
         
         Main.DrawPanel((int)winX, (int)winY, (int)winW, (int)winH);
         
@@ -61,7 +61,7 @@ class MenuDlg
         {
             float y = winY + marginY + ( i*9 );
             if( focusIndex == i )
-                Main.screen.fillRect( winX+focusMarginY, y-1, winW-(2*focusMarginY), 7, 5, true );
+                Main.screen.fillRect( winX+focusMarginX, y-1, winW-(2*focusMarginX), 8, 5, true );
                 
             Main.drawTextCellCentered( winX, y, winW, texts[ i ] );
         }

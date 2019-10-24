@@ -146,7 +146,9 @@ public class MainLevelMap extends State
             int topLeftY = row * height + 14 + 17;
 
             // If this is the first update call and the first zero item, set the grid pos.
-            if(isFirstUpdate && Common.levelPointsArray[i]==0 && !isNewLevelDrawn)
+            if( isFirstUpdate && 
+                (Common.levelPointsArray[i]==0 ||  i == 5) &&
+                !isNewLevelDrawn )
             {
                 gridPosX = col;
                 gridPosY = row;

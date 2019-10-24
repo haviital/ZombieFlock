@@ -47,6 +47,8 @@ class HeroEntity extends Hero
     float prevY;
     float dustHalfWidth;
     long runSfxReplayTimeAt;
+    int prevTileXIndex = 255;
+    int prevTileYIndex = 255;
     
     // Sounds
     RunSfx runSfx;
@@ -158,11 +160,13 @@ class HeroEntity extends Hero
         float heroY = y + halfHeight;
         int tileYIndex = ((int)heroY) >> 4;
         
-        // Collision to beans.
+        // Get tile under me in the map.
         int tileId = Common.tilemap.readDayField(tileXIndex, tileYIndex);
-        boolean isTilechanged = (tileId != prevTileID);
+        boolean isTileTypeChanged = (tileId != prevTileID);
+        boolean isTileIndexChanged = tileXIndex != prevTileXIndex || tileYIndex != prevTileYIndex;
 
-        if(isTilechanged && tileId == Common.BEAN_MAP_TILE_ID)
+        // Collision to beans.
+        if(isTileIndexChanged && tileId == Common.BEAN_MAP_TILE_ID)
         {
             // Collect beans.
             //Common.events[0].setMoveAnimEvent(0, (long)1*1000, heroX, heroY, 110.90, -10.0, beansImage );
@@ -182,7 +186,10 @@ class HeroEntity extends Hero
         float objH;
         boolean isIntersection;
         
-        boolean isCollidedToBatsOrBushes = (isTilechanged && tileId == Common.TREE_MAP_TILE_ID);
+        // Collided to a tree?
+        boolean isCollidedToBatsOrBushes = (isTileTypeChanged && tileId == Common.TREE_MAP_TILE_ID);
+        
+        // Collided to a bat?
         if( ! isCollidedToBatsOrBushes )
         {
             // Collision to bats.
@@ -290,6 +297,8 @@ class HeroEntity extends Hero
         
        // Store prev values 
         prevTileID = tileId;
+        prevTileXIndex = tileXIndex; 
+        prevTileYIndex = tileYIndex; 
         
    }
     

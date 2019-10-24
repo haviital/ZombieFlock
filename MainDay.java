@@ -58,6 +58,8 @@ public class MainDay extends State {
     boolean nextBatGoEast; // Bat direction
     int levelStartY;
     int levelStartX;
+    String pauseMenuTextLineArray[];
+    MenuDlg pauseMenuDlg;
    
     // Avoid allocation in a State's constructor
     // Allocate on init instead.
@@ -147,7 +149,11 @@ public class MainDay extends State {
 
         System.out.println("2. init(): free=" + java.lang.Runtime.getRuntime().freeMemory());
         
-        
+        pauseMenuTextLineArray[] = new String[3];
+        pauseMenuTextLineArray[0] = "Continue";
+        pauseMenuTextLineArray[1] = "Restart the day";
+        pauseMenuTextLineArray[2] = "Main menu";
+    
         //currentBeanCount = 500; //!!!HV 
         //Common.heroEntity.y = 95*16; //!!!HV
     }
@@ -166,44 +172,91 @@ public class MainDay extends State {
         Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         //System.out.println("update().currentFrameStartTimeMs=" + Common.currentFrameStartTimeMs);
         
-        // Change to a new state when A is pressed
-        if( Button.A.justPressed() )
+        // read keys
+        if( pauseMenuDlg != null )
         {
-            if(isWon)
+            pauseMenuDlg.update();
+            if(pauseMenuDlg.pressedA)
             {
-                // Go on to the night level.
-                Game.changeState( new Main() );
-            }
-            else if(isGameOver)
-            {
-                // Restart the game
-                Common.totalBeanCount = 0;
-                Common.totalCoffeeCount = 0;
-                currentBeanCount = 0;
-                if( Common.isTutorialActive )
-                    Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
-                else
-                    Game.changeState( new MainLevelMap() );
+               if(pauseMenuDlg.focusIndex == 0)
+               {
+                   // "Continue"
+               }
+               else if(pauseMenuDlg.focusIndex == 1)
+               {
+                   // "Restart the day"
+                   
+                    // Restart the game
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+
+                    // Goto startup screen
+                    Common.isTutorialActive = false;
+                    Game.changeState( new MainDay() );
+               }
+               else if(pauseMenuDlg.focusIndex == 2)
+               {
+                    // "Main menu"
+                    
+                    // Restart the game
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+
+                    // Goto startup screen
+                    Common.isTutorialActive = false;
+                    Game.changeState( new MainStartupScreen() );
+                }
+            
+                pauseMenuDlg = null;
             }
         }
- 
-        // Exit to menu
-        else  if( Button.C.justPressed() )
+        else
         {
-            // Restart the game
-            Common.totalBeanCount = 0;
-            Common.totalCoffeeCount = 0;
-            currentBeanCount = 0;
+            // Change to a new state when A is pressed
+            if( Button.A.justPressed() )
+            {
+                if(isWon)
+                {
+                    // Go on to the night level.
+                    Game.changeState( new Main() );
+                }
+                else if(isGameOver)
+                {
+                    // Restart the game
+                    Common.totalBeanCount = 0;
+                    Common.totalCoffeeCount = 0;
+                    currentBeanCount = 0;
+                    if( Common.isTutorialActive )
+                        Game.changeState( new MainDay() );  // repeat the day level in tutorial mode
+                    else
+                        Game.changeState( new MainLevelMap() );
+                }
+            }
+     
+            // Exit to menu
+            else  if( Button.C.justPressed() )
+            {
+                //if(!isWon && !isGameOver)
+                {
+                    // Create menu
+                    pauseMenuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, pauseMenuTextLineArray );
+                }
             
-            // Goto startup screen
-            Common.isTutorialActive = false;
-            Game.changeState( new MainStartupScreen() );
+                // // Restart the game
+                // Common.totalBeanCount = 0;
+                // Common.totalCoffeeCount = 0;
+                // currentBeanCount = 0;
+                
+                // // Goto startup screen
+                // Common.isTutorialActive = false;
+                // Game.changeState( new MainStartupScreen() );
+           }
        }
             
            
         // *** UPDATE
 
-        if(! isGameOver && ! isWon && state == STATE_PLAYING)
+        if(! isGameOver && ! isWon && state == STATE_PLAYING && pauseMenuDlg == null )
         {
             // Events
             for(int i=0; i < Common.MAX_EVENTS; i++)
@@ -341,10 +394,14 @@ public class MainDay extends State {
         if(Common.isTutorialActive)
             Main.drawButtonAndLabel( 0, 176-17, 220,"C  Exit tutorial", "C");
 
+        // Draw menu if open
+        if( pauseMenuDlg != null )
+            pauseMenuDlg.draw();
+                
         // print fps
-        Main.screen.setTextPosition( 0, 0 );
-        Main.screen.textColor = 3;
-        Main.screen.print("FPS:" + (int)(Main.screen.fps()+0.5));
+        // Main.screen.setTextPosition( 0, 0 );
+        // Main.screen.textColor = 3;
+        // Main.screen.print("FPS:" + (int)(Main.screen.fps()+0.5));
         
         //!!HV
         //System.out.println("castleY=" + (int)castleY + ", Main.screen.cameraY=" + (int)Main.screen.cameraY + ", levelStartY=" + (int)levelStartY + ", HALF_MAP_LEVEL_HIGHT_IN_PIXELS=" + (int)HALF_MAP_LEVEL_HIGHT_IN_PIXELS);

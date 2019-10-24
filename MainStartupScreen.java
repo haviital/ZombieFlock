@@ -88,14 +88,14 @@ public class MainStartupScreen extends State
 
         //System.out.print("menuDlg="+menuDlg+", menuDlg.pressedA="+menuDlg.pressedA);
 
-         if( Button.B.justPressed() ) //!!!HV
-         {
-             // 
-             Common.currentDay = 5;
-             Common.totalBeanCount = 40*5;
-             Common.totalCoffeeCount = 5;
-             Game.changeState( new Main() );
-         }
+        //  if( Button.B.justPressed() ) //!!!HV
+        //  {
+        //      // 
+        //      Common.currentDay = 5;
+        //      Common.totalBeanCount = 40*5;
+        //      Common.totalCoffeeCount = 5;
+        //      Game.changeState( new Main() );
+        //  }
         
         // Pressed A in the back story window?
         boolean justPressedA = Button.A.justPressed();

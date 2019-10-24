@@ -165,13 +165,13 @@ public class MainFinished extends State
         
         // *** DRAW
         
-        if(Common.currentFrameStartTimeMs>changeColorAt)
-        {
-            changeColorAt = Common.currentFrameStartTimeMs + 500;
-            if(++colorIndex > 15)
-                colorIndex = 0;
-        }
-        Main.screen.clear(5);
+        // if(Common.currentFrameStartTimeMs>changeColorAt)
+        // {
+        //     changeColorAt = Common.currentFrameStartTimeMs + 500;
+        //     if(++colorIndex > 15)
+        //         colorIndex = 0;
+        // }
+        Main.screen.clear(12);
         
         hero.drawMe();
         
