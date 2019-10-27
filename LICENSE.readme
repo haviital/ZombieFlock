@@ -1,15 +1,26 @@
-// Code: by Hannu Viitala, MIT license. 
+Year: 2019
 
-// Graphics:
-// @hanski, CCBY 3.0
-// @vampirics, CCBY 3.0
-// "bat3.png", Bagzie /OpenGameArt, OGA-BY 3.0
+Code: by Hannu Viitala, MIT license. 
+====================================
 
-// Sounds from Freesound.org:
-// Breviceps, CC0 1.0
-// CrocyTC, CC0 1.0
-// ArriGD, CC0 1.0
-// Missozzy, CCBY 3.0
-// Missozzy, CCBY 3.0
-// Thanra, CC0 1.0
-// Lewfres, CC0 1.0
+Graphics
+=========
+ 
+Hannu Viitala. I have made all the game graphics except the ones mentioned below. License: CCBY 3.0
+ 
+@vampirics. License: CCBY 3.0
+- The startup screen
+- Coffee cup in the night level
+- The original climbing zombie in the night level
+
+Bagzie / OpenGameArt. License OGA-BY 3.0
+- The original bat graphics in the day level  
+
+Sounds from Freesound.org
+==========================
+
+Breviceps: "step_into_water_puddle_wade.wav". License: CC0 1.0
+Breviceps: "zombie_gargles.wav". License: CC0 1.0
+DRFX: "soft_grass_foot_step". License: CC0 1.0
+Missozzy: "zombie_02.wav". License: CCBY 3.0
+Lewfres: "wild_animal_scream". License: CC0 1.0

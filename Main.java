@@ -78,9 +78,11 @@ public class Main extends State {
     int bombCoordsMax = 4;
     int bombCoordsNum = 0;
     boolean waitForZombieToClimb;
+    
     String pauseMenuTextLineArray[];
     MenuDlg pauseMenuDlg;
-    
+    long pauseDialogStartTimeMs;
+
     // *** static variables and functions
     
     static final var eepromCookie = new EepromCookie();
@@ -228,7 +230,7 @@ public class Main extends State {
             textLineArray1[1] = "Move the force";
             textLineArray2[1] = "fields and keep them";
             textLineArray1[2] = "away until the";
-            textLineArray2[2] = "the morning comes.";
+            textLineArray2[2] = "morning comes.";
             Common.events[Main.getNextFreeEvent()].setTutorialBubbleEvent((long)1*1000, textLineArray1, textLineArray2, arrCount );
         }
         
@@ -251,21 +253,26 @@ public class Main extends State {
     // update is called by femto.Game every frame
     void update(){
         
-        // long currTime = System.currentTimeMillis();
+        Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         
         // Read the current time. Substract the program start time to make the value smaller, so it fits to 32 bits. 
-        Common.currentFrameStartTimeMs = System.currentTimeMillis() - programStartTimeMs;
         //System.out.println("update().currentFrameStartTimeMs=" + Common.currentFrameStartTimeMs);
         
         // read keys
         if( pauseMenuDlg != null )
         {
             pauseMenuDlg.update();
+            
             if(pauseMenuDlg.pressedA)
             {
                if(pauseMenuDlg.focusIndex == 0)
                {
                    // "Continue"
+                   
+                   // Unpause the game.
+                   // Add total pause time to the program start time so that the pause time do not affect to the actual game timings.
+                   long totalPauseTimeMs = Common.currentFrameStartTimeMs - pauseDialogStartTimeMs;
+                   programStartTimeMs += totalPauseTimeMs;
                }
                else if(pauseMenuDlg.focusIndex == 1)
                {
@@ -293,7 +300,12 @@ public class Main extends State {
                 }
             
                 pauseMenuDlg = null;
+                
             }
+            
+            // Pause time. Stop it the the pause dialog start time.        
+            Common.currentFrameStartTimeMs = pauseDialogStartTimeMs;
+            
         }
         else
         {
@@ -336,14 +348,9 @@ public class Main extends State {
             {
                 // Create menu
                 pauseMenuDlg = new MenuDlg( 45, 40, 220-90, 4*7 + 20, pauseMenuTextLineArray );
-                    
-                // // Restart the game
-                // Common.totalBeanCount = 0;
-                // Common.totalCoffeeCount = 0;
-    
-                // // Goto startup screen
-                // Common.isTutorialActive = false;
-                // Game.changeState( new MainStartupScreen() );
+                
+                // Start pause
+                pauseDialogStartTimeMs = Common.currentFrameStartTimeMs;
            }
        }
         
